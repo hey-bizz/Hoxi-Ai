@@ -220,7 +220,6 @@ export default function DashboardPage() {
   const router = useRouter()
   const [showOnboarding, setShowOnboarding] = useState(true)
   const [timeRange, setTimeRange] = useState("Last hour")
-  const [liveRequests, setLiveRequests] = useState(0)
   const [chatMessages, setChatMessages] = useState([
     {
       role: "assistant",
@@ -485,8 +484,8 @@ export default function DashboardPage() {
 
         if (cancelled) return
 
+        // Update all states together to prevent partial updates
         setMetrics(normalizedMetrics)
-        setLiveRequests(normalizeNumber(metricsPayload.totalRequests))
 
         const breakdownEntries = Object.entries(metricsPayload.botBreakdown ?? {})
         const breakdownTotal = normalizedMetrics.totalRequests
@@ -512,10 +511,21 @@ export default function DashboardPage() {
           })
           .sort((a, b) => b.requests - a.requests)
 
-        setBotCategories(categories)
-
         const activity = buildActivityFromLogs(payload.logs ?? [])
+
+        // Batch state updates to prevent timing issues
+        setBotCategories(categories)
         setRealtimeActivity(activity.length ? activity : generateRealtimeActivity())
+
+        console.log('✅ Dashboard data updated:', {
+          totalRequests: normalizedMetrics.totalRequests,
+          botRequests: normalizedMetrics.botRequests,
+          botPercentage: normalizedMetrics.aiPercentage,
+          bandwidth: normalizedMetrics.botBandwidth
+        })
+
+        // Clear any previous errors on successful data load
+        setError(null)
       } catch (err) {
         console.error('Dashboard data load failed:', err)
 
@@ -659,31 +669,31 @@ export default function DashboardPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
               <MetricCard
                 title="Total Requests"
-                value={metrics ? metrics.totalRequests.toLocaleString() : liveRequests.toLocaleString()}
+                value={loading ? "Loading..." : (metrics?.totalRequests?.toLocaleString() || "0")}
                 change="+12%"
                 icon={<Activity className="w-6 h-6" />}
                 color="blue"
-                subtitle={metrics ? `Human: ${metrics.humanPercentage}% • Bots: ${metrics.aiPercentage}%` : "Human: 73.1% • Bots: 26.8%"}
+                subtitle={loading ? "Loading..." : (metrics ? `Human: ${metrics.humanPercentage}% • Bots: ${metrics.aiPercentage}%` : "No data")}
               />
               <MetricCard
                 title="Bot Traffic"
-                value={metrics ? `${metrics.aiPercentage}%` : "26.8%"}
-                subtitle={metrics ? `${metrics.botRequests?.toLocaleString()} requests` : "13,929 requests"}
+                value={loading ? "Loading..." : (metrics ? `${metrics.aiPercentage}%` : "0%")}
+                subtitle={loading ? "Loading..." : (metrics ? `${metrics.botRequests?.toLocaleString()} requests` : "0 requests")}
                 icon={<Bot className="w-6 h-6" />}
                 color="red"
                 change="+2.3%"
               />
               <MetricCard
                 title="Bot Bandwidth"
-                value={metrics ? formatBytes(metrics.botBandwidth) : "1.84 GB"}
-                subtitle={metrics ? `${(metrics.botBandwidth / (1024**3) * 0.15 * 30).toFixed(0)} cost` : "$95 cost"}
+                value={loading ? "Loading..." : (metrics ? formatBytes(metrics.botBandwidth) : "0 B")}
+                subtitle={loading ? "Loading..." : (metrics ? `$${(metrics.botBandwidth / (1024**3) * 0.15 * 30).toFixed(2)} cost` : "$0 cost")}
                 icon={<HardDrive className="w-6 h-6" />}
                 color="orange"
                 change="+1.8%"
               />
               <MetricCard
                 title="Potential Monthly Savings"
-                value={metrics ? `${metrics.potentialSavings?.monthly?.toFixed(2) || "0.00"}` : "$8.27"}
+                value={loading ? "Loading..." : (metrics ? `$${metrics.potentialSavings?.monthly?.toFixed(2) || "0.00"}` : "$0.00")}
                 subtitle="per month"
                 icon={<DollarSign className="w-6 h-6" />}
                 color="green"
