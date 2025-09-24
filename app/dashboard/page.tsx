@@ -304,6 +304,44 @@ export default function DashboardPage() {
     router.push("/")
   }
 
+  const generateSampleData = async () => {
+    if (!websiteMeta?.id) return
+
+    try {
+      setLoading(true)
+      const response = await fetch('/api/generate-sample-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          websiteId: websiteMeta.id,
+          timeRange: '24h'
+        })
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        console.log('✅ Sample data generated:', result)
+        // Reload the dashboard data
+        setError(null)
+        // The useEffect will reload the data automatically
+        setTimeout(() => {
+          window.location.reload()
+        }, 1000)
+      } else {
+        console.error('Failed to generate sample data:', result.error)
+        setError(`Failed to generate sample data: ${result.error}`)
+      }
+    } catch (error) {
+      console.error('Error generating sample data:', error)
+      setError('Failed to generate sample data')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   const handleSendMessage = async () => {
     if (!chatInput.trim() || isSending) return
 
@@ -571,8 +609,19 @@ export default function DashboardPage() {
             
             {error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
-                <p className="text-red-400">⚠️ {error}</p>
-                <p className="text-gray-400 text-sm mt-2">Displaying sample data for demonstration purposes.</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-red-400">⚠️ {error}</p>
+                    <p className="text-gray-400 text-sm mt-2">Displaying sample data for demonstration purposes.</p>
+                  </div>
+                  <Button
+                    onClick={() => generateSampleData()}
+                    className="bg-green-500 hover:bg-green-600 text-white text-sm"
+                    size="sm"
+                  >
+                    Generate Sample Data
+                  </Button>
+                </div>
               </div>
             )}
 

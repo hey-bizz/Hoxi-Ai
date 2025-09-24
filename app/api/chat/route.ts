@@ -48,24 +48,23 @@ export async function POST(req: NextRequest) {
     const messagesWithContext = [contextMessage, ...messages]
     
     // Stream the response using the Hoxi agent
-    const result = await streamText({
+    const result = streamText({
       model: hoxiAgent.getModel(),
       messages: messagesWithContext,
       tools: hoxiAgent.getTools(),
-      maxSteps: 5,
       temperature: 0.1,
-      onStepFinish: async ({ toolCalls, stepNumber }) => {
+      onStepFinish: async ({ toolCalls }) => {
         // Log tool usage for optimization
         if (toolCalls?.length) {
           hoxiAgent.logToolUsage(toolCalls, sessionId)
-          console.log(`Hoxi AI [${sessionId}] Step ${stepNumber} used tools: ${toolCalls.map(t => t.toolName).join(', ')}`)
+          console.log(`Hoxi AI [${sessionId}] used tools: ${toolCalls.map(t => t.toolName).join(', ')}`)
         }
       }
     })
-    
-    // Check if result has toDataStreamResponse method
-    if (typeof result.toDataStreamResponse === 'function') {
-      return result.toDataStreamResponse()
+
+    // Use the correct stream response method
+    if (typeof result.toTextStreamResponse === 'function') {
+      return result.toTextStreamResponse()
     } else {
       // Fallback for development
       return new Response(

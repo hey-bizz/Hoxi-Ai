@@ -1,22 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 
-interface BotDetectionRow {
-  request_count: number
-  bandwidth_bytes: number
-  category: string | null
+interface TrafficLogRow {
+  id: string
+  website_id: string
+  timestamp: string
+  user_agent: string | null
   bot_name: string | null
-  detected_at: string
-  impact?: string | null
-  subcategory?: string | null
-  confidence?: number
-  detection_method?: Record<string, unknown> | null
+  is_bot: boolean
+  bot_category: string | null
+  bytes_transferred: number | null
+  response_time_ms: number | null
+  path: string | null
 }
 
-interface CostAnalysisRow {
-  bot_cost_usd: number
-  projected_monthly_cost: number | null
-  projected_yearly_cost: number | null
+interface TrafficAnalysisRow {
+  fingerprint: string
+  website_id: string
+  classification: string | null
+  confidence: number | null
+  signature_match: string | null
+  velocity_rpm: number | null
+  burst_score: number | null
+  pattern_hits: any
+  behavior_score: number | null
+  source: string | null
 }
 
 interface BotBreakdownSummary {
@@ -58,49 +66,37 @@ export async function GET(request: NextRequest) {
   const since = new Date(Date.now() - hours * 60 * 60 * 1000).toISOString()
 
   try {
-    // Get bot detection data from Supabase
-    const { data: botDetectionData, error: botError } = await supabaseAdmin
-      .from('bot_detections')
+    // Get traffic logs from Supabase
+    const { data: trafficData, error: trafficError } = await supabaseAdmin
+      .from('traffic_logs')
       .select('*')
       .eq('website_id', websiteId)
-      .gte('detected_at', since)
-      .order('detected_at', { ascending: false })
+      .gte('timestamp', since)
+      .order('timestamp', { ascending: false })
 
-    if (botError) {
-      console.error('Bot detections query error:', botError)
-      return NextResponse.json({ error: botError.message }, { status: 500 })
+    if (trafficError) {
+      console.error('Traffic logs query error:', trafficError)
+      return NextResponse.json({ error: trafficError.message }, { status: 500 })
     }
 
-    const botDetections = (botDetectionData ?? []) as BotDetectionRow[]
+    const trafficLogs = (trafficData ?? []) as TrafficLogRow[]
 
-    // Get cost analysis data from Supabase
-    const { data: costAnalysisData, error: costError } = await supabaseAdmin
-      .from('cost_analyses')
-      .select('*')
-      .eq('website_id', websiteId)
-      .gte('analysis_date', new Date(since).toISOString().split('T')[0])
-      .order('analysis_date', { ascending: false })
+    // Calculate metrics from traffic logs
+    const totalRequests = trafficLogs.length
+    const botLogs = trafficLogs.filter(log => log.is_bot)
+    const humanLogs = trafficLogs.filter(log => !log.is_bot)
 
-    if (costError) {
-      console.error('Cost analyses query error:', costError)
-      return NextResponse.json({ error: costError.message }, { status: 500 })
-    }
+    const botRequests = botLogs.length
+    const humanRequests = humanLogs.length
 
-    const costAnalyses = (costAnalysisData ?? []) as CostAnalysisRow[]
-
-    // Calculate metrics from bot detections
-    const totalRequests = botDetections.reduce((sum, detection) => sum + detection.request_count, 0)
-    const botRequests = totalRequests // All detections are bot requests
-    const humanRequests = 0 // For now, we're only tracking bot detections
-    
-    const botBytes = botDetections.reduce((sum, detection) => sum + detection.bandwidth_bytes, 0)
-    const humanBytes = 0 // For now, we're only tracking bot detections
+    const botBytes = botLogs.reduce((sum, log) => sum + (log.bytes_transferred || 0), 0)
+    const humanBytes = humanLogs.reduce((sum, log) => sum + (log.bytes_transferred || 0), 0)
 
     // Group by bot category
     const breakdownMap = new Map<string, { requests: number; bandwidth: number; bots: Set<string> }>()
 
-    botDetections.forEach(detection => {
-      const category = detection.category || 'unknown'
+    botLogs.forEach(log => {
+      const category = log.bot_category || 'unknown'
       if (!breakdownMap.has(category)) {
         breakdownMap.set(category, {
           requests: 0,
@@ -111,10 +107,10 @@ export async function GET(request: NextRequest) {
       const summary = breakdownMap.get(category)
       if (!summary) return
 
-      summary.requests += detection.request_count
-      summary.bandwidth += detection.bandwidth_bytes
-      if (detection.bot_name) {
-        summary.bots.add(detection.bot_name)
+      summary.requests += 1
+      summary.bandwidth += (log.bytes_transferred || 0)
+      if (log.bot_name) {
+        summary.bots.add(log.bot_name)
       }
     })
 
@@ -127,31 +123,14 @@ export async function GET(request: NextRequest) {
       }
     })
 
-    // Get potential savings from cost analysis or calculate if not available
-    let potentialSavings: { total: number; monthly: number; yearly: number } = {
-      total: 0,
-      monthly: 0,
-      yearly: 0
-    }
-    
-    if (costAnalyses.length > 0) {
-      // Use existing cost analysis data
-      const latestCost = costAnalyses[0]
-      potentialSavings = {
-        total: latestCost.bot_cost_usd,
-        monthly: latestCost.projected_monthly_cost || latestCost.bot_cost_usd,
-        yearly: latestCost.projected_yearly_cost || (latestCost.bot_cost_usd * 12)
-      }
-    } else {
-      // Calculate potential savings based on bandwidth
-      const savingsPerGB = 0.15 // Average cost
-      const botGB = botBytes / (1024 ** 3)
-      const monthlySavings = botGB * savingsPerGB * 30
-      potentialSavings = {
-        total: monthlySavings,
-        monthly: monthlySavings,
-        yearly: monthlySavings * 12
-      }
+    // Calculate potential savings based on bandwidth
+    const savingsPerGB = 0.15 // Average cost per GB
+    const botGB = botBytes / (1024 ** 3)
+    const monthlySavings = botGB * savingsPerGB * 30
+    const potentialSavings: { total: number; monthly: number; yearly: number } = {
+      total: monthlySavings,
+      monthly: monthlySavings,
+      yearly: monthlySavings * 12
     }
 
     return NextResponse.json({
@@ -166,7 +145,13 @@ export async function GET(request: NextRequest) {
         potentialSavings,
         botBreakdown
       },
-      logs: botDetections.slice(0, 100) // Recent 100 for activity feed
+      logs: trafficLogs.slice(0, 100).map(log => ({
+        detected_at: log.timestamp,
+        bot_name: log.bot_name,
+        category: log.bot_category,
+        path: log.path,
+        bandwidth_bytes: log.bytes_transferred || 0
+      })) // Recent 100 for activity feed
     })
   } catch (error) {
     console.error('Error in analyze API:', error)

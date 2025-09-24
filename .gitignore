@@ -33,3 +33,4 @@ next-env.d.ts
 spec_plans/image copy 4.png
 *.png
 *spec_plans
+*
