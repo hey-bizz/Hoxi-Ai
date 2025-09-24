@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useMemo, useState } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -22,6 +22,12 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null)
 
   const supabase = useMemo(() => getSupabaseBrowserClient(), [])
+  const searchParams = useSearchParams()
+
+  const redirectPath = useMemo(() => {
+    const redirectParam = searchParams?.get("redirect") || "/upload"
+    return redirectParam.startsWith("/") ? redirectParam : "/upload"
+  }, [searchParams])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -41,14 +47,23 @@ export default function LoginPage() {
     }
 
     if (data.session) {
-      router.push("/dashboard")
+      // Ensure session hydration before navigation
+      await supabase.auth.getSession()
+      router.replace(redirectPath)
     }
   }
 
   const handleOAuthLogin = async (provider: 'google' | 'github') => {
     setError(null)
     setIsLoading(true)
-    const { error: oauthError } = await supabase.auth.signInWithOAuth({ provider })
+    const redirectTo = typeof window === 'undefined' ? undefined : `${window.location.origin}${redirectPath}`
+
+    const { error: oauthError } = await supabase.auth.signInWithOAuth({
+      provider,
+      options: {
+        redirectTo,
+      }
+    })
     setIsLoading(false)
 
     if (oauthError) {

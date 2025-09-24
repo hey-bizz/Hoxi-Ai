@@ -9,10 +9,22 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const getSupabaseBrowserClient = (() => {
   let client: ReturnType<typeof createClient> | null = null
+
   return () => {
     if (!client) {
-      client = createClient(supabaseUrl, supabaseAnonKey)
+      const storage = typeof window === 'undefined' ? undefined : window.localStorage
+
+      client = createClient(supabaseUrl, supabaseAnonKey, {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true,
+          detectSessionInUrl: true,
+          storage,
+          storageKey: 'hoxi-auth'
+        }
+      })
     }
+
     return client
   }
 })()

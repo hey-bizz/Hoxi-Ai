@@ -28,3 +28,6 @@ next-env.d.ts
 
 # MD files
 *.md
+
+# Local artifacts
+spec_plans/image copy 4.png

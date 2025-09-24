@@ -232,7 +232,11 @@ export default function UploadPage() {
                   <AlertTriangle className="w-5 h-5" />
                   <span>
                     You need to be signed in to upload logs.{' '}
-                    <Button variant="link" className="text-yellow-300 px-2" onClick={() => router.push('/auth/login')}>
+                    <Button
+                      variant="link"
+                      className="text-yellow-300 px-2"
+                      onClick={() => router.push('/auth/login?redirect=/upload')}
+                    >
                       Sign in
                     </Button>
                   </span>
