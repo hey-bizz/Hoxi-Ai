@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
+import { createHash } from 'crypto'
 
 import { supabaseAdmin } from '@/lib/supabase'
 import { LogParser } from '@/lib/log-parser'
@@ -22,12 +23,17 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData()
     const files = formData.getAll('files') as File[]
-    const websiteId = (formData.get('websiteId') as string) || ''
+    let websiteId = (formData.get('websiteId') as string) || ''
     const dryRun = (formData.get('dryRun') as string)?.toString() === 'true'
     const providerOverride = (formData.get('provider') as string) || undefined
 
-    if (!files.length || !websiteId) {
-      return NextResponse.json({ error: 'Missing files or websiteId' }, { status: 400 })
+    if (!files.length) {
+      return NextResponse.json({ error: 'Missing files' }, { status: 400 })
+    }
+
+    // Auto-generate websiteId if not provided
+    if (!websiteId) {
+      websiteId = `upload-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`
     }
 
     const accessToken = extractAccessToken(request)
@@ -41,25 +47,64 @@ export async function POST(request: NextRequest) {
     }
     const userId = userData.user.id
 
-    const { data: websiteRow, error: websiteError } = await supabaseAdmin
-      .from('websites')
-      .select('id, user_id, provider')
-      .eq('id', websiteId)
-      .maybeSingle()
+    // Try to find existing website or create new one for uploads
+    let websiteRow: any = null
 
-    if (websiteError) {
-      throw websiteError
-    }
-    if (!websiteRow) {
-      return NextResponse.json({ error: 'Website not found' }, { status: 404 })
-    }
-    if (websiteRow.user_id && websiteRow.user_id !== userId) {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    // Check if websiteId is a UUID (existing website)
+    const isUUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(websiteId)
+
+    if (isUUID) {
+      // Existing website - validate ownership
+      const { data, error: websiteError } = await supabaseAdmin
+        .from('websites')
+        .select('id, user_id, provider')
+        .eq('id', websiteId)
+        .maybeSingle()
+
+      if (websiteError) {
+        throw websiteError
+      }
+      if (!data) {
+        return NextResponse.json({ error: 'Website not found' }, { status: 404 })
+      }
+      if (data.user_id && data.user_id !== userId) {
+        return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+      }
+      websiteRow = data
     }
 
-    const provider = providerOverride || websiteRow.provider || 'generic'
+    const provider = providerOverride || websiteRow?.provider || 'generic'
 
     const { lines, headers } = await readFiles(files)
+
+    // For auto-generated IDs, create website record using extracted domain
+    if (!isUUID) {
+      const domain = extractDomainFromLogs(lines, headers) || 'uploaded-logs.local'
+      const uploadUUID = generateUUIDFromString(websiteId)
+
+      // Create website record
+      const { data: newWebsite, error: createError } = await supabaseAdmin
+        .from('websites')
+        .upsert({
+          id: uploadUUID,
+          user_id: userId,
+          domain: domain,
+          provider: 'upload',
+          name: `Uploaded logs - ${domain}`,
+          created_at: new Date().toISOString()
+        }, { onConflict: 'id' })
+        .select('id, user_id, provider')
+        .single()
+
+      if (createError) {
+        console.error('Failed to create website record:', createError)
+        // Continue with processing even if website creation fails
+      }
+
+      websiteId = uploadUUID
+      websiteRow = newWebsite || { id: uploadUUID, user_id: userId, provider: 'upload' }
+    }
+
     const parsedLogs = parseLogs(lines, headers, websiteId)
 
     if (parsedLogs.length === 0) {
@@ -88,7 +133,8 @@ export async function POST(request: NextRequest) {
       console.log(`🔍 Processing ${parsedLogs.length} logs with Core Detection Engine`)
       const detectionResult = await detectionEngine.analyze(parsedLogs, websiteId, {
         provider,
-        includesCosts: true
+        includesCosts: true,
+        skipTimeFilter: provider === 'upload'
       })
       normalizedEntries = detectionResult.normalizedLogs
       botAnalysis = detectionResult.botAnalysis
@@ -339,10 +385,10 @@ function mapCostAnalysis(
 
   for (const bot of costAnalysis.byBot || []) {
     const botKey = bot.botName || 'Unknown Bot'
-    costByBot[botKey] = (costByBot[botKey] || 0) + bot.costs.current
+    costByBot[botKey] = (costByBot[botKey] || 0) + bot.cost.current
 
-    const categoryKey = bot.subcategory || bot.category
-    costByCategory[categoryKey] = (costByCategory[categoryKey] || 0) + bot.costs.current
+    const categoryKey = bot.category
+    costByCategory[categoryKey] = (costByCategory[categoryKey] || 0) + bot.cost.current
   }
 
   const bandwidthGB = costAnalysis.summary.totalBandwidth / (1024 ** 3)
@@ -370,4 +416,66 @@ function mapCostAnalysis(
     logs_processed: processingStats?.totalLogs ?? null,
     updated_at: new Date().toISOString()
   }
+}
+
+function extractDomainFromLogs(lines: string[], headers?: string[]): string | null {
+  // Try to extract domain from common log formats
+  for (const line of lines.slice(0, 100)) { // Check first 100 lines
+    try {
+      // For CSV logs with headers
+      if (headers) {
+        const values = line.split(',')
+        const hostIndex = headers.findIndex(h =>
+          h.toLowerCase().includes('host') ||
+          h.toLowerCase().includes('domain')
+        )
+        if (hostIndex >= 0 && values[hostIndex]) {
+          const host = values[hostIndex].replace(/"/g, '').trim()
+          if (host && host !== '-' && host.includes('.')) {
+            return host
+          }
+        }
+      }
+
+      // For JSON logs
+      if (line.trim().startsWith('{')) {
+        const parsed = JSON.parse(line)
+        const host = parsed.host || parsed.http_host || parsed.server_name || parsed.domain
+        if (host && host !== '-' && host.includes('.')) {
+          return host
+        }
+      }
+
+      // For common log format - extract from URL or host header
+      const hostMatch = line.match(/Host:\s*([^\s]+)/i)
+      if (hostMatch && hostMatch[1].includes('.')) {
+        return hostMatch[1]
+      }
+
+      // Extract from URL in log line
+      const urlMatch = line.match(/https?:\/\/([^\/\s]+)/)
+      if (urlMatch && urlMatch[1].includes('.')) {
+        return urlMatch[1]
+      }
+    } catch {
+      // Skip invalid lines
+      continue
+    }
+  }
+
+  return null
+}
+
+function generateUUIDFromString(str: string): string {
+  // Generate a deterministic UUID v5-style from string
+  const hash = createHash('sha256').update(str).digest('hex')
+
+  // Format as UUID v4
+  return [
+    hash.substring(0, 8),
+    hash.substring(8, 12),
+    '4' + hash.substring(13, 16), // Version 4
+    ((parseInt(hash.substring(16, 17), 16) & 0x3) | 0x8).toString(16) + hash.substring(17, 20), // Variant bits
+    hash.substring(20, 32)
+  ].join('-')
 }

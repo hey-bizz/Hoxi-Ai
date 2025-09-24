@@ -22,7 +22,6 @@ export default function UploadPage() {
   const [error, setError] = useState<string | null>(null)
   const [session, setSession] = useState<Session | null>(null)
   const [authChecked, setAuthChecked] = useState(false)
-  const [websiteId, setWebsiteId] = useState("")
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const supabase = useMemo(() => getSupabaseBrowserClient(), [])
@@ -95,10 +94,6 @@ export default function UploadPage() {
       return
     }
 
-    if (!websiteId.trim()) {
-      setError("Enter the website ID you want to analyze.")
-      return
-    }
 
     setUploading(true)
     setProgress({ stage: "uploading", percent: 0, message: "Starting upload..." })
@@ -106,7 +101,8 @@ export default function UploadPage() {
 
     try {
       const formData = new FormData()
-      formData.append("websiteId", websiteId.trim())
+      // Auto-generate websiteId for uploaded logs
+      formData.append("websiteId", `upload-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`)
       formData.append("dryRun", "false")
 
       files.forEach((file) => {
@@ -256,22 +252,6 @@ export default function UploadPage() {
 
             <Card className="bg-gray-900/40 border-gray-700 backdrop-blur-xl">
               <CardContent className="p-6 space-y-6">
-                <div className="space-y-2">
-                  <label className="text-sm text-gray-400 font-medium" htmlFor="website-id-input">
-                    Website ID (UUID)
-                  </label>
-                  <Input
-                    id="website-id-input"
-                    placeholder="550e8400-e29b-41d4-a716-446655440000"
-                    value={websiteId}
-                    onChange={(e) => setWebsiteId(e.target.value)}
-                    className="bg-gray-800/50 border-gray-700 text-white"
-                    disabled={uploading}
-                  />
-                  <p className="text-xs text-gray-500">
-                    Use the website identifier associated with your account in Supabase.
-                  </p>
-                </div>
 
                 <div
                   className={`border-2 border-dashed rounded-xl p-6 transition ${dragActive ? "border-blue-500 bg-blue-500/10" : "border-gray-700"}`}
@@ -408,7 +388,7 @@ export default function UploadPage() {
                 <Button
                   className="w-full h-12 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600"
                   onClick={handleUpload}
-                  disabled={files.length === 0 || uploading || !session || !websiteId.trim()}
+                  disabled={files.length === 0 || uploading || !session}
                 >
                   {uploading ? (
                     <div className="flex items-center gap-2">

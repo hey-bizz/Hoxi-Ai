@@ -26,13 +26,13 @@ async function testUpload() {
   const formData = new FormData();
   const file = new File([fileBuffer], path.basename(testFilePath), { type: 'text/csv' });
   formData.append('files', file);
-  formData.append('websiteId', '550e8400-e29b-41d4-a716-446655440000'); // Valid UUID
+  // No websiteId needed - will be auto-generated
   formData.append('dryRun', 'true'); // Use dry-run to avoid database writes
 
   console.log('🚀 Uploading to localhost:3000...');
 
   try {
-    const response = await fetch('http://localhost:3000/api/process-logs', {
+    const response = await fetch('http://localhost:3000/api/upload-test', {
       method: 'POST',
       body: formData
     });
@@ -47,6 +47,8 @@ async function testUpload() {
       console.log(`   Human requests: ${result.stats?.humanRequests || 0}`);
       console.log(`   Total bytes: ${result.stats?.totalBytes || 0}`);
       console.log(`   Potential savings: $${result.stats?.potentialSavings || 0}/month`);
+      console.log(`   Domain detected: ${result.stats?.domain || 'Unknown'}`);
+      console.log(`   Processing time: ${result.processing?.processingTime || 0}ms`);
       console.log(`   Message: ${result.message}`);
     } else {
       console.error('❌ Upload failed:', result.error);

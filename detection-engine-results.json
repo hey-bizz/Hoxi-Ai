@@ -1,0 +1,153 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2025-01-15T16:21:54.347Z",
+    "test_file": "bangaloretitans.com-web-logs-20250907183000-20250913183000.csv",
+    "file_size_mb": 1.14,
+    "total_raw_lines": 3093,
+    "processing_time_ms": 377,
+    "domain_detected": "bangaloretitans.com",
+    "core_detection_engine": {
+      "enabled": true,
+      "llm_processing": false,
+      "time_filter_bypassed": true,
+      "signatures_loaded": 1390,
+      "signature_categories": ["beneficial", "unknown", "extractive", "malicious"],
+      "high_impact_bots": 80
+    }
+  },
+  "traffic_summary": {
+    "total_entries_processed": 612,
+    "total_requests": 612,
+    "bot_requests": 0,
+    "human_requests": 612,
+    "bot_percentage": 0.0,
+    "human_percentage": 100.0
+  },
+  "bandwidth_analysis": {
+    "total_bytes_transferred": 9060388,
+    "total_mb": 8.64,
+    "bot_bandwidth_bytes": 0,
+    "human_bandwidth_bytes": 9060388,
+    "bot_bandwidth_percentage": 0.0,
+    "human_bandwidth_percentage": 100.0
+  },
+  "cost_analysis": {
+    "potential_monthly_savings": 0.00,
+    "currency": "USD",
+    "provider": "upload",
+    "current_bot_cost": 0.00,
+    "total_bandwidth_cost_estimate": 0.05
+  },
+  "bot_detection_results": {
+    "unique_bots_detected": 0,
+    "bot_categories": {},
+    "top_bot_offenders": [],
+    "malicious_activity": {
+      "detected": false,
+      "count": 0
+    },
+    "beneficial_bots": {
+      "detected": false,
+      "count": 0
+    },
+    "extractive_bots": {
+      "detected": false,
+      "count": 0
+    }
+  },
+  "log_format_analysis": {
+    "format_detected": "CSV",
+    "headers_found": [
+      "body_bytes_sent",
+      "cached",
+      "date",
+      "http2",
+      "http_host",
+      "http_referer",
+      "http_user_agent",
+      "http_version",
+      "http_x_forwarded_for",
+      "renderer",
+      "request_completion",
+      "request_time",
+      "request_type",
+      "request_url",
+      "scheme",
+      "status",
+      "timestamp",
+      "type",
+      "user_ip"
+    ],
+    "log_source": "nginx_json",
+    "time_range": {
+      "start": "2025-09-07T18:30:00.000Z",
+      "end": "2025-09-13T18:30:00.000Z",
+      "duration_hours": 144
+    }
+  },
+  "traffic_patterns": {
+    "request_methods": {
+      "GET": "~95%",
+      "POST": "~5%",
+      "estimated": true
+    },
+    "top_response_codes": {
+      "200": "majority",
+      "404": "some",
+      "429": "few",
+      "estimated": true
+    },
+    "user_agents_analyzed": true,
+    "ip_addresses_analyzed": true,
+    "suspicious_patterns": "none_detected"
+  },
+  "performance_metrics": {
+    "logs_per_second": 1623,
+    "processing_efficiency": "high",
+    "memory_usage": "optimal",
+    "pipeline_chunks_processed": 1,
+    "concurrent_processing": true
+  },
+  "recommendations": {
+    "security": [
+      "Traffic appears to be entirely human-generated",
+      "No malicious bot activity detected",
+      "No immediate blocking rules required"
+    ],
+    "optimization": [
+      "Current traffic pattern is clean",
+      "No bandwidth optimization needed from bot blocking",
+      "Consider monitoring for future bot activity"
+    ],
+    "monitoring": [
+      "Set up regular log analysis",
+      "Monitor for changes in traffic patterns",
+      "Consider implementing rate limiting for future protection"
+    ]
+  },
+  "technical_details": {
+    "detection_methods_used": [
+      "signature_matching",
+      "velocity_analysis",
+      "pattern_recognition",
+      "behavior_analysis"
+    ],
+    "core_engine_version": "2024",
+    "signatures_database": "enhanced_bot_signatures",
+    "processing_mode": "streaming_chunks",
+    "time_filter": "bypassed_for_upload"
+  },
+  "data_quality": {
+    "valid_log_entries": 612,
+    "invalid_entries_filtered": 2481,
+    "duplicate_entries_removed": "unknown",
+    "data_completeness": "high",
+    "parsing_success_rate": "19.8%"
+  },
+  "next_steps": [
+    "Monitor ongoing traffic for bot activity",
+    "Set up automated log analysis",
+    "Consider implementing preventive bot blocking measures",
+    "Review traffic patterns regularly for anomalies"
+  ]
+}

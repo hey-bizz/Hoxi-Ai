@@ -73,6 +73,27 @@ export class DetectionPipeline {
   }
 
   /**
+   * Process all logs without time filtering - for uploads and historical analysis
+   */
+  async processAllLogs(
+    logs: NormalizedLog[],
+    websiteId: string,
+    onProgress?: (progress: ProcessingProgress) => void
+  ): Promise<ProcessingResult> {
+    const startTime = new Date()
+    this.progressCallback = onProgress
+
+    if (logs.length === 0) {
+      return this.createEmptyResult(startTime)
+    }
+
+    // Process in streaming chunks without time filtering
+    const result = await this.processLogsStreaming(logs, websiteId, startTime)
+
+    return result
+  }
+
+  /**
    * Filter logs to recent time window (24-48 hours)
    */
   private filterRecentLogs(logs: NormalizedLog[]): NormalizedLog[] {
@@ -275,7 +296,8 @@ export class DetectionPipeline {
       processingTime: Date.now() - startTime.getTime(),
       chunksProcessed: 0,
       totalLogs: 0,
-      memoryPeak: this.getMemoryUsage()
+      memoryPeak: this.getMemoryUsage(),
+      logs: []
     }
   }
 

@@ -64,6 +64,7 @@ export class CoreDetectionEngine {
       pricePerGB?: number
       includesCosts?: boolean
       onProgress?: (progress: ProcessingProgress) => void
+      skipTimeFilter?: boolean
     }
   ): Promise<{
     botAnalysis: BotAnalysis
@@ -79,11 +80,9 @@ export class CoreDetectionEngine {
     const initialMemory = this.getMemoryUsage()
 
     // Process logs through detection pipeline
-    const result = await detectionPipeline.processRecentLogs(
-      logs,
-      websiteId,
-      options?.onProgress
-    )
+    const result = options?.skipTimeFilter
+      ? await detectionPipeline.processAllLogs(logs, websiteId, options?.onProgress)
+      : await detectionPipeline.processRecentLogs(logs, websiteId, options?.onProgress)
 
     const botAnalysis = result.analysis
 
