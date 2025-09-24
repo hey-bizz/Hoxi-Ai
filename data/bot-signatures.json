@@ -1,0 +1,8839 @@
+[
+  {
+    "name": "GoogleBot",
+    "pattern": "Googlebot\\/",
+    "category": "beneficial",
+    "operator": "www.google.com"
+  },
+  {
+    "name": "Googlebot-Mobile",
+    "pattern": "Googlebot-Mobile",
+    "category": "beneficial"
+  },
+  {
+    "name": "Googlebot-Image",
+    "pattern": "Googlebot-Image",
+    "category": "beneficial"
+  },
+  {
+    "name": "Lumar",
+    "pattern": "Googlebot-News",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Googlebot-Video",
+    "pattern": "Googlebot-Video",
+    "category": "beneficial"
+  },
+  {
+    "name": "AdsBot-Google^-|$",
+    "pattern": "AdsBot-Google([^-]|$)",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "AdsBot-Google-Mobile",
+    "pattern": "AdsBot-Google-Mobile",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "Feedfetcher-Google",
+    "pattern": "Feedfetcher-Google",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "Mediapartners-Google",
+    "pattern": "Mediapartners-Google",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "Mediapartners GoogleBot",
+    "pattern": "Mediapartners \\(Googlebot\\)",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "APIs-Google",
+    "pattern": "APIs-Google",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "Google-InspectionTool",
+    "pattern": "Google-InspectionTool",
+    "category": "beneficial",
+    "operator": "developers.google.com"
+  },
+  {
+    "name": "NTT Resonant",
+    "pattern": "Storebot-Google",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GoogleOther",
+    "pattern": "GoogleOther",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Bingbot",
+    "pattern": "bingbot",
+    "category": "beneficial",
+    "operator": "Microsoft",
+    "purpose": "Search"
+  },
+  {
+    "name": "Slurp",
+    "pattern": "Slurp",
+    "category": "beneficial",
+    "operator": "Yahoo",
+    "purpose": "Search"
+  },
+  {
+    "name": "wWget",
+    "pattern": "[wW]get",
+    "category": "unknown"
+  },
+  {
+    "name": "Mojeek Ltd.",
+    "pattern": "LinkedInBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Python-urllib",
+    "pattern": "Python-urllib",
+    "category": "unknown"
+  },
+  {
+    "name": "python-requests",
+    "pattern": "python-requests",
+    "category": "unknown"
+  },
+  {
+    "name": "aiohttp",
+    "pattern": "aiohttp",
+    "category": "extractive",
+    "operator": "docs.aiohttp.org"
+  },
+  {
+    "name": "Nineteen Ten LLC",
+    "pattern": "httpx",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "libwww-perl",
+    "pattern": "libwww-perl",
+    "category": "unknown"
+  },
+  {
+    "name": "httpunit",
+    "pattern": "httpunit",
+    "category": "unknown"
+  },
+  {
+    "name": "Find.tf",
+    "pattern": "Nutch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Go-http-client",
+    "pattern": "Go-http-client",
+    "category": "unknown",
+    "operator": "golang.org"
+  },
+  {
+    "name": "phpcrawl",
+    "pattern": "phpcrawl",
+    "category": "unknown",
+    "operator": "phpcrawl.cuab.de"
+  },
+  {
+    "name": "msnBot",
+    "pattern": "msnbot",
+    "category": "unknown",
+    "operator": "search.msn.com"
+  },
+  {
+    "name": "jyxoBot",
+    "pattern": "jyxobot",
+    "category": "unknown"
+  },
+  {
+    "name": "Gaisbot",
+    "pattern": "FAST-WebCrawler",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "FAST Enterprise Crawler",
+    "pattern": "FAST Enterprise Crawler",
+    "category": "unknown"
+  },
+  {
+    "name": "BIGLOTRON",
+    "pattern": "BIGLOTRON",
+    "category": "unknown"
+  },
+  {
+    "name": "Teoma",
+    "pattern": "Teoma",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "convera",
+    "pattern": "convera",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "seekBot",
+    "pattern": "seekbot",
+    "category": "unknown",
+    "operator": "www.seekbot.net"
+  },
+  {
+    "name": "GigaBot",
+    "pattern": "Gigabot",
+    "category": "unknown",
+    "operator": "www.gigablast.com"
+  },
+  {
+    "name": "Gigablast",
+    "pattern": "Gigablast",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "exaBot",
+    "pattern": "exabot",
+    "category": "unknown"
+  },
+  {
+    "name": "ia_archiver",
+    "pattern": "ia_archiver",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "GingerCrawler",
+    "pattern": "GingerCrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "webmon",
+    "pattern": "webmon ",
+    "category": "unknown"
+  },
+  {
+    "name": "HTTrack",
+    "pattern": "HTTrack",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "gruborg",
+    "pattern": "grub\\.org",
+    "category": "unknown"
+  },
+  {
+    "name": "UsineNouvelleCrawler",
+    "pattern": "UsineNouvelleCrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "antiBot",
+    "pattern": "antibot",
+    "category": "unknown"
+  },
+  {
+    "name": "netresearchserver",
+    "pattern": "netresearchserver",
+    "category": "unknown"
+  },
+  {
+    "name": "speedy",
+    "pattern": "speedy",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "fluffy",
+    "pattern": "fluffy",
+    "category": "unknown"
+  },
+  {
+    "name": "findlink",
+    "pattern": "findlink",
+    "category": "unknown"
+  },
+  {
+    "name": "msrBot",
+    "pattern": "msrbot",
+    "category": "unknown"
+  },
+  {
+    "name": "panscient",
+    "pattern": "panscient",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "XenForo Ltd.",
+    "pattern": "yacybot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AISearchBot",
+    "pattern": "AISearchBot",
+    "category": "extractive"
+  },
+  {
+    "name": "Microsoft Corporation",
+    "pattern": "ips-agent",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "tagooBot",
+    "pattern": "tagoobot",
+    "category": "unknown"
+  },
+  {
+    "name": "MJ12bot",
+    "pattern": "MJ12bot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "worioBot",
+    "pattern": "woriobot",
+    "category": "unknown"
+  },
+  {
+    "name": "yanga",
+    "pattern": "yanga",
+    "category": "unknown"
+  },
+  {
+    "name": "buzzBot",
+    "pattern": "buzzbot",
+    "category": "unknown"
+  },
+  {
+    "name": "mlBot",
+    "pattern": "mlbot",
+    "category": "unknown"
+  },
+  {
+    "name": "yandexcombots",
+    "pattern": "yandex\\.com\\/bots",
+    "category": "beneficial",
+    "operator": "yandex.ru"
+  },
+  {
+    "name": "pureBot",
+    "pattern": "purebot",
+    "category": "unknown"
+  },
+  {
+    "name": "Linguee Bot",
+    "pattern": "Linguee Bot",
+    "category": "unknown",
+    "operator": "www.linguee.com"
+  },
+  {
+    "name": "CyberPatrol",
+    "pattern": "CyberPatrol",
+    "category": "unknown",
+    "operator": "www.cyberpatrol.com"
+  },
+  {
+    "name": "voilaBot",
+    "pattern": "voilabot",
+    "category": "unknown"
+  },
+  {
+    "name": "Baiduspider",
+    "pattern": "Baiduspider",
+    "category": "beneficial",
+    "operator": "Baidu",
+    "purpose": "Search"
+  },
+  {
+    "name": "citeseerxBot",
+    "pattern": "citeseerxbot",
+    "category": "unknown"
+  },
+  {
+    "name": "Openindex B.V.",
+    "pattern": "spbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "twengaBot",
+    "pattern": "twengabot",
+    "category": "unknown",
+    "operator": "www.twenga.com"
+  },
+  {
+    "name": "postrank",
+    "pattern": "postrank",
+    "category": "unknown",
+    "operator": "www.postrank.com"
+  },
+  {
+    "name": "Turnitin",
+    "pattern": "Turnitin",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "scribdBot",
+    "pattern": "scribdbot",
+    "category": "unknown",
+    "operator": "www.scribd.com"
+  },
+  {
+    "name": "pagerss",
+    "pattern": "page2rss",
+    "category": "unknown",
+    "operator": "www.page2rss.com"
+  },
+  {
+    "name": "siteBot",
+    "pattern": "sitebot",
+    "category": "unknown",
+    "operator": "www.sitebot.org"
+  },
+  {
+    "name": "linkdex",
+    "pattern": "linkdex",
+    "category": "unknown",
+    "operator": "www.linkdex.com"
+  },
+  {
+    "name": "AdidxBot",
+    "pattern": "Adidxbot",
+    "category": "unknown",
+    "operator": "www.bing.com"
+  },
+  {
+    "name": "ezooms",
+    "pattern": "ezooms",
+    "category": "unknown",
+    "operator": "www.phpbb.com"
+  },
+  {
+    "name": "dotBot",
+    "pattern": "dotbot",
+    "category": "unknown"
+  },
+  {
+    "name": "MailRU_Bot",
+    "pattern": "Mail\\.RU_Bot",
+    "category": "extractive"
+  },
+  {
+    "name": "DAZOO.FR",
+    "pattern": "discobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Reply!, Inc.",
+    "pattern": "heritrix",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "findthatfile",
+    "pattern": "findthatfile",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "europarchiveorg",
+    "pattern": "europarchive\\.org",
+    "category": "unknown"
+  },
+  {
+    "name": "NerdByNatureBot",
+    "pattern": "NerdByNature\\.Bot",
+    "category": "unknown",
+    "operator": "www.nerdbynature.net"
+  },
+  {
+    "name": "sistrix|SISTRIX cCrawler",
+    "pattern": "(sistrix|SISTRIX) [cC]rawler",
+    "category": "unknown",
+    "operator": "www.sistrix.com"
+  },
+  {
+    "name": "AhrefsBot|SiteAudit",
+    "pattern": "Ahrefs(Bot|SiteAudit)",
+    "category": "extractive"
+  },
+  {
+    "name": "fuelBot",
+    "pattern": "fuelbot",
+    "category": "unknown"
+  },
+  {
+    "name": "CrunchBot",
+    "pattern": "CrunchBot",
+    "category": "unknown"
+  },
+  {
+    "name": "IndeedBot",
+    "pattern": "IndeedBot",
+    "category": "unknown"
+  },
+  {
+    "name": "mappydata",
+    "pattern": "mappydata",
+    "category": "unknown"
+  },
+  {
+    "name": "PiplBot",
+    "pattern": "woobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ZoominfoBot",
+    "pattern": "ZoominfoBot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "PrivacyAwareBot",
+    "pattern": "PrivacyAwareBot",
+    "category": "unknown"
+  },
+  {
+    "name": "MultiviewBot",
+    "pattern": "Multiviewbot",
+    "category": "unknown"
+  },
+  {
+    "name": "SWIMGBot",
+    "pattern": "SWIMGBot",
+    "category": "unknown"
+  },
+  {
+    "name": "GrobBot",
+    "pattern": "Grobbot",
+    "category": "unknown"
+  },
+  {
+    "name": "eright",
+    "pattern": "eright",
+    "category": "unknown"
+  },
+  {
+    "name": "Apercite",
+    "pattern": "Apercite",
+    "category": "unknown"
+  },
+  {
+    "name": "semanticBot",
+    "pattern": "semanticbot",
+    "category": "unknown"
+  },
+  {
+    "name": "Online Media Group, Inc.",
+    "pattern": "Aboundex",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "domaincrawler",
+    "pattern": "domaincrawler",
+    "category": "extractive"
+  },
+  {
+    "name": "wbsearchBot",
+    "pattern": "wbsearchbot",
+    "category": "unknown",
+    "operator": "www.warebay.com"
+  },
+  {
+    "name": "summify",
+    "pattern": "summify",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "CCBot",
+    "pattern": "CCBot",
+    "category": "extractive",
+    "operator": "Common Crawl",
+    "purpose": "Archive"
+  },
+  {
+    "name": "edisterBot",
+    "pattern": "edisterbot",
+    "category": "unknown"
+  },
+  {
+    "name": "SeznamBot",
+    "pattern": "SeznamBot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "eclinkfinder",
+    "pattern": "ec2linkfinder",
+    "category": "unknown"
+  },
+  {
+    "name": "gslfBot",
+    "pattern": "gslfbot",
+    "category": "unknown"
+  },
+  {
+    "name": "Domainstats Ltd",
+    "pattern": "aiHitBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "intelium_Bot",
+    "pattern": "intelium_bot",
+    "category": "unknown"
+  },
+  {
+    "name": "facebookexternalhit",
+    "pattern": "facebookexternalhit",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Yeti",
+    "pattern": "Yeti",
+    "category": "unknown",
+    "operator": "naver.me"
+  },
+  {
+    "name": "RetrevoPageAnalyzer",
+    "pattern": "RetrevoPageAnalyzer",
+    "category": "unknown"
+  },
+  {
+    "name": "lb-spider",
+    "pattern": "lb-spider",
+    "category": "unknown"
+  },
+  {
+    "name": "Sogou",
+    "pattern": "Sogou",
+    "category": "unknown",
+    "operator": "www.sogou.com"
+  },
+  {
+    "name": "lssBot",
+    "pattern": "lssbot",
+    "category": "unknown",
+    "operator": "www.lssbot.com"
+  },
+  {
+    "name": "careerBot",
+    "pattern": "careerbot",
+    "category": "unknown",
+    "operator": "www.career-x.de"
+  },
+  {
+    "name": "wotbox",
+    "pattern": "wotbox",
+    "category": "unknown",
+    "operator": "www.wotbox.com"
+  },
+  {
+    "name": "wocBot",
+    "pattern": "wocbot",
+    "category": "unknown",
+    "operator": "www.wocodi.com"
+  },
+  {
+    "name": "Pompos",
+    "pattern": "ichiro",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DuckDuckBot",
+    "pattern": "DuckDuckBot",
+    "category": "beneficial",
+    "operator": "DuckDuckGo",
+    "purpose": "Search"
+  },
+  {
+    "name": "lssrocketcrawler",
+    "pattern": "lssrocketcrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "drupact",
+    "pattern": "drupact",
+    "category": "unknown",
+    "operator": "www.arocom.de"
+  },
+  {
+    "name": "webcompanycrawler",
+    "pattern": "webcompanycrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "acoonBot",
+    "pattern": "acoonbot",
+    "category": "unknown",
+    "operator": "www.acoon.de"
+  },
+  {
+    "name": "openindexspider",
+    "pattern": "openindexspider",
+    "category": "unknown",
+    "operator": "www.openindex.io"
+  },
+  {
+    "name": "gnam gnam spider",
+    "pattern": "gnam gnam spider",
+    "category": "unknown"
+  },
+  {
+    "name": "web-archive-netcomBot",
+    "pattern": "web-archive-net\\.com\\.bot",
+    "category": "unknown"
+  },
+  {
+    "name": "backlinkcrawler",
+    "pattern": "backlinkcrawler",
+    "category": "extractive",
+    "operator": "www.backlinktest.com"
+  },
+  {
+    "name": "coccoc",
+    "pattern": "coccoc",
+    "category": "unknown",
+    "operator": "help.coccoc.vn"
+  },
+  {
+    "name": "integromedb",
+    "pattern": "integromedb",
+    "category": "unknown",
+    "operator": "www.integromedb.org"
+  },
+  {
+    "name": "content crawler spider",
+    "pattern": "content crawler spider",
+    "category": "unknown"
+  },
+  {
+    "name": "toplistBot",
+    "pattern": "toplistbot",
+    "category": "unknown"
+  },
+  {
+    "name": "itmedia-domain-crawler",
+    "pattern": "it2media-domain-crawler",
+    "category": "extractive"
+  },
+  {
+    "name": "ip-web-crawlercom",
+    "pattern": "ip-web-crawler\\.com",
+    "category": "unknown"
+  },
+  {
+    "name": "siteexplorerinfo",
+    "pattern": "siteexplorer\\.info",
+    "category": "unknown"
+  },
+  {
+    "name": "elisaBot",
+    "pattern": "elisabot",
+    "category": "unknown"
+  },
+  {
+    "name": "proximic",
+    "pattern": "proximic",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "changedetection",
+    "pattern": "changedetection",
+    "category": "unknown",
+    "operator": "www.changedetection.com"
+  },
+  {
+    "name": "araBot",
+    "pattern": "arabot",
+    "category": "unknown"
+  },
+  {
+    "name": "WeSEE:Search",
+    "pattern": "WeSEE:Search",
+    "category": "unknown"
+  },
+  {
+    "name": "niki-Bot",
+    "pattern": "niki-bot",
+    "category": "unknown"
+  },
+  {
+    "name": "researchcyber.net",
+    "pattern": "CrystalSemanticsBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "F-Secure",
+    "pattern": "rogerbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "360Spider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Paessler AG",
+    "pattern": "psbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "InterfaxScanBot",
+    "pattern": "InterfaxScanBot",
+    "category": "malicious",
+    "operator": "scan-interfax.ru"
+  },
+  {
+    "name": "CC Metadata Scaper",
+    "pattern": "CC Metadata Scaper",
+    "category": "unknown",
+    "operator": "wiki.creativecommons.org"
+  },
+  {
+    "name": "ggenet",
+    "pattern": "g00g1e\\.net",
+    "category": "unknown",
+    "operator": "www.g00g1e.net"
+  },
+  {
+    "name": "Lets Encrypt",
+    "pattern": "GrapeshotCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "urlappendBot",
+    "pattern": "urlappendbot",
+    "category": "unknown",
+    "operator": "www.profound.net"
+  },
+  {
+    "name": "brainoBot",
+    "pattern": "brainobot",
+    "category": "extractive"
+  },
+  {
+    "name": "fr-crawler",
+    "pattern": "fr-crawler",
+    "category": "unknown"
+  },
+  {
+    "name": "binlar",
+    "pattern": "binlar",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "SimpleCrawler",
+    "pattern": "SimpleCrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "Twitterbot",
+    "pattern": "Twitterbot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "cXenseBot",
+    "pattern": "cXensebot",
+    "category": "unknown",
+    "operator": "www.cxense.com"
+  },
+  {
+    "name": "smtBot",
+    "pattern": "smtbot",
+    "category": "unknown",
+    "operator": "www.similartech.com"
+  },
+  {
+    "name": "bnffr_Bot",
+    "pattern": "bnf\\.fr_bot",
+    "category": "unknown",
+    "operator": "www.bnf.fr"
+  },
+  {
+    "name": "A-Indexer",
+    "pattern": "A6-Indexer",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ADmantX",
+    "pattern": "ADmantX",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "FaceBot",
+    "pattern": "Facebot",
+    "category": "unknown",
+    "operator": "developers.facebook.com"
+  },
+  {
+    "name": "OrangeBot",
+    "pattern": "OrangeBot\\/",
+    "category": "unknown"
+  },
+  {
+    "name": "memoryBot",
+    "pattern": "memorybot",
+    "category": "unknown",
+    "operator": "mignify.com"
+  },
+  {
+    "name": "AdvBot",
+    "pattern": "AdvBot",
+    "category": "unknown",
+    "operator": "advbot.net"
+  },
+  {
+    "name": "MegaIndex",
+    "pattern": "MegaIndex",
+    "category": "extractive",
+    "operator": "www.megaindex.ru"
+  },
+  {
+    "name": "ADmantX Service Fetcher",
+    "pattern": "SemanticScholarBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LinkedIn",
+    "pattern": "ltx71",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "nerdyBot",
+    "pattern": "nerdybot",
+    "category": "unknown",
+    "operator": "nerdybot.com"
+  },
+  {
+    "name": "xoviBot",
+    "pattern": "xovibot",
+    "category": "unknown",
+    "operator": "www.xovibot.net"
+  },
+  {
+    "name": "Browsershots.org",
+    "pattern": "BUbiNG",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Qwantify",
+    "pattern": "Qwantify",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "archiveorg_Bot",
+    "pattern": "archive\\.org_bot",
+    "category": "unknown",
+    "operator": "www.archive.org"
+  },
+  {
+    "name": "The Apache Software Foundation",
+    "pattern": "Applebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TweetedTimes",
+    "pattern": "TweetmemeBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "crawlerj",
+    "pattern": "crawler4j",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "findxBot",
+    "pattern": "findxbot",
+    "category": "unknown",
+    "operator": "www.findxbot.com"
+  },
+  {
+    "name": "SeEmMrushBot",
+    "pattern": "S[eE][mM]rushBot",
+    "category": "unknown",
+    "operator": "www.semrush.com"
+  },
+  {
+    "name": "yoozBot",
+    "pattern": "yoozBot",
+    "category": "unknown",
+    "operator": "yooz.ir"
+  },
+  {
+    "name": "lipperhey",
+    "pattern": "lipperhey",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Y!J",
+    "pattern": "Y!J",
+    "category": "unknown",
+    "operator": "www.yahoo-help.jp"
+  },
+  {
+    "name": "Domain Re-Animator Bot",
+    "pattern": "Domain Re-Animator Bot",
+    "category": "extractive",
+    "operator": "domainreanimator.com"
+  },
+  {
+    "name": "AddThis",
+    "pattern": "AddThis",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Screaming Frog SEO Spider",
+    "pattern": "Screaming Frog SEO Spider",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "MetaURI",
+    "pattern": "MetaURI",
+    "category": "unknown",
+    "operator": "www.useragentstring.com"
+  },
+  {
+    "name": "Scrapy",
+    "pattern": "Scrapy",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "LivelapbBot",
+    "pattern": "Livelap[bB]ot",
+    "category": "unknown",
+    "operator": "site.livelap.com"
+  },
+  {
+    "name": "OpenHoseBot",
+    "pattern": "OpenHoseBot",
+    "category": "unknown",
+    "operator": "www.openhose.org"
+  },
+  {
+    "name": "CapsuleChecker",
+    "pattern": "CapsuleChecker",
+    "category": "unknown",
+    "operator": "www.capsulink.com"
+  },
+  {
+    "name": "Abonti",
+    "pattern": "collection@infegy\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "IstellaBot",
+    "pattern": "IstellaBot",
+    "category": "unknown",
+    "operator": "www.tiscali.it"
+  },
+  {
+    "name": "DeuSu",
+    "pattern": "DeuSu\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "betaBot",
+    "pattern": "betaBot",
+    "category": "unknown"
+  },
+  {
+    "name": "CliqzBot",
+    "pattern": "Cliqzbot\\/",
+    "category": "unknown",
+    "operator": "cliqz.com"
+  },
+  {
+    "name": "MojeekBot",
+    "pattern": "MojeekBot\\/",
+    "category": "unknown",
+    "operator": "www.mojeek.com"
+  },
+  {
+    "name": "Netcraft",
+    "pattern": "netEstate NE Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SafeSearch microdata crawler",
+    "pattern": "SafeSearch microdata crawler",
+    "category": "unknown",
+    "operator": "safesearch.avira.com"
+  },
+  {
+    "name": "Gluten Free Crawler",
+    "pattern": "Gluten Free Crawler\\/",
+    "category": "unknown",
+    "operator": "glutenfreepleasure.com"
+  },
+  {
+    "name": "Sonic",
+    "pattern": "Sonic",
+    "category": "unknown",
+    "operator": "www.yama.info.waseda.ac.jp"
+  },
+  {
+    "name": "Sysomos",
+    "pattern": "Sysomos",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Trove",
+    "pattern": "Trove",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "deadlinkchecker",
+    "pattern": "deadlinkchecker",
+    "category": "unknown",
+    "operator": "www.deadlinkchecker.com"
+  },
+  {
+    "name": "Slack-ImgProxy",
+    "pattern": "Slack-ImgProxy",
+    "category": "unknown",
+    "operator": "api.slack.com"
+  },
+  {
+    "name": "The Knowledge AI",
+    "pattern": "Embedly",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "RankActiveLinkBot",
+    "pattern": "RankActiveLinkBot",
+    "category": "unknown",
+    "operator": "rankactive.com"
+  },
+  {
+    "name": "iskanie",
+    "pattern": "iskanie",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Roihunter a.s.",
+    "pattern": "SafeDNSBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Seoscanners.net",
+    "pattern": "SkypeUriPreview",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "VeoozBot",
+    "pattern": "Veoozbot",
+    "category": "unknown",
+    "operator": "www.veooz.com"
+  },
+  {
+    "name": "SlackBot",
+    "pattern": "Slackbot",
+    "category": "unknown",
+    "operator": "api.slack.com"
+  },
+  {
+    "name": "Rainmeter",
+    "pattern": "redditbot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Choosito! Inc.",
+    "pattern": "datagnionbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google-Adwords-Instant",
+    "pattern": "Google-Adwords-Instant",
+    "category": "beneficial",
+    "operator": "www.google.com"
+  },
+  {
+    "name": "adbeat_Bot",
+    "pattern": "adbeat_bot",
+    "category": "unknown"
+  },
+  {
+    "name": "WhatsApp",
+    "pattern": "WhatsApp",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "contxBot",
+    "pattern": "contxbot",
+    "category": "unknown"
+  },
+  {
+    "name": "pinterestcomBot",
+    "pattern": "pinterest\\.com\\/bot",
+    "category": "unknown",
+    "operator": "www.pinterest.com"
+  },
+  {
+    "name": "electricmonk",
+    "pattern": "electricmonk",
+    "category": "unknown",
+    "operator": "www.duedil.com"
+  },
+  {
+    "name": "GarlikCrawler",
+    "pattern": "GarlikCrawler",
+    "category": "unknown",
+    "operator": "garlik.com"
+  },
+  {
+    "name": "BingPreview",
+    "pattern": "BingPreview\\/",
+    "category": "beneficial",
+    "operator": "www.bing.com"
+  },
+  {
+    "name": "vebidooBot",
+    "pattern": "vebidoobot",
+    "category": "unknown",
+    "operator": "blog.vebidoo.de"
+  },
+  {
+    "name": "Kleissner Investments s.r.o.",
+    "pattern": "FemtosearchBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo Link Preview",
+    "pattern": "Yahoo Link Preview",
+    "category": "unknown",
+    "operator": "help.yahoo.com"
+  },
+  {
+    "name": "Meanpath",
+    "pattern": "MetaJobBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Itteco Software, Corp.",
+    "pattern": "DomainStatsBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "mindUpBot",
+    "pattern": "mindUpBot",
+    "category": "unknown",
+    "operator": "www.datenbutler.de"
+  },
+  {
+    "name": "Daum",
+    "pattern": "Daum\\/",
+    "category": "unknown",
+    "operator": "cs.daum.net"
+  },
+  {
+    "name": "Jugendschutzprogramm-Crawler",
+    "pattern": "Jugendschutzprogramm-Crawler",
+    "category": "unknown",
+    "operator": "www.jugendschutzprogramm.de"
+  },
+  {
+    "name": "Xenu Link Sleuth",
+    "pattern": "Xenu Link Sleuth",
+    "category": "unknown",
+    "operator": "home.snafu.de"
+  },
+  {
+    "name": "Pcore-HTTP",
+    "pattern": "Pcore-HTTP",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "moatBot",
+    "pattern": "moatbot",
+    "category": "unknown",
+    "operator": "moat.com"
+  },
+  {
+    "name": "KosmioBot",
+    "pattern": "KosmioBot",
+    "category": "unknown",
+    "operator": "kosm.io"
+  },
+  {
+    "name": "pPingdom",
+    "pattern": "[pP]ingdom",
+    "category": "unknown",
+    "operator": "www.pingdom.com"
+  },
+  {
+    "name": "AppInsights",
+    "pattern": "AppInsights",
+    "category": "unknown",
+    "operator": "docs.microsoft.com"
+  },
+  {
+    "name": "PhantomJS",
+    "pattern": "PhantomJS",
+    "category": "unknown",
+    "operator": "phantomjs.org"
+  },
+  {
+    "name": "SurdotlyBot",
+    "pattern": "Gowikibot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LumtelBot",
+    "pattern": "PiplBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DataForSeoBot",
+    "pattern": "Discordbot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Tarmot Gezgin",
+    "pattern": "TelegramBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Jetslide",
+    "pattern": "Jetslide",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "newsharecounts",
+    "pattern": "newsharecounts",
+    "category": "unknown",
+    "operator": "newsharecounts.com"
+  },
+  {
+    "name": "James Bot",
+    "pattern": "James BOT",
+    "category": "unknown",
+    "operator": "cognitiveseo.com"
+  },
+  {
+    "name": "BarkrRowler",
+    "pattern": "Bark[rR]owler",
+    "category": "unknown",
+    "operator": "www.exensa.com"
+  },
+  {
+    "name": "Chronicle Security Ireland Limited",
+    "pattern": "TinEye",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SocialRankIOBot",
+    "pattern": "SocialRankIOBot",
+    "category": "unknown",
+    "operator": "socialrank.io"
+  },
+  {
+    "name": "Chartable",
+    "pattern": "trendictionbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "OcarinaBot",
+    "pattern": "Ocarinabot",
+    "category": "unknown"
+  },
+  {
+    "name": "epicBot",
+    "pattern": "epicbot",
+    "category": "unknown",
+    "operator": "www.epictions.com"
+  },
+  {
+    "name": "PrimalBot",
+    "pattern": "Primalbot",
+    "category": "unknown",
+    "operator": "www.primal.com"
+  },
+  {
+    "name": "DuckDuckGo-Favicons-Bot",
+    "pattern": "DuckDuckGo-Favicons-Bot",
+    "category": "unknown",
+    "operator": "duckduckgo.com"
+  },
+  {
+    "name": "GnowitNewsBot",
+    "pattern": "GnowitNewsbot",
+    "category": "unknown",
+    "operator": "www.gnowit.com"
+  },
+  {
+    "name": "LeikiBot",
+    "pattern": "Leikibot",
+    "category": "unknown",
+    "operator": "www.leiki.com"
+  },
+  {
+    "name": "LinkArchiver",
+    "pattern": "LinkArchiver",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "YaK",
+    "pattern": "YaK\\/",
+    "category": "unknown",
+    "operator": "linkfluence.com"
+  },
+  {
+    "name": "Orange",
+    "pattern": "PaperLiBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Digg Deeper",
+    "pattern": "Digg Deeper",
+    "category": "unknown",
+    "operator": "digg.com"
+  },
+  {
+    "name": "dcrawl",
+    "pattern": "dcrawl",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "Snacktory",
+    "pattern": "Snacktory",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "AndersPinkBot",
+    "pattern": "AndersPinkBot",
+    "category": "unknown",
+    "operator": "anderspink.com"
+  },
+  {
+    "name": "FyreBot",
+    "pattern": "Fyrebot",
+    "category": "unknown"
+  },
+  {
+    "name": "EveryoneSocialBot",
+    "pattern": "EveryoneSocialBot",
+    "category": "unknown",
+    "operator": "everyonesocial.com"
+  },
+  {
+    "name": "Odnoklassniki Bot",
+    "pattern": "Mediatoolkitbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Luminator-robots",
+    "pattern": "Luminator-robots",
+    "category": "unknown"
+  },
+  {
+    "name": "ExtLinksBot",
+    "pattern": "ExtLinksBot",
+    "category": "unknown",
+    "operator": "extlinks.com"
+  },
+  {
+    "name": "Sputnik Image Bot",
+    "pattern": "SurveyBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NING",
+    "pattern": "NING\\/",
+    "category": "unknown"
+  },
+  {
+    "name": "okhttp",
+    "pattern": "okhttp",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Nmap",
+    "pattern": "Nuzzel",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "omgili",
+    "pattern": "omgili",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "PocketParser",
+    "pattern": "PocketParser",
+    "category": "unknown",
+    "operator": "getpocket.com"
+  },
+  {
+    "name": "YisouSpider",
+    "pattern": "YisouSpider",
+    "category": "unknown"
+  },
+  {
+    "name": "um-LN",
+    "pattern": "um-LN",
+    "category": "unknown"
+  },
+  {
+    "name": "ToutiaoSpider",
+    "pattern": "ToutiaoSpider",
+    "category": "unknown",
+    "operator": "web.toutiao.com"
+  },
+  {
+    "name": "The Wikimedia Foundation, Inc.",
+    "pattern": "MuckRack",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Jamie's Spider",
+    "pattern": "Jamie's Spider",
+    "category": "unknown",
+    "operator": "jamiembrown.com"
+  },
+  {
+    "name": "AHC",
+    "pattern": "AHC\\/",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "NetcraftSurveyAgent",
+    "pattern": "NetcraftSurveyAgent",
+    "category": "unknown"
+  },
+  {
+    "name": "LaserlikeBot",
+    "pattern": "Laserlikebot",
+    "category": "unknown"
+  },
+  {
+    "name": "^Apache-HttpClient",
+    "pattern": "^Apache-HttpClient",
+    "category": "unknown"
+  },
+  {
+    "name": "AppEngine-Google",
+    "pattern": "AppEngine-Google",
+    "category": "beneficial"
+  },
+  {
+    "name": "Jetty",
+    "pattern": "Jetty",
+    "category": "unknown"
+  },
+  {
+    "name": "Upflow",
+    "pattern": "Upflow",
+    "category": "unknown"
+  },
+  {
+    "name": "Thinklab",
+    "pattern": "Thinklab",
+    "category": "unknown"
+  },
+  {
+    "name": "Traackrcom",
+    "pattern": "Traackr\\.com",
+    "category": "unknown",
+    "operator": "www.traackr.com"
+  },
+  {
+    "name": "Twurly",
+    "pattern": "Twurly",
+    "category": "unknown",
+    "operator": "twurly.org"
+  },
+  {
+    "name": "Mastodon",
+    "pattern": "Mastodon",
+    "category": "unknown"
+  },
+  {
+    "name": "http_get",
+    "pattern": "http_get",
+    "category": "unknown"
+  },
+  {
+    "name": "DnyzBot",
+    "pattern": "DnyzBot",
+    "category": "unknown"
+  },
+  {
+    "name": "Particify Gerhardt & Weingarten OHG",
+    "pattern": "botify",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ac Crawler",
+    "pattern": "007ac9 Crawler",
+    "category": "unknown"
+  },
+  {
+    "name": "BehloolBot",
+    "pattern": "BehloolBot",
+    "category": "unknown"
+  },
+  {
+    "name": "A Medium, Corp.",
+    "pattern": "BrandVerity",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "check_http",
+    "pattern": "check_http",
+    "category": "unknown"
+  },
+  {
+    "name": "Barkrowler",
+    "pattern": "BDCbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Hwacha ApS",
+    "pattern": "ZumBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "EZID",
+    "pattern": "EZID",
+    "category": "unknown"
+  },
+  {
+    "name": "towards GmbH",
+    "pattern": "ICC-Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ArchiveBot",
+    "pattern": "ArchiveBot",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "^LCC",
+    "pattern": "^LCC ",
+    "category": "unknown",
+    "operator": "corpora.informatik.uni-leipzig.de"
+  },
+  {
+    "name": "filterdbissnetcrawler",
+    "pattern": "filterdb\\.iss\\.net\\/crawler",
+    "category": "unknown",
+    "operator": "filterdb.iss.net"
+  },
+  {
+    "name": "BLP_bBot",
+    "pattern": "BLP_bbot",
+    "category": "unknown"
+  },
+  {
+    "name": "BomboraBot",
+    "pattern": "BomboraBot",
+    "category": "unknown",
+    "operator": "www.bombora.com"
+  },
+  {
+    "name": "Buck",
+    "pattern": "Buck\\/",
+    "category": "unknown",
+    "operator": "app.hypefactors.com"
+  },
+  {
+    "name": "Companybook-Crawler",
+    "pattern": "Companybook-Crawler",
+    "category": "unknown",
+    "operator": "www.companybooknetworking.com"
+  },
+  {
+    "name": "FreshRSS",
+    "pattern": "Genieo",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "magpie-crawler",
+    "pattern": "magpie-crawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "MADBbot",
+    "pattern": "MeltwaterNews",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Moreover",
+    "pattern": "Moreover",
+    "category": "unknown",
+    "operator": "www.moreover.com"
+  },
+  {
+    "name": "newspaper",
+    "pattern": "newspaper\\/",
+    "category": "unknown"
+  },
+  {
+    "name": "Speedy",
+    "pattern": "ScoutJet",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "^| sentry",
+    "pattern": "(^| )sentry\\/",
+    "category": "unknown",
+    "operator": "sentry.io"
+  },
+  {
+    "name": "StorygizeBot",
+    "pattern": "StorygizeBot",
+    "category": "unknown",
+    "operator": "www.storygize.com"
+  },
+  {
+    "name": "Uptime",
+    "pattern": "UptimeRobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "OutclicksBot",
+    "pattern": "OutclicksBot",
+    "category": "unknown",
+    "operator": "www.outclicks.net"
+  },
+  {
+    "name": "seoscanners",
+    "pattern": "seoscanners",
+    "category": "extractive",
+    "operator": "github.com"
+  },
+  {
+    "name": "Hatena",
+    "pattern": "Hatena",
+    "category": "unknown"
+  },
+  {
+    "name": "Google Web Preview",
+    "pattern": "Google Web Preview",
+    "category": "beneficial"
+  },
+  {
+    "name": "MauiBot",
+    "pattern": "MauiBot",
+    "category": "unknown"
+  },
+  {
+    "name": "AlphaBot",
+    "pattern": "AlphaBot",
+    "category": "unknown",
+    "operator": "alphaseobot.com"
+  },
+  {
+    "name": "SBL-Bot",
+    "pattern": "SBL-BOT",
+    "category": "unknown",
+    "operator": "sbl.net"
+  },
+  {
+    "name": "IAS crawler",
+    "pattern": "IAS crawler",
+    "category": "unknown",
+    "operator": "integralads.com"
+  },
+  {
+    "name": "BOTIFY SAS",
+    "pattern": "adscanner",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "netEstate GmbH",
+    "pattern": "Netvibes",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "acapBot",
+    "pattern": "acapbot",
+    "category": "unknown"
+  },
+  {
+    "name": "Baidu-YunGuanCe",
+    "pattern": "Baidu-YunGuanCe",
+    "category": "extractive",
+    "operator": "ce.baidu.com"
+  },
+  {
+    "name": "Catchpoint Systems",
+    "pattern": "bitlybot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "blogmuraBot",
+    "pattern": "blogmuraBot",
+    "category": "unknown",
+    "operator": "www.blogmura.com"
+  },
+  {
+    "name": "BotAraTurkacom",
+    "pattern": "Bot\\.AraTurka\\.com",
+    "category": "unknown",
+    "operator": "www.araturka.com"
+  },
+  {
+    "name": "bot-pgechlooecom",
+    "pattern": "bot-pge\\.chlooe\\.com",
+    "category": "unknown"
+  },
+  {
+    "name": "BoxcarBot",
+    "pattern": "BoxcarBot",
+    "category": "unknown",
+    "operator": "boxcar.io"
+  },
+  {
+    "name": "BTWebClient",
+    "pattern": "BTWebClient",
+    "category": "unknown",
+    "operator": "www.utorrent.com"
+  },
+  {
+    "name": "ContextAd Bot",
+    "pattern": "ContextAd Bot",
+    "category": "unknown"
+  },
+  {
+    "name": "Digincore Bot",
+    "pattern": "Digincore bot",
+    "category": "unknown",
+    "operator": "www.digincore.com"
+  },
+  {
+    "name": "Disqus",
+    "pattern": "Disqus",
+    "category": "unknown",
+    "operator": "disqus.com"
+  },
+  {
+    "name": "David Smith & Developing Perspective, LLC",
+    "pattern": "Feedly",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Fetch",
+    "pattern": "Fetch\\/",
+    "category": "unknown"
+  },
+  {
+    "name": "Fever",
+    "pattern": "Fever",
+    "category": "unknown",
+    "operator": "feedafever.com"
+  },
+  {
+    "name": "Flamingo_SearchEngine",
+    "pattern": "Flamingo_SearchEngine",
+    "category": "unknown"
+  },
+  {
+    "name": "FlipboardProxy",
+    "pattern": "FlipboardProxy",
+    "category": "unknown",
+    "operator": "about.flipboard.com"
+  },
+  {
+    "name": "greader-Bot",
+    "pattern": "g2reader-bot",
+    "category": "unknown",
+    "operator": "www.g2reader.com"
+  },
+  {
+    "name": "G Web Services",
+    "pattern": "G2 Web Services",
+    "category": "unknown",
+    "operator": "www.g2webservices.com"
+  },
+  {
+    "name": "imrBot",
+    "pattern": "imrbot",
+    "category": "unknown",
+    "operator": "www.mignify.com"
+  },
+  {
+    "name": "KMLWCBot",
+    "pattern": "K7MLWCBot",
+    "category": "unknown",
+    "operator": "www.k7computing.com"
+  },
+  {
+    "name": "KemviBot",
+    "pattern": "Kemvibot",
+    "category": "unknown",
+    "operator": "kemvi.com"
+  },
+  {
+    "name": "Landau-Media-Spider",
+    "pattern": "Landau-Media-Spider",
+    "category": "unknown",
+    "operator": "bots.landaumedia.de"
+  },
+  {
+    "name": "linkapediaBot",
+    "pattern": "linkapediabot",
+    "category": "unknown",
+    "operator": "www.linkapedia.com"
+  },
+  {
+    "name": "vkShare",
+    "pattern": "vkShare",
+    "category": "unknown",
+    "operator": "vk.com"
+  },
+  {
+    "name": "Siteimprovecom",
+    "pattern": "Siteimprove\\.com",
+    "category": "unknown"
+  },
+  {
+    "name": "BLEXBot",
+    "pattern": "BLEXBot\\/",
+    "category": "unknown",
+    "operator": "webmeup-crawler.com"
+  },
+  {
+    "name": "DareBoost",
+    "pattern": "DareBoost",
+    "category": "unknown",
+    "operator": "www.dareboost.com"
+  },
+  {
+    "name": "ZuperlistBot",
+    "pattern": "ZuperlistBot\\/",
+    "category": "unknown"
+  },
+  {
+    "name": "Miniflux",
+    "pattern": "Miniflux\\/",
+    "category": "unknown",
+    "operator": "miniflux.net"
+  },
+  {
+    "name": "Feedly",
+    "pattern": "Feedspot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DiffBot",
+    "pattern": "Diffbot\\/",
+    "category": "unknown",
+    "operator": "www.diffbot.com"
+  },
+  {
+    "name": "SEOkicks",
+    "pattern": "SEOkicks",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "Hypefactors A/S",
+    "pattern": "tracemyfile",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Parsely, Inc.",
+    "pattern": "Nimbostratus-Bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "YunYun",
+    "pattern": "zgrab",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PR-CYRU",
+    "pattern": "PR-CY\\.RU",
+    "category": "unknown",
+    "operator": "a.pr-cy.ru"
+  },
+  {
+    "name": "AdsTxtCrawler",
+    "pattern": "AdsTxtCrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "Datafeedwatch",
+    "pattern": "Datafeedwatch",
+    "category": "unknown",
+    "operator": "www.datafeedwatch.com"
+  },
+  {
+    "name": "Zabbix",
+    "pattern": "Zabbix",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "TangibleeBot",
+    "pattern": "TangibleeBot",
+    "category": "unknown",
+    "operator": "tangiblee.com"
+  },
+  {
+    "name": "google-xrawler",
+    "pattern": "google-xrawler",
+    "category": "beneficial",
+    "operator": "webmasters.stackexchange.com"
+  },
+  {
+    "name": "axios",
+    "pattern": "axios",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "Amazon CloudFront",
+    "pattern": "Amazon CloudFront",
+    "category": "unknown",
+    "operator": "aws.amazon.com"
+  },
+  {
+    "name": "Pulsepoint",
+    "pattern": "Pulsepoint",
+    "category": "unknown"
+  },
+  {
+    "name": "Cloudflare",
+    "pattern": "CloudFlare-AlwaysOnline",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Plesk International GmbH",
+    "pattern": "Cloudflare-Healthchecks",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "Cloudflare-Traffic-Manager",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare-Prefetch",
+    "pattern": "CloudFlare-Prefetch",
+    "category": "unknown",
+    "operator": "developers.cloudflare.com"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "Cloudflare-SSLDetector",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "https:developerscloudflarecomsecurity-center",
+    "pattern": "https:\\/\\/developers\\.cloudflare\\.com\\/security-center\\/",
+    "category": "unknown",
+    "operator": "developers.cloudflare.com"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google-Structured-Data-Testing-Tool",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "WordupInfoSearch",
+    "pattern": "WordupInfoSearch",
+    "category": "unknown"
+  },
+  {
+    "name": "Notify Ninja",
+    "pattern": "WebDataStats",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "HttpUrlConnection",
+    "pattern": "HttpUrlConnection",
+    "category": "unknown"
+  },
+  {
+    "name": "National Szechenyi Library",
+    "pattern": "ZoomBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Semantic Scholar Bot",
+    "pattern": "VelenPublicWebCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MoodleBot",
+    "pattern": "MoodleBot",
+    "category": "unknown"
+  },
+  {
+    "name": "jpg-newsBot",
+    "pattern": "jpg-newsbot",
+    "category": "unknown",
+    "operator": "vipnytt.no"
+  },
+  {
+    "name": "outbrain",
+    "pattern": "outbrain",
+    "category": "extractive",
+    "operator": "www.outbrain.com"
+  },
+  {
+    "name": "WC_Validator",
+    "pattern": "W3C_Validator",
+    "category": "unknown",
+    "operator": "validator.w3.org"
+  },
+  {
+    "name": "Validatornu",
+    "pattern": "Validator\\.nu",
+    "category": "unknown",
+    "operator": "validator.w3.org"
+  },
+  {
+    "name": "W3C",
+    "pattern": "W3C-checklink",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "W3C",
+    "pattern": "W3C-mobileOK",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "W3C",
+    "pattern": "W3C_I18n-Checker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "FeedValidator",
+    "pattern": "FeedValidator",
+    "category": "unknown",
+    "operator": "validator.w3.org"
+  },
+  {
+    "name": "WC_CSS_Validator",
+    "pattern": "W3C_CSS_Validator",
+    "category": "unknown",
+    "operator": "validator.w3.org"
+  },
+  {
+    "name": "W3C",
+    "pattern": "W3C_Unicorn",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google-PhysicalWeb",
+    "pattern": "Google-PhysicalWeb",
+    "category": "beneficial"
+  },
+  {
+    "name": "Blackboard",
+    "pattern": "Blackboard",
+    "category": "unknown",
+    "operator": "help.blackboard.com"
+  },
+  {
+    "name": "ICBot",
+    "pattern": "ICBot\\/",
+    "category": "unknown",
+    "operator": "ideasandcode.xyz"
+  },
+  {
+    "name": "Baidu",
+    "pattern": "BazQux",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Twingly",
+    "pattern": "Twingly",
+    "category": "unknown",
+    "operator": "twingly.com"
+  },
+  {
+    "name": "Rivva",
+    "pattern": "Rivva",
+    "category": "unknown",
+    "operator": "rivva.de"
+  },
+  {
+    "name": "ExperiBot",
+    "pattern": "Experibot",
+    "category": "unknown",
+    "operator": "amirkr.wixsite.com"
+  },
+  {
+    "name": "awesomecrawler",
+    "pattern": "awesomecrawler",
+    "category": "unknown"
+  },
+  {
+    "name": "Dataprovidercom",
+    "pattern": "Dataprovider\\.com",
+    "category": "unknown",
+    "operator": "www.dataprovider.com"
+  },
+  {
+    "name": "GroupHigh",
+    "pattern": "GroupHigh\\/",
+    "category": "unknown",
+    "operator": "www.grouphigh.com"
+  },
+  {
+    "name": "Tiny Tiny RSS",
+    "pattern": "theoldreader\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AnyEvent",
+    "pattern": "AnyEvent",
+    "category": "unknown",
+    "operator": "software.schmorp.de"
+  },
+  {
+    "name": "Uptimebotorg",
+    "pattern": "Uptimebot\\.org",
+    "category": "unknown",
+    "operator": "uptimebot.org"
+  },
+  {
+    "name": "Northern Light",
+    "pattern": "Nmap Scripting Engine",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ipru",
+    "pattern": "2ip\\.ru",
+    "category": "unknown",
+    "operator": "2ip.ru"
+  },
+  {
+    "name": "fragFINN e.V.",
+    "pattern": "Clickagy",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CaliperBot",
+    "pattern": "Caliperbot",
+    "category": "unknown",
+    "operator": "www.conductor.com"
+  },
+  {
+    "name": "SiteScore",
+    "pattern": "MBCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AdScanner d.o.o",
+    "pattern": "online-webceo-bot",
+    "category": "malicious",
+    "operator": "various"
+  },
+  {
+    "name": "BB Bot",
+    "pattern": "B2B Bot",
+    "category": "unknown"
+  },
+  {
+    "name": "AddSearchBot",
+    "pattern": "AddSearchBot",
+    "category": "unknown",
+    "operator": "www.addsearch.com"
+  },
+  {
+    "name": "Google StoreBot",
+    "pattern": "Google Favicon",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "HubSpot",
+    "pattern": "HubSpot",
+    "category": "unknown"
+  },
+  {
+    "name": "Chrome-Lighthouse",
+    "pattern": "Chrome-Lighthouse",
+    "category": "unknown",
+    "operator": "developers.google.com"
+  },
+  {
+    "name": "HeadlessChrome",
+    "pattern": "HeadlessChrome",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "CheckMarkNetwork",
+    "pattern": "CheckMarkNetwork\\/",
+    "category": "unknown",
+    "operator": "www.checkmarknetwork.com"
+  },
+  {
+    "name": "wwwuptimecom",
+    "pattern": "www\\.uptime\\.com",
+    "category": "unknown",
+    "operator": "www.uptime.com"
+  },
+  {
+    "name": "StreamlineBot",
+    "pattern": "Streamline3Bot\\/",
+    "category": "unknown",
+    "operator": "www.ubtsupport.com"
+  },
+  {
+    "name": "serpstatBot",
+    "pattern": "serpstatbot\\/",
+    "category": "unknown",
+    "operator": "serpstatbot.com"
+  },
+  {
+    "name": "MixnodeCache",
+    "pattern": "MixnodeCache\\/",
+    "category": "unknown",
+    "operator": "cache.mixnode.com"
+  },
+  {
+    "name": "^curl",
+    "pattern": "^curl",
+    "category": "unknown",
+    "operator": "curl.haxx.se"
+  },
+  {
+    "name": "SimpleScraper",
+    "pattern": "SimpleScraper",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "RSSingBot",
+    "pattern": "RSSingBot",
+    "category": "unknown",
+    "operator": "www.rssing.com"
+  },
+  {
+    "name": "JoobleBot",
+    "pattern": "Jooblebot",
+    "category": "unknown",
+    "operator": "jooble.org"
+  },
+  {
+    "name": "fedoraplanet",
+    "pattern": "fedoraplanet",
+    "category": "unknown",
+    "operator": "fedoraplanet.org"
+  },
+  {
+    "name": "Friendica",
+    "pattern": "Friendica",
+    "category": "unknown",
+    "operator": "hoyer.xyz"
+  },
+  {
+    "name": "NextCloud",
+    "pattern": "NextCloud",
+    "category": "unknown",
+    "operator": "nextcloud.com"
+  },
+  {
+    "name": "Idée Inc.",
+    "pattern": "Tiny Tiny RSS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "RegionStuttgartBot",
+    "pattern": "RegionStuttgartBot",
+    "category": "unknown",
+    "operator": "it.region-stuttgart.de"
+  },
+  {
+    "name": "Bytespider",
+    "pattern": "Bytespider",
+    "category": "extractive",
+    "operator": "ByteDance",
+    "purpose": "Training"
+  },
+  {
+    "name": "Datadog",
+    "pattern": "Datanyze",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google-Site-Verification",
+    "pattern": "Google-Site-Verification",
+    "category": "beneficial",
+    "operator": "support.google.com"
+  },
+  {
+    "name": "Vistex LTD",
+    "pattern": "TrendsmapResolver",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "tweetedtimes",
+    "pattern": "tweetedtimes",
+    "category": "unknown",
+    "operator": "tweetedtimes.com"
+  },
+  {
+    "name": "NTENTBot",
+    "pattern": "NTENTbot",
+    "category": "unknown",
+    "operator": "ntent.com"
+  },
+  {
+    "name": "Gwene",
+    "pattern": "Gwene",
+    "category": "unknown",
+    "operator": "gwene.org"
+  },
+  {
+    "name": "SilverReader",
+    "pattern": "SimplePie",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SearchAtlas",
+    "pattern": "SearchAtlas",
+    "category": "unknown",
+    "operator": "SearchAtlas.com"
+  },
+  {
+    "name": "Superfeedr",
+    "pattern": "Superfeedr",
+    "category": "unknown",
+    "operator": "superfeedr.com"
+  },
+  {
+    "name": "feedBot",
+    "pattern": "feedbot",
+    "category": "unknown",
+    "operator": "wp.com"
+  },
+  {
+    "name": "UT-DorkBot",
+    "pattern": "UT-Dorkbot",
+    "category": "unknown",
+    "operator": "security.utexas.edu"
+  },
+  {
+    "name": "Amazonbot",
+    "pattern": "Amazonbot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Petal Bot",
+    "pattern": "SerendeputyBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "EyeotaBot",
+    "pattern": "Eyeotabot",
+    "category": "unknown",
+    "operator": "www.eyeota.com"
+  },
+  {
+    "name": "officestoreBot",
+    "pattern": "officestorebot",
+    "category": "unknown",
+    "operator": "aka.ms"
+  },
+  {
+    "name": "Neticle Crawler",
+    "pattern": "Neticle Crawler",
+    "category": "unknown",
+    "operator": "neticle.com"
+  },
+  {
+    "name": "Comscore",
+    "pattern": "SurdotlyBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LinkisBot",
+    "pattern": "LinkisBot",
+    "category": "unknown"
+  },
+  {
+    "name": "AwarioSmartBot",
+    "pattern": "AwarioSmartBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "AwarioRssBot",
+    "pattern": "AwarioRssBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "RyteBot",
+    "pattern": "RyteBot",
+    "category": "unknown",
+    "operator": "bot.ryte.com"
+  },
+  {
+    "name": "Profound Networks, LLC",
+    "pattern": "FreeWebMonitoring SiteChecker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sarosys LLC",
+    "pattern": "AspiegelBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NAVER Blog RssBot",
+    "pattern": "NAVER Blog Rssbot",
+    "category": "unknown",
+    "operator": "www.naver.com"
+  },
+  {
+    "name": "zenback Bot",
+    "pattern": "zenback bot",
+    "category": "unknown",
+    "operator": "corp.logly.co.jp"
+  },
+  {
+    "name": "SentiBot",
+    "pattern": "SentiBot",
+    "category": "unknown",
+    "operator": "sites.google.com"
+  },
+  {
+    "name": "Domains Project",
+    "pattern": "Domains Project\\/",
+    "category": "extractive",
+    "operator": "github.com"
+  },
+  {
+    "name": "Peer39 Tech, LLC",
+    "pattern": "Pandalytics",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VK",
+    "pattern": "VKRobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "bidswitchBot",
+    "pattern": "bidswitchbot",
+    "category": "unknown",
+    "operator": "www.bidswitch.com"
+  },
+  {
+    "name": "tigerBot",
+    "pattern": "tigerbot",
+    "category": "unknown"
+  },
+  {
+    "name": "NIXStatsBot",
+    "pattern": "NIXStatsbot",
+    "category": "unknown",
+    "operator": "www.nixstats.com"
+  },
+  {
+    "name": "Atom Feed RoBot",
+    "pattern": "Atom Feed Robot",
+    "category": "unknown",
+    "operator": "rssmicro.com"
+  },
+  {
+    "name": "CcureBot",
+    "pattern": "[Cc]urebot",
+    "category": "unknown"
+  },
+  {
+    "name": "PagePeeker",
+    "pattern": "PagePeeker\\/",
+    "category": "unknown",
+    "operator": "pagepeeker.com"
+  },
+  {
+    "name": "Vigil",
+    "pattern": "Vigil\\/",
+    "category": "unknown",
+    "operator": "vigil-app.com"
+  },
+  {
+    "name": "rssBot",
+    "pattern": "rssbot\\/",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "startmeBot",
+    "pattern": "startmebot\\/",
+    "category": "unknown",
+    "operator": "start.me"
+  },
+  {
+    "name": "NormShield, Inc.",
+    "pattern": "JobboerseBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "seewithkids",
+    "pattern": "seewithkids",
+    "category": "unknown",
+    "operator": "seewithkids.com"
+  },
+  {
+    "name": "NINJA Bot",
+    "pattern": "NINJA bot",
+    "category": "unknown"
+  },
+  {
+    "name": "CutBot",
+    "pattern": "Cutbot",
+    "category": "unknown",
+    "operator": "cutbot.net"
+  },
+  {
+    "name": "BublupBot",
+    "pattern": "BublupBot",
+    "category": "unknown",
+    "operator": "www.bublup.com"
+  },
+  {
+    "name": "BrandONBot",
+    "pattern": "BrandONbot",
+    "category": "unknown",
+    "operator": "brandonmedia.net"
+  },
+  {
+    "name": "RidderBot",
+    "pattern": "RidderBot",
+    "category": "unknown",
+    "operator": "ridder.co"
+  },
+  {
+    "name": "Klarna Bank AB",
+    "pattern": "Taboolabot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Kadolijst",
+    "pattern": "Dubbotbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "FindITAnswersBot",
+    "pattern": "FindITAnswersbot",
+    "category": "unknown",
+    "operator": "search.it-influentials.com"
+  },
+  {
+    "name": "infooBot",
+    "pattern": "infoobot",
+    "category": "unknown",
+    "operator": "www.infoo.nl"
+  },
+  {
+    "name": "RefindBot",
+    "pattern": "Refindbot",
+    "category": "unknown",
+    "operator": "refind.com"
+  },
+  {
+    "name": "BlogTrafficdd Feed-Fetcher",
+    "pattern": "BlogTraffic\\/\\d\\.\\d+ Feed-Fetcher",
+    "category": "unknown",
+    "operator": "www.blogtraffic.de"
+  },
+  {
+    "name": "SeobilityBot",
+    "pattern": "SeobilityBot",
+    "category": "extractive",
+    "operator": "www.seobility.net"
+  },
+  {
+    "name": "Linespider",
+    "pattern": "Cincraw",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DragonBot",
+    "pattern": "Dragonbot",
+    "category": "unknown",
+    "operator": "www.dragonmetrics.com"
+  },
+  {
+    "name": "VoluumDSP-content-Bot",
+    "pattern": "VoluumDSP-content-bot",
+    "category": "unknown",
+    "operator": "codewise.com"
+  },
+  {
+    "name": "Findxbot",
+    "pattern": "FreshRSS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BitBot",
+    "pattern": "BitBot",
+    "category": "unknown",
+    "operator": "bitbot.dev"
+  },
+  {
+    "name": "^PHP-Curl-Class",
+    "pattern": "^PHP-Curl-Class",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "Google-Certificates-Bridge",
+    "pattern": "Google-Certificates-Bridge",
+    "category": "beneficial"
+  },
+  {
+    "name": "centuryBot",
+    "pattern": "centurybot",
+    "category": "unknown"
+  },
+  {
+    "name": "Viber",
+    "pattern": "Viber",
+    "category": "unknown",
+    "operator": "www.viber.com"
+  },
+  {
+    "name": "eventures Investment Crawler",
+    "pattern": "e\\.ventures Investment Crawler",
+    "category": "unknown",
+    "operator": "www.eventures.vc"
+  },
+  {
+    "name": "EMail Exractor",
+    "pattern": "evc-batch",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "PetalBot",
+    "pattern": "PetalBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "virustotal",
+    "pattern": "virustotal",
+    "category": "unknown",
+    "operator": "www.virustotal.com"
+  },
+  {
+    "name": "^| PTST",
+    "pattern": "(^| )PTST\\/",
+    "category": "unknown",
+    "operator": "www.webpagetest.org"
+  },
+  {
+    "name": "minicrawler",
+    "pattern": "minicrawler",
+    "category": "unknown",
+    "operator": "www.testomato.com"
+  },
+  {
+    "name": "WooRank",
+    "pattern": "Cookiebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "trovitBot",
+    "pattern": "trovitBot",
+    "category": "unknown",
+    "operator": "www.trovit.com"
+  },
+  {
+    "name": "seostarco",
+    "pattern": "seostar\\.co",
+    "category": "extractive",
+    "operator": "seostar.co"
+  },
+  {
+    "name": "CISPA - Helmholtz-Zentrum für Informationssicherheit gGmbH",
+    "pattern": "IonCrawl",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Morningscore",
+    "pattern": "Uptime-Kuma",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MegaIndex",
+    "pattern": "Seekport",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "FreshpingBot",
+    "pattern": "FreshpingBot",
+    "category": "unknown",
+    "operator": "www.freshworks.com"
+  },
+  {
+    "name": "Meta Platforms, Inc.",
+    "pattern": "Feedbin",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CriteoBot",
+    "pattern": "CriteoBot",
+    "category": "unknown",
+    "operator": "www.criteo.com"
+  },
+  {
+    "name": "Snapchat Inc.",
+    "pattern": "Snap URL Preview Service",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BazQux Reader",
+    "pattern": "Better Uptime Bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Barracuda Networks, Inc.",
+    "pattern": "RuxitSynthetic",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google-Read-Aloud",
+    "pattern": "Google-Read-Aloud",
+    "category": "beneficial",
+    "operator": "developers.google.com"
+  },
+  {
+    "name": "ValveSteam",
+    "pattern": "Valve\\/Steam",
+    "category": "unknown"
+  },
+  {
+    "name": "OdklBot",
+    "pattern": "OdklBot\\/",
+    "category": "unknown",
+    "operator": "odnoklassniki.ru"
+  },
+  {
+    "name": "GPTBot",
+    "pattern": "GPTBot",
+    "category": "extractive",
+    "operator": "OpenAI",
+    "purpose": "LLM Training"
+  },
+  {
+    "name": "ChatGPT-User",
+    "pattern": "ChatGPT-User",
+    "category": "extractive",
+    "operator": "OpenAI",
+    "purpose": "RAG"
+  },
+  {
+    "name": "OAI-SearchBot",
+    "pattern": "OAI-SearchBot",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "YandexRenderResourcesBot",
+    "pattern": "YandexRenderResourcesBot\\/",
+    "category": "beneficial",
+    "operator": "yandex.com"
+  },
+  {
+    "name": "SiteSell Inc.",
+    "pattern": "LightspeedSystemsCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ev-crawler",
+    "pattern": "ev-crawler\\/",
+    "category": "unknown",
+    "operator": "headline.com"
+  },
+  {
+    "name": "BitSightBot",
+    "pattern": "BitSightBot\\/",
+    "category": "unknown",
+    "operator": "www.bitsight.com"
+  },
+  {
+    "name": "woorankreview",
+    "pattern": "woorankreview\\/",
+    "category": "unknown",
+    "operator": "www.woorank.com"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google-Safety",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "AwarioBot",
+    "pattern": "AwarioBot",
+    "category": "unknown",
+    "operator": "awario.com"
+  },
+  {
+    "name": "DataForSeoBot",
+    "pattern": "DataForSeoBot",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "Discord Bot",
+    "pattern": "Linespider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Global Digital Network Plus, LLC",
+    "pattern": "WellKnownBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "A Patent Crawler",
+    "pattern": "A Patent Crawler",
+    "category": "unknown",
+    "operator": "scitas.epfl.ch"
+  },
+  {
+    "name": "DAWAP SARL",
+    "pattern": "StractBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "The Internet Archive",
+    "pattern": "search\\.marginalia\\.nu",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "YouBot",
+    "pattern": "YouBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "PDR Labs",
+    "pattern": "Nicecrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Komodia Inc.",
+    "pattern": "Neevabot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "OpenAI OpCo, LLC",
+    "pattern": "BrightEdge Crawler",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "CMS Experiment",
+    "pattern": "SiteCheckerBotCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TombaPublicWebCrawler",
+    "pattern": "TombaPublicWebCrawler",
+    "category": "unknown",
+    "operator": "tombascraper.com"
+  },
+  {
+    "name": "Aegis",
+    "pattern": "CrawlyProjectCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Linkfluence SAS",
+    "pattern": "KomodiaBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Komodia Inc.",
+    "pattern": "KStandBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CISPA Webcrawler",
+    "pattern": "CISPA Webcrawler",
+    "category": "unknown",
+    "operator": "vuln-notify-checker.cispa.saarland"
+  },
+  {
+    "name": "Adsbot",
+    "pattern": "MTRobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "hyscoreio",
+    "pattern": "hyscore\\.io",
+    "category": "unknown",
+    "operator": "hyscore.io"
+  },
+  {
+    "name": "AlexandriaOrgBot",
+    "pattern": "AlexandriaOrgBot",
+    "category": "unknown",
+    "operator": "www.alexandria.org"
+  },
+  {
+    "name": "start.me BV",
+    "pattern": "2ip bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "YellowbrandprotectionBot",
+    "pattern": "Yellowbrandprotectionbot",
+    "category": "unknown",
+    "operator": "www.yellowbp.com"
+  },
+  {
+    "name": "SEOlizer",
+    "pattern": "SEOlizer",
+    "category": "extractive",
+    "operator": "www.seolizer.de"
+  },
+  {
+    "name": "vuhuvBot",
+    "pattern": "vuhuvBot",
+    "category": "unknown",
+    "operator": "vuhuv.com"
+  },
+  {
+    "name": "White Source Ltd.",
+    "pattern": "INETDEX-BOT",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Wibybot",
+    "pattern": "Synapse",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Intelium Corp.",
+    "pattern": "t3versionsBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "airSlate, Inc.",
+    "pattern": "deepnoc",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Roku, Inc.",
+    "pattern": "Cocolyzebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "hypestat",
+    "pattern": "hypestat",
+    "category": "unknown",
+    "operator": "hypestat.com"
+  },
+  {
+    "name": "ReverseEngineeringBot",
+    "pattern": "ReverseEngineeringBot",
+    "category": "unknown",
+    "operator": "torus.company"
+  },
+  {
+    "name": "sempitech",
+    "pattern": "sempi\\.tech",
+    "category": "unknown",
+    "operator": "sempi.tech"
+  },
+  {
+    "name": "Jaohawi AB",
+    "pattern": "Iframely",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MetaJob",
+    "pattern": "MetaInspector",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "node-fetch",
+    "pattern": "node-fetch",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "l9tcpid",
+    "pattern": "l9explore",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "python-opengraph",
+    "pattern": "python-opengraph",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "OpenGraphCheck",
+    "pattern": "OpenGraphCheck",
+    "category": "unknown",
+    "operator": "opengraphcheck.com"
+  },
+  {
+    "name": "developersgooglecomwebsnippet",
+    "pattern": "developers\\.google\\.com\\/\\+\\/web\\/snippet",
+    "category": "beneficial",
+    "operator": "developers.google.com"
+  },
+  {
+    "name": "WhatsMyIP.org",
+    "pattern": "SenutoBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PayPal, Inc.",
+    "pattern": "MaCoCu",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NewsBlur",
+    "pattern": "NewsBlur",
+    "category": "unknown",
+    "operator": "www.newsblur.com"
+  },
+  {
+    "name": "inoreader",
+    "pattern": "inoreader",
+    "category": "unknown",
+    "operator": "inoreader.com"
+  },
+  {
+    "name": "Cybot A/S",
+    "pattern": "NetSystemsResearch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PageThing",
+    "pattern": "PageThing",
+    "category": "unknown",
+    "operator": "pagething.com"
+  },
+  {
+    "name": "WordPress",
+    "pattern": "WordPress\\/",
+    "category": "unknown",
+    "operator": "wordpress.org"
+  },
+  {
+    "name": "PhxBot",
+    "pattern": "PhxBot",
+    "category": "unknown"
+  },
+  {
+    "name": "ImagesiftBot",
+    "pattern": "ImagesiftBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Expanse",
+    "pattern": "Expanse",
+    "category": "unknown",
+    "operator": "www.paloaltonetworks.com"
+  },
+  {
+    "name": "Project Patchwatch",
+    "pattern": "InternetMeasurement",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "^BW",
+    "pattern": "^BW\\/",
+    "category": "unknown",
+    "operator": "builtwith.com"
+  },
+  {
+    "name": "Stract",
+    "pattern": "GeedoBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Audisto Crawler",
+    "pattern": "Audisto Crawler",
+    "category": "unknown",
+    "operator": "audisto.com"
+  },
+  {
+    "name": "PerplexityBot",
+    "pattern": "PerplexityBot\\/",
+    "category": "unknown",
+    "operator": "docs.perplexity.ai"
+  },
+  {
+    "name": "cClaudebBot",
+    "pattern": "[cC]laude[bB]ot",
+    "category": "unknown",
+    "operator": "www.anthropic.com"
+  },
+  {
+    "name": "Sitebulb Limited",
+    "pattern": "Monsidobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GroupMeBot",
+    "pattern": "GroupMeBot",
+    "category": "unknown",
+    "operator": "groupme.com"
+  },
+  {
+    "name": "Seobility",
+    "pattern": "Vercelbot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "vercel-screenshot",
+    "pattern": "vercel-screenshot",
+    "category": "unknown"
+  },
+  {
+    "name": "facebookcatalog",
+    "pattern": "facebookcatalog\\/",
+    "category": "unknown",
+    "operator": "developers.facebook.com"
+  },
+  {
+    "name": "meta-externalads",
+    "pattern": "meta-externalads\\/",
+    "category": "unknown",
+    "operator": "developers.facebook.com"
+  },
+  {
+    "name": "meta-externalagent",
+    "pattern": "meta-externalagent\\/",
+    "category": "unknown",
+    "operator": "developers.facebook.com"
+  },
+  {
+    "name": "meta-externalfetcher",
+    "pattern": "meta-externalfetcher\\/",
+    "category": "unknown",
+    "operator": "developers.facebook.com"
+  },
+  {
+    "name": "AcademicBotRTU",
+    "pattern": "AcademicBotRTU",
+    "category": "unknown",
+    "operator": "academicbot.rtu.lv"
+  },
+  {
+    "name": "KeybaseBot",
+    "pattern": "KeybaseBot",
+    "category": "unknown",
+    "operator": "book.keybase.io"
+  },
+  {
+    "name": "Lemmy",
+    "pattern": "Lemmy",
+    "category": "unknown",
+    "operator": "leminal.space"
+  },
+  {
+    "name": "CookieHubScan",
+    "pattern": "CookieHubScan",
+    "category": "malicious",
+    "operator": "www.cookiehub.com"
+  },
+  {
+    "name": "Hydrozenio",
+    "pattern": "Hydrozen\\.io",
+    "category": "unknown",
+    "operator": "docs.hydrozen.io"
+  },
+  {
+    "name": "HTTP Banner Detection",
+    "pattern": "HTTP Banner Detection",
+    "category": "unknown",
+    "operator": "security.ipip.net"
+  },
+  {
+    "name": "SummalyBot",
+    "pattern": "SummalyBot",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "MicrosoftPreview",
+    "pattern": "MicrosoftPreview\\/",
+    "category": "unknown",
+    "operator": "www.bing.com"
+  },
+  {
+    "name": "GeedoBot",
+    "pattern": "GeedoProductSearch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TikTokSpider",
+    "pattern": "TikTokSpider",
+    "category": "unknown"
+  },
+  {
+    "name": "OnCrawl",
+    "pattern": "OnCrawl\\/",
+    "category": "unknown",
+    "operator": "www.oncrawl.com"
+  },
+  {
+    "name": "sindresorhusgot",
+    "pattern": "sindresorhus\\/got",
+    "category": "unknown",
+    "operator": "github.com"
+  },
+  {
+    "name": "CensysInspect",
+    "pattern": "CensysInspect\\/",
+    "category": "unknown",
+    "operator": "about.censys.io"
+  },
+  {
+    "name": "SBIntuitionsBot",
+    "pattern": "SBIntuitionsBot\\/",
+    "category": "unknown",
+    "operator": "www.sbintuitions.co.jp"
+  },
+  {
+    "name": "Dynatrace LLC",
+    "pattern": "sitebulb",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "YextBot",
+    "pattern": "YextBot\\/",
+    "category": "unknown",
+    "operator": "hitchhikers.yext.com"
+  },
+  {
+    "name": "DatadogSynthetics",
+    "pattern": "DatadogSynthetics",
+    "category": "unknown",
+    "operator": "docs.datadoghq.com"
+  },
+  {
+    "name": "Google-Ads-Conversions",
+    "pattern": "Google-Ads-Conversions",
+    "category": "beneficial",
+    "operator": "developers.google.com"
+  },
+  {
+    "name": "Bot",
+    "pattern": "bot",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Buck-",
+    "pattern": "^Buck\\/[0-9]",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "spider",
+    "pattern": "spider",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "crawl",
+    "pattern": "crawl",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^$",
+    "pattern": "^.?$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^afish",
+    "pattern": "[^a]fish",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^IDA$",
+    "pattern": "^IDA$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^ruby$",
+    "pattern": "^ruby$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^@ozillad",
+    "pattern": "^@ozilla\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^脝脝陆芒潞贸碌脛$",
+    "pattern": "^脝脝陆芒潞贸碌脛$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^破解后的$",
+    "pattern": "^破解后的$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "alexa",
+    "pattern": "alexa",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Alexandrias|prototypes|project",
+    "pattern": "Alexandria(\\s|\\+)prototype(\\s|\\+)project",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "AllenTrack",
+    "pattern": "AllenTrack",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "almaden",
+    "pattern": "almaden",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "AntBot",
+    "pattern": "AntBot",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "appie",
+    "pattern": "appie",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "APIsscraper",
+    "pattern": "API[\\+\\s]scraper",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "AppSignal",
+    "pattern": "Arachni",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Arachmo",
+    "pattern": "Arachmo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "architext",
+    "pattern": "architext",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ArchiveTeam",
+    "pattern": "ArchiveTeam",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ariad",
+    "pattern": "aria2\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "arks",
+    "pattern": "arks",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Array$",
+    "pattern": "^Array$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "asterias",
+    "pattern": "asterias",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "atomz",
+    "pattern": "atomz",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "axiosd",
+    "pattern": "axios\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Crawly Project",
+    "pattern": "BDFetch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Betsie",
+    "pattern": "Betsie",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "baidu",
+    "pattern": "baidu",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "biglotron",
+    "pattern": "biglotron",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "BingPreview",
+    "pattern": "BingPreview",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "bjaaland",
+    "pattern": "bjaaland",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "BlackboardsSafeassign",
+    "pattern": "Blackboard[\\+\\s]Safeassign",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "blaiz-bee",
+    "pattern": "blaiz-bee",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "bloglines",
+    "pattern": "bloglines",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "blogpulse",
+    "pattern": "blogpulse",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "boithocom-dc",
+    "pattern": "boitho\\.com-dc",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "bookmark-manager",
+    "pattern": "bookmark-manager",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "BrutusAET",
+    "pattern": "Brutus\\/AET",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "bwh_user_agent",
+    "pattern": "bwh3_user_agent",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "CakePHP",
+    "pattern": "CakePHP",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "celestial",
+    "pattern": "celestial",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "centuryb",
+    "pattern": "centuryb",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "cfnetwork",
+    "pattern": "cfnetwork",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "checklink",
+    "pattern": "checklink",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "checkprivacy",
+    "pattern": "checkprivacy",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ChinasLocalsBrowses",
+    "pattern": "China\\sLocal\\sBrowse\\s2\\.6",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Citoid",
+    "pattern": "Citoid",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ClaudeBot",
+    "pattern": "ClaudeBot",
+    "category": "extractive",
+    "operator": "Anthropic",
+    "purpose": "Training"
+  },
+  {
+    "name": "cloakDetect",
+    "pattern": "cloakDetect",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "coccoc",
+    "pattern": "coccoc\\/1\\.0",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "CodesSamplesWebsClient",
+    "pattern": "Code\\sSample\\sWeb\\sClient",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ColdFusion",
+    "pattern": "ColdFusion",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "collection@infegycom",
+    "pattern": "collection@infegy.com",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "complumanalytics",
+    "pattern": "com\\.plumanalytics",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "combine",
+    "pattern": "combine",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "contentmatch",
+    "pattern": "contentmatch",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ContentSmartz",
+    "pattern": "ContentSmartz",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "core",
+    "pattern": "core",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Cortana",
+    "pattern": "Cortana",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "CoverScout",
+    "pattern": "CoverScout",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "crustyd",
+    "pattern": "crusty\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "curl",
+    "pattern": "curl\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "cursor",
+    "pattern": "cursor",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "custo",
+    "pattern": "custo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "DataChas",
+    "pattern": "DataCha0s\\/2\\.0",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "daumoa",
+    "pattern": "daum(oa)?",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^%default%$",
+    "pattern": "^\\%?default\\%?$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Dispatchd",
+    "pattern": "Dispatch\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Docoloc",
+    "pattern": "Docoloc",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "docomo",
+    "pattern": "docomo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "DownloadMaster",
+    "pattern": "Download\\+Master",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Drupal",
+    "pattern": "Drupal",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "DSurf",
+    "pattern": "DSurf",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "DTS Agent",
+    "pattern": "DTS Agent",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "EasyBibsAutoCites",
+    "pattern": "EasyBib[\\+\\s]AutoCite[\\+\\s]",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "easydl",
+    "pattern": "easydl",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "EBSCOsEJSsContentsServer",
+    "pattern": "EBSCO\\sEJS\\sContent\\sServer",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "EcoSearch",
+    "pattern": "EcoSearch",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ELinks",
+    "pattern": "ELinks\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "EmailSiphon",
+    "pattern": "EmailSiphon",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Willow Internet Crawler",
+    "pattern": "EmailWolf",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "EThOSBritishLibrary",
+    "pattern": "EThOS\\+\\(British\\+Library\\)",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "facebookexternalhit",
+    "pattern": "facebookexternalhit\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "favorg",
+    "pattern": "favorg",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Faveeod",
+    "pattern": "Faveeo\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "FDMs|d",
+    "pattern": "FDM(\\s|\\+)\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "feedburner",
+    "pattern": "feedburner",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "FeedFetcher",
+    "pattern": "FeedFetcher",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "feedreader",
+    "pattern": "feedreader",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ferret",
+    "pattern": "ferret",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Fetchs|APIs|Request",
+    "pattern": "Fetch(\\s|\\+)API(\\s|\\+)Request",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "findlinks",
+    "pattern": "findlinks",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^FileDown$",
+    "pattern": "^FileDown$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Filter$",
+    "pattern": "^Filter$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^firefox$",
+    "pattern": "^firefox$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^FOCA",
+    "pattern": "^FOCA",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^FreshpingBot https:freshpingio$",
+    "pattern": "^FreshpingBot\\/1.0 \\(\\+https:\\/\\/freshping\\.io\\/\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Fulltext",
+    "pattern": "Fulltext",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Funnelback",
+    "pattern": "Funnelback",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "GetRight",
+    "pattern": "GetRight",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "geturl",
+    "pattern": "geturl",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Genieo",
+    "pattern": "GigablastOpenSource",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "G-i-g-a-b-o-t",
+    "pattern": "G-i-g-a-b-o-t",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "GLMSLinkAnalysis",
+    "pattern": "GLMSLinkAnalysis",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Goldfires|Server",
+    "pattern": "Goldfire(\\s|\\+)Server",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "google",
+    "pattern": "google",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Vercel Bot",
+    "pattern": "Grammarly",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GroupHighd",
+    "pattern": "GroupHigh\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "grub",
+    "pattern": "grub",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "gulliver",
+    "pattern": "gulliver",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "gvfs",
+    "pattern": "gvfs\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "harvest",
+    "pattern": "harvest",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "holmes",
+    "pattern": "holmes",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "htdig",
+    "pattern": "htdig",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "htmlparser",
+    "pattern": "htmlparser",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "HttpComponents",
+    "pattern": "HttpComponents\\/1.1",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "HTTPFetcher",
+    "pattern": "HTTPFetcher",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "httpclient",
+    "pattern": "http.?client",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "httpget",
+    "pattern": "httpget",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "httrack",
+    "pattern": "httrack",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "iktomi",
+    "pattern": "iktomi",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ilse",
+    "pattern": "ilse",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Indy Library",
+    "pattern": "Indy Library",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "insomnia",
+    "pattern": "insomnia",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^integrityd",
+    "pattern": "^integrity\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "internetseer",
+    "pattern": "internetseer",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "intute",
+    "pattern": "intute",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "iSiloX",
+    "pattern": "iSiloX",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^javad,d",
+    "pattern": "^java\\/\\d{1,2}.\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "jeeves",
+    "pattern": "jeeves",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Jerseyd",
+    "pattern": "Jersey\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "jobo",
+    "pattern": "jobo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Koha",
+    "pattern": "Koha",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "kyluka",
+    "pattern": "kyluka",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "larbin",
+    "pattern": "larbin",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "libcurl",
+    "pattern": "libcurl",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "libhttp",
+    "pattern": "libhttp",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "libwww",
+    "pattern": "libwww",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "lilina",
+    "pattern": "lilina",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^LinkAnalyser",
+    "pattern": "^LinkAnalyser",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "linkcheck",
+    "pattern": "link.?check",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "LinkLint-checkonly",
+    "pattern": "LinkLint-checkonly",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^LinkParser",
+    "pattern": "^LinkParser\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^LinkSaver",
+    "pattern": "^LinkSaver\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "linkscan",
+    "pattern": "linkscan",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "LinkTiger",
+    "pattern": "LinkTiger",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "linkwalker",
+    "pattern": "linkwalker",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "livejournalcom",
+    "pattern": "livejournal\\.com",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "LOCKSS",
+    "pattern": "LOCKSS",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "LongURLAPI",
+    "pattern": "LongURL.API",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "lwp",
+    "pattern": "lwp",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "lycos_",
+    "pattern": "lycos[_+]",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "mailru",
+    "pattern": "mail\\.ru",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "MarcEdit",
+    "pattern": "MarcEdit",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "mediapartners-google",
+    "pattern": "mediapartners-google",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "megite",
+    "pattern": "megite",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "MetaURIsAPIdd",
+    "pattern": "MetaURI[\\+\\s]API\\/\\d\\.\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Microsofts|URLs|Control",
+    "pattern": "Microsoft(\\s|\\+)URL(\\s|\\+)Control",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Microsoft Office Existence Discovery",
+    "pattern": "Microsoft Office Existence Discovery",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Microsoft Office Protocol Discovery",
+    "pattern": "Microsoft Office Protocol Discovery",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Microsoft-WebDAV-MiniRedir",
+    "pattern": "Microsoft-WebDAV-MiniRedir",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "mimas",
+    "pattern": "mimas",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "mnogosearch",
+    "pattern": "mnogosearch",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "moget",
+    "pattern": "moget",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "motor",
+    "pattern": "motor",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozilla$",
+    "pattern": "^Mozilla$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozilla$",
+    "pattern": "^Mozilla.4\\.0$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozillacompatible;$",
+    "pattern": "^Mozilla\\/4\\.0\\+\\(compatible;\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozillacompatible;ICS$",
+    "pattern": "^Mozilla\\/4\\.0\\+\\(compatible;\\+ICS\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^MozillaenWin;I$",
+    "pattern": "^Mozilla\\/4\\.5\\+\\[en]\\+\\(Win98;\\+I\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozilla$",
+    "pattern": "^Mozilla.5\\.0$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozillacompatible;MSIE;WindowsNT$",
+    "pattern": "^Mozilla\\/5.0\\+\\(compatible;\\+MSIE\\+6\\.0;\\+Windows\\+NT\\+5\\.0\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozillas|compatible;scenturybotatgmailcom$",
+    "pattern": "^Mozilla\\/5\\.0(\\s|\\+)\\(compatible;\\s\\+centuryb\\.o\\.t9\\[at\\]gmail\\.com\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozillas|compatible;sVelenPublicWebCrawler;shttps:velenio$",
+    "pattern": "^Mozilla\\/5\\.0(\\s|\\+)\\(compatible;\\sVelenPublicWebCrawler\\/1\\.0;\\s\\+https:\\/\\/velen\\.io\\)$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^MozillalikeGecko$",
+    "pattern": "^Mozilla\\/5\\.0\\+like\\+Gecko$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Mozillas|Geckos|Firefox$",
+    "pattern": "^Mozilla\\/5.0(\\s|\\+)Gecko\\/20100115(\\s|\\+)Firefox\\/3.6$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^MSIE",
+    "pattern": "^MSIE",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "MuscatFerre",
+    "pattern": "MuscatFerre",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "myweb",
+    "pattern": "myweb",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "nagios",
+    "pattern": "nagios",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^NetAntsd",
+    "pattern": "^NetAnts\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "netcraft",
+    "pattern": "netcraft",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "netluchs",
+    "pattern": "netluchs",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "nettle",
+    "pattern": "nettle",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "newspaperd",
+    "pattern": "newspaper\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ng",
+    "pattern": "ng\\/2\\.",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Ningd",
+    "pattern": "^Ning\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "no_user_agent",
+    "pattern": "no_user_agent",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "nomad",
+    "pattern": "nomad",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "nutch",
+    "pattern": "nutch",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^oaDOI$",
+    "pattern": "^oaDOI$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ocelli",
+    "pattern": "ocelli",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Offlines|Navigator",
+    "pattern": "Offline(\\s|\\+)Navigator",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "OgScrper",
+    "pattern": "OgScrper",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "onetszukaj",
+    "pattern": "onetszukaj",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Opera$",
+    "pattern": "^Opera\\/4$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "OurBrowser",
+    "pattern": "OurBrowser",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "parsijoo",
+    "pattern": "parsijoo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Patternd",
+    "pattern": "^Pattern\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "pearphpnet",
+    "pattern": "pear\\.php\\.net",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "perman",
+    "pattern": "perman",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "PHP",
+    "pattern": "PHP\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "pidcheck",
+    "pattern": "pidcheck",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "pioneer",
+    "pattern": "pioneer",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "playmusiccom",
+    "pattern": "playmusic\\.com",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "playstarmusiccom",
+    "pattern": "playstarmusic\\.com",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Postgenomics|v",
+    "pattern": "^Postgenomic(\\s|\\+)v2",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "powermarks",
+    "pattern": "powermarks",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "PycURL",
+    "pattern": "PycURL",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "python",
+    "pattern": "python",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "rambler",
+    "pattern": "rambler",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ReactorNettyd",
+    "pattern": "ReactorNetty\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Readpaper",
+    "pattern": "Readpaper",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "redalert",
+    "pattern": "redalert",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "RestSharp",
+    "pattern": "RestSharp",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "reddit inc.",
+    "pattern": "Riddler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "robozilla",
+    "pattern": "robozilla",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "rss",
+    "pattern": "rss",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "scanmail",
+    "pattern": "scan4mail",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "scientificcommons",
+    "pattern": "scientificcommons",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "scirus",
+    "pattern": "scirus",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "NetResearchServer",
+    "pattern": "scooter",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Scrapyd",
+    "pattern": "Scrapy\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^scrutinyd",
+    "pattern": "^scrutiny\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "SearchBloxIntra",
+    "pattern": "SearchBloxIntra",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "sfFeedReader",
+    "pattern": "sfFeedReader\\/0\\.9",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "shoutcast",
+    "pattern": "shoutcast",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Sitex",
+    "pattern": "Site24x7",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "slurp",
+    "pattern": "slurp",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "sogou",
+    "pattern": "sogou",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "sqlmap",
+    "pattern": "sqlmap",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "SrceDAMP",
+    "pattern": "SrceDAMP",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Strider",
+    "pattern": "Strider",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "sunrise",
+    "pattern": "sunrise",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "T-H-U-N-D-E-R-S-T-O-N-E",
+    "pattern": "T\\-H\\-U\\-N\\-D\\-E\\-R\\-S\\-T\\-O\\-N\\-E",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "tailrank",
+    "pattern": "tailrank",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Teleports|Pro",
+    "pattern": "Teleport(\\s|\\+)Pro",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ThesKnowledgesAI",
+    "pattern": "The[\\+\\s]Knowledge[\\+\\s]AI",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "titan",
+    "pattern": "titan",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^Traackrcom$",
+    "pattern": "^Traackr\\.com$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Trello",
+    "pattern": "Trello",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "twiceler",
+    "pattern": "twiceler",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Typhoeus",
+    "pattern": "Typhoeus",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ucsd",
+    "pattern": "ucsd",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "ultraseek",
+    "pattern": "ultraseek",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^undefined$",
+    "pattern": "^undefined$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^unknown$",
+    "pattern": "^unknown$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Unpaywall",
+    "pattern": "Unpaywall",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "URLFile",
+    "pattern": "URL2File",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "urlaliasbuilder",
+    "pattern": "urlaliasbuilder",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "urllib",
+    "pattern": "urllib",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^useragent$",
+    "pattern": "^user.?agent$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^User-Agent",
+    "pattern": "^User-Agent",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "validator",
+    "pattern": "validator",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "virusdetector",
+    "pattern": "virus.detector",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "voila",
+    "pattern": "voila",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "^voltron$",
+    "pattern": "^voltron$",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "voyager",
+    "pattern": "voyager\\/",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "waforg",
+    "pattern": "w3af\\.org",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Wanadoo",
+    "pattern": "Wanadoo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Webs|Downloader",
+    "pattern": "Web(\\s|\\+)Downloader",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "WebCloner",
+    "pattern": "WebCloner",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "webcollage",
+    "pattern": "webcollage",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "WebCopier",
+    "pattern": "WebCopier",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Webinator",
+    "pattern": "Webinator",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "weblayers",
+    "pattern": "weblayers",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Webmetrics",
+    "pattern": "Webmetrics",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "webmirror",
+    "pattern": "webmirror",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "webmon",
+    "pattern": "webmon",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Treeworks SRL",
+    "pattern": "weborama-fetcher",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "webreaper",
+    "pattern": "webreaper",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "WebStripper",
+    "pattern": "WebStripper",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "WebZIP",
+    "pattern": "WebZIP",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Wget",
+    "pattern": "Wget",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "wordpress",
+    "pattern": "wordpress",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "worm",
+    "pattern": "worm",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "wwwgnipcom",
+    "pattern": "www\\.gnip\\.com",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "WWW-Mechanize",
+    "pattern": "WWW-Mechanize",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "xenu",
+    "pattern": "xenu",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "y!j",
+    "pattern": "y!j",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "yacy",
+    "pattern": "yacy",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "yahoo",
+    "pattern": "yahoo",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "yandex",
+    "pattern": "yandex",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Yetid",
+    "pattern": "Yeti\\/\\d",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Convertify",
+    "pattern": "ZoteroTranslationServer",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "zeus",
+    "pattern": "zeus",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "zyborg",
+    "pattern": "zyborg",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "siters",
+    "pattern": "7siters",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "WireReaderBot",
+    "pattern": "WireReaderBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "360 Monitoring",
+    "pattern": "monitoring360bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Aboundex.com",
+    "pattern": "AcoonBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Acoon GmbH",
+    "pattern": "AddThis\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AhrefsBot",
+    "pattern": "AhrefsBot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "Ahrefs Pte Ltd",
+    "pattern": "AhrefsSiteAudit",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Ahrefs Pte Ltd",
+    "pattern": "ia_archiver|alexabot|verifybot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Alexa Internet",
+    "pattern": "alexa site audit",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Amazon.com, Inc.",
+    "pattern": "AmazonAdBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Amazon.com, Inc.",
+    "pattern": "Amazon[ -]Route ?53[ -]Health[ -]Check[ -]Service",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Amazon Web Services",
+    "pattern": "AmorankSpider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Amorank",
+    "pattern": "ApacheBench",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Apple Inc",
+    "pattern": "iTMS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Apple Inc",
+    "pattern": "AppSignalBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Huawei",
+    "pattern": "Castro 2, Episode Duration Lookup",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Supertop",
+    "pattern": "Curious George",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Analytics SEO",
+    "pattern": "archive\\.org_bot|special_archiver",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "The Internet Archive",
+    "pattern": "Ask Jeeves/Teoma",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ask Jeeves Inc.",
+    "pattern": "Backlink-Check\\.de",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BacklinkCrawler",
+    "pattern": "BacklinkCrawler",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "2.0Promotion GbR",
+    "pattern": "Baidu.*spider|baidu Transcoder",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Better Uptime",
+    "pattern": "MSNBot|msrbot|bingbot|bingadsbot|BingPreview|msnbot-(UDiscovery|NewsBlogs)|adidxbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Microsoft Corporation",
+    "pattern": "Blackbox Exporter",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Prometheus",
+    "pattern": "Blekkobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BLEXBot",
+    "pattern": "BLEXBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "WebMeUp",
+    "pattern": "Bloglovin",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Bloglovin",
+    "pattern": "Blogtrottr",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Blogtrottr Ltd",
+    "pattern": "BoardReader Blog Indexer",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BoardReader",
+    "pattern": "BountiiBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Bountii Inc.",
+    "pattern": "Browsershots",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "The Laboratory for Web Algorithmics (LAW)",
+    "pattern": "(?<!HTC)[ _]Butterfly/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Topsy Labs",
+    "pattern": "CareerBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "reddit inc.",
+    "pattern": "Cliqzbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "10betterpages GmbH",
+    "pattern": "Cloudflare-AMP",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "Cloudflare-?Diagnostics",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "Cloudflare Custom Hostname Verification",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "Cloudflare-Smart-Transit",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "CloudflareObservatory",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "https://developers\\.cloudflare\\.com/security-center/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CloudFlare",
+    "pattern": "coccoc\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Cốc Cốc",
+    "pattern": "collectd",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Collectd",
+    "pattern": "CommaFeed",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CommaFeed",
+    "pattern": "CSS Certificate Spider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Certified Security Solutions",
+    "pattern": "Datadog Agent|Datadog/?Synthetics",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Datanyze",
+    "pattern": "Dataprovider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Dataprovider B.V.",
+    "pattern": "Daum(?!(?:Apps|Device))",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Daum Communications Corp.",
+    "pattern": "Dazoobot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Discovery Engine",
+    "pattern": "Domain Re-Animator Bot|support@domainreanimator\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DotBot",
+    "pattern": "DotBot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "SEOmoz, Inc.",
+    "pattern": "DuckDuck(?:Go-Favicons-)?Bot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "DuckAssistBot",
+    "pattern": "DuckAssistBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "DuckDuckGo",
+    "pattern": "EasouSpider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "easou ICP",
+    "pattern": "eCairn-Grabber",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "eCairn",
+    "pattern": "EMail Exractor",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "eVenture Capital Partners II, LLC",
+    "pattern": "Exabot|ExaleadCloudview",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Dassault Systèmes",
+    "pattern": "ExactSeek Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Jayde Online, Inc.",
+    "pattern": "Ezooms",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SEOmoz, Inc.",
+    "pattern": "facebook(?:catalog|externalhit|externalua|platform|scraper)",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "meta-externalagent",
+    "pattern": "meta-externalagent",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "meta-externalfetcher",
+    "pattern": "meta-externalfetcher",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "FacebookBot",
+    "pattern": "FacebookBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Feedbin",
+    "pattern": "FeedBurner",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "FeedBurner",
+    "pattern": "Feed Wrangler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Feedspot",
+    "pattern": "Fever/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Fever",
+    "pattern": "FlipboardProxy|FlipboardRSS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Flipboard",
+    "pattern": "Findxbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Matt Wells",
+    "pattern": "Gluten Free Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Gluten Free Crawler",
+    "pattern": "gobuster",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Gobuster",
+    "pattern": "ichiro/mobile goo",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google Favicon",
+    "pattern": "Google Search Console",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google Page Speed Insights",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "google_partner_monitoring",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google-Cloud-Scheduler",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "GoogleStackdriverMonitoring",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google-Transparency-Report",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google-CloudVertexBot",
+    "pattern": "Google-CloudVertexBot",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "via ggpht\\.com GoogleImageProxy",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google-Document-Conversion",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "GoogleDocs; apps-spreadsheets",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "GoogleDocs; apps-presentations",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "GoogleDocs;",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "SeznamEmailProxy",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Seznam.cz, a.s.",
+    "pattern": "Seznam-Zbozi-robot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Seznam.cz, a.s.",
+    "pattern": "Heurekabot-Feed",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Heureka.cz, a.s.",
+    "pattern": "ShopAlike",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Visual Meta",
+    "pattern": "deepcrawl\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Adwords-(?:DisplayAds|Express|Instant)|Google Web Preview|Google[ -]Publisher[ -]Plugin|Google-(?:adstxt|Ads-Conversions|Ads-Qualify|Adwords|AMPHTML|Assess|Extended|HotelAdsVerifier|InspectionTool|Lens|PageRenderer|Read-Aloud|Shopping-Quality|Site-Verification|Sites-Thumbnails|speakr|Stale-Content-Probe|Test|Youtube-Links)|(?:AdsBot|APIs|Feedfetcher|Mediapartners)-Google(?:-Mobile)?|Google(?:AdSenseInfeed|AssociationService|bot|Other|Prober|Producer|Sites)|Google.*/\\+/web/snippet",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "^Google$",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "DuplexWeb-Google",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "Google-Area120-PrivacyPolicyFetcher",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "HubSpot ",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "HubSpot Inc.",
+    "pattern": "vuhuv(?:Bot|RBT)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "vuhuvBot",
+    "pattern": "HTTPMon",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ICC-Crawler",
+    "pattern": "inoreader\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "inoreader",
+    "pattern": "iisbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VeriSign, Inc",
+    "pattern": "IP-Guide\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "IP-Guide Crawler",
+    "pattern": "k6/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "K6",
+    "pattern": "kouio",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Larbin web crawler",
+    "pattern": "[A-z0-9]*-Lighthouse",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Lighthouse",
+    "pattern": "last-modified\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LastMod Bot",
+    "pattern": "linkdexbot|linkdex\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LTX71",
+    "pattern": "Mail\\.RU",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Brandwatch",
+    "pattern": "MagpieRSS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MagpieRSS",
+    "pattern": "masscan-ng",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BIZON, OOO",
+    "pattern": ".*masscan",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Robert Graham",
+    "pattern": "Mastodon/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Mastodon Bot",
+    "pattern": "meanpathbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MetaInspector",
+    "pattern": "MixrankBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Majestic-12",
+    "pattern": "Mnogosearch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Lavtech.Com Corp.",
+    "pattern": "MojeekBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Mojeek Ltd.",
+    "pattern": "munin",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Munin",
+    "pattern": "NalezenCzBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Jaroslav Kuboš",
+    "pattern": "check_http/v",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Nagios Plugins Development Team",
+    "pattern": "nbertaupete95\\(at\\)gmail\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "nbertaupete95",
+    "pattern": "Netcraft(?: Web Server Survey| SSL Server Survey|SurveyAgent)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Netvibes",
+    "pattern": "NewsBlur .*(?:Fetcher|Finder)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NewsBlur",
+    "pattern": "NewsGatorOnline",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NewsGator",
+    "pattern": "nlcrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Nuzzel",
+    "pattern": "NodePing",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NodePing",
+    "pattern": "Octopus [\\d.]+",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Octopus",
+    "pattern": "OnlineOrNot\\.com_bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Omgili",
+    "pattern": "OpenindexSpider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Axandra GmbH",
+    "pattern": "OpenWebSpider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "OpenWebSpider Lab",
+    "pattern": "OrangeBot|VoilaBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Smallrivers SA",
+    "pattern": "phantomas/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Phantomas",
+    "pattern": "phpservermon",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PHP Server Monitor",
+    "pattern": "Pocket(?:ImageCache|Parser)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Read It Later, Inc.",
+    "pattern": "PritTorrent",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Bitlove",
+    "pattern": "PRTG Network Monitor",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Picsearch",
+    "pattern": "Pingdom(?:\\.com|TMS)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Pingdom AB",
+    "pattern": "Quora Link Preview",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Quora-Bot",
+    "pattern": "Quora-Bot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Quora",
+    "pattern": "RamblerMail",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Rambler&Co",
+    "pattern": "QuerySeekerSpider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "QueryEye Inc.",
+    "pattern": "Qwantify|Qwantbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Qwant Corporation",
+    "pattern": "Rainmeter",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SEOmoz, Inc.",
+    "pattern": "ROI Hunter",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Screaming Frog Ltd",
+    "pattern": "ScreenerBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SemrushBot",
+    "pattern": "SemrushBot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "Semrush Inc.",
+    "pattern": "BacklinksExtendedBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Semrush Inc.",
+    "pattern": "SerpReputationManagementAgent",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Semrush Inc.",
+    "pattern": "SplitSignalBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Semrush Inc.",
+    "pattern": "SiteAuditBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Semrush Inc.",
+    "pattern": "SensikaBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Sensika",
+    "pattern": "SEOENG(?:World)?Bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SEO Engine",
+    "pattern": "seoscanners\\.net",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Skype Communications S.à.r.l.",
+    "pattern": "SeznamBot|SklikBot|Seznam screenshot-generator",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Seznam.cz, a.s.",
+    "pattern": "shopify-partner-homepage-scraper",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Shopify",
+    "pattern": "ShopWiki",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ShopWiki Corp.",
+    "pattern": "SilverReader",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SimplePie",
+    "pattern": "SISTRIX Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SISTRIX GmbH",
+    "pattern": "compatible; (?:SISTRIX )?Optimizer",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SISTRIX GmbH",
+    "pattern": "SiteSucker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SiteSucker",
+    "pattern": "sixy\\.ch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Manuel Kasper",
+    "pattern": "Slackbot|Slack-ImgProxy",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Slack Technologies",
+    "pattern": "Sogou[ -](?:head|inst|Orion|Pic|Test|web)[ -]spider|New-Sogou-Spider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sohu, Inc.",
+    "pattern": "Sosospider|Sosoimagespider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Tencent Holdings",
+    "pattern": "Sprinklr",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sprinklr, Inc.",
+    "pattern": "SSL Labs",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SSL Labs",
+    "pattern": "StatusCake",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "StatusCake",
+    "pattern": "Superfeedr bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Superfeedr",
+    "pattern": "Sparkler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sparkler",
+    "pattern": "Spinn3r",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Tailrank Inc",
+    "pattern": "SputnikBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Sputnik Bot",
+    "pattern": "SputnikFaviconBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sputnik Favicon Bot",
+    "pattern": "SputnikImageBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Domain Tools",
+    "pattern": "TarmotGezgin",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "TelegramBot",
+    "pattern": "TLSProbe",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Venafi TrustNet",
+    "pattern": "TinEye-bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "theoldreader",
+    "pattern": "Trackable/0\\.1",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TurnitinBot",
+    "pattern": "TurnitinBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "iParadigms, LLC.",
+    "pattern": "TweetedTimes",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Mediasift",
+    "pattern": "Twingly Recon",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Twitter",
+    "pattern": "UniversalFeedParser",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Kurt McKee",
+    "pattern": "via secureurl\\.fwdcdn\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "UkrNet Ltd",
+    "pattern": "Uptime(?:bot)?/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Uptime Robot",
+    "pattern": "URLAppendBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Profound Networks",
+    "pattern": "Vagabondo",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WiseGuys",
+    "pattern": "vkShare; ",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VK",
+    "pattern": "VSMCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Alentum Software Ltd.",
+    "pattern": "Jigsaw",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "W3C",
+    "pattern": "W3C_Validator|Validator\\.nu",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "W3C",
+    "pattern": "P3P Validator",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "W3C",
+    "pattern": "Wappalyzer",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AliasIO",
+    "pattern": "PTST/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebPageTest",
+    "pattern": "WeSEE",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WeSEE Ltd",
+    "pattern": "WebbCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Steve Webb",
+    "pattern": "websitepulse[+ ]checker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebSitePulse",
+    "pattern": "WordPress.+isitwp\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WPBeginner, LLC",
+    "pattern": "Automattic Analytics Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Wordpress.org",
+    "pattern": "WordPress\\.com mShots",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Wordpress.org",
+    "pattern": "wp\\.com feedbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Automattic, Inc.",
+    "pattern": "WordPress",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Wordpress.org",
+    "pattern": "Wotbox",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Wotbox",
+    "pattern": "XenForo",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "YaCy",
+    "pattern": "Yahoo! Slurp|Yahoo!-AdCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Inc.",
+    "pattern": "Yahoo Link Preview|Yahoo:LinkExpander:Slingstone",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Inc.",
+    "pattern": "YahooMailProxy",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Inc.",
+    "pattern": "YahooCacheSystem",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Inc.",
+    "pattern": "Y!J-BRW",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Japan Corp.",
+    "pattern": "Y!J-WSC",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Japan Corp.",
+    "pattern": "Y!J-ASR",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Japan Corp.",
+    "pattern": "^Y!J",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Japan Corp.",
+    "pattern": "Yandex(?:(?:\\.Gazeta |Accessibility|Mobile|MobileScreenShot|RenderResources|Screenshot|Sprav)?Bot|(?:AdNet|Antivirus|Blogs|Calendar|Catalog|Direct|Favicons|ForDomain|ImageResizer|Images|Market|Media|Metrika|News|OntoDB(?:API)?|Pagechecker|Partner|RCA|SearchShop|(?:News|Site)links|Tracker|Turbo|Userproxy|Verticals|Vertis|Video|Webmaster))|YaDirectFetcher",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yandex LLC",
+    "pattern": "Yeti|NaverJapan|AdsBot-Naver",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "Naver",
+    "pattern": "YoudaoBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NetEase, Inc.",
+    "pattern": "YOURLS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yourls",
+    "pattern": "YRSpider|YYSpider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "zgrab",
+    "pattern": "Zookabot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ZUM internet",
+    "pattern": "YottaaMonitor",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yottaa",
+    "pattern": "Yahoo Ad monitoring.*yahoo-ad-monitoring-SLN24857",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Yahoo! Inc.",
+    "pattern": ".*Java.*outbrain",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Outbrain",
+    "pattern": "HubPages.*crawlingpolicy",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "HubPages, Inc.",
+    "pattern": "Pinterest(?:bot)?/.*www\\.pinterest\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Pinterest",
+    "pattern": ".*Site24x7",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Site24x7",
+    "pattern": ".* HLB",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Site24x7",
+    "pattern": "s~snapchat-proxy",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Snapchat Inc.",
+    "pattern": "SnapchatAds",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Snapchat Inc.",
+    "pattern": "Lets Encrypt validation server",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Grapeshot",
+    "pattern": "www\\.monitor\\.us",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Monitor.Us",
+    "pattern": "Catchpoint",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Bitly, Inc.",
+    "pattern": "Zao/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Zao",
+    "pattern": "lycos",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Inktomi Slurp",
+    "pattern": "Speedy Spider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ScoutJet",
+    "pattern": "nrsbot|netresearch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Scooter",
+    "pattern": "gigabot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Gigabot",
+    "pattern": "charlotte",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Charlotte",
+    "pattern": "Pompos",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ichiro",
+    "pattern": "PagePeeker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PAGEPEEKER SRL",
+    "pattern": "WebThumbnail",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebThumbnail",
+    "pattern": "Willow Internet Crawler",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "EmailWolf",
+    "pattern": "NetLyzer FastProbe",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "NetLyzer FastProbe",
+    "pattern": "AdMantX.*admantx\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ADMantX",
+    "pattern": "Server Density Service Monitoring",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Server Density",
+    "pattern": "RSSRadio \\(Push Notification Scanner;support@dorada\\.co\\.uk\\)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "RSSRadio Bot",
+    "pattern": "^sentry",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sentry",
+    "pattern": "^Spotify/[\\d.]+$",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Spotify",
+    "pattern": "The Knowledge AI",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BrandVerity, Inc.",
+    "pattern": "Kaspersky Lab CFR link resolver",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AO Kaspersky Lab",
+    "pattern": "eZ Publish Link Validator",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "eZ Systems AS",
+    "pattern": "woorankreview",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WooRank sprl",
+    "pattern": "Siteimprove",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Siteimprove GmbH",
+    "pattern": "CATExplorador",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Fundació puntCAT",
+    "pattern": "Buck",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Idee Inc.",
+    "pattern": "zelist\\.ro feed parser",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Weborama SA",
+    "pattern": "BoardReader Favicon Fetcher",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Effyis Inc",
+    "pattern": "IDG/(?:EU|IT|RU|UK)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ByteDance Ltd.",
+    "pattern": "WikiDo",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Fotolitografie Fiorentine di Becchi Antonio s.n.c.",
+    "pattern": "Awario(?:Smart)?Bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TechFusion Ltd.",
+    "pattern": "oBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "IBM Germany Research & Development GmbH",
+    "pattern": "SMTBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SimilarTech Ltd.",
+    "pattern": "LCC",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Universität Leipzig",
+    "pattern": "Startpagina-Linkchecker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Startpagina B.V.",
+    "pattern": "MoodleBot-Linkchecker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Moodle Pty Ltd",
+    "pattern": "GTmetrix",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Carbon60 Operating Co. Ltd.",
+    "pattern": "CyberFind ?Crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "The Apache Software Foundation",
+    "pattern": "Seobility",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Grammarly",
+    "pattern": "Robozilla",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Robozilla",
+    "pattern": "Domains Project",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Serendeputy Bot",
+    "pattern": "ias-(?:va|sg).*admantx.*service-fetcher|admantx\\.com.*service-fetcher",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Velen Public Web Crawler",
+    "pattern": "Barkrowler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BIG Data Solucoes Em Tecnologia de Informatica LTDA",
+    "pattern": "adbeat",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PPC Labs LLC",
+    "pattern": "(?:BuiltWith|BW/)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BuiltWith Pty Ltd",
+    "pattern": "https://whatis\\.contentkingapp\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ContentKing BV",
+    "pattern": "MicroAdBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MicroAd, Inc.",
+    "pattern": "PingAdmin\\.Ru",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PingAdmin.Ru",
+    "pattern": "notifyninja.+monitoring",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebTehRazrabotka LLC",
+    "pattern": "parse\\.ly scraper",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Nimbostratus Bot",
+    "pattern": "HeartRails_Capture",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Heart Rails Capture",
+    "pattern": "Project-Resonance",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "RedHunt Labs Limited",
+    "pattern": "DataXu",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VSI INNOVATION SAS",
+    "pattern": "veryhip",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VeryHip",
+    "pattern": "LinkpadBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Solomono LLC",
+    "pattern": "MuscatFerret",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MuscatFerret",
+    "pattern": "PageThing\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SPECIALNOISE LTD",
+    "pattern": "ArchiveBox",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ArchiveBox",
+    "pattern": "Choosito",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DATAGNION GMBH",
+    "pattern": "WhatCMS",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ProjectDiscovery, Inc.",
+    "pattern": ".*\\.oast\\.",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ProjectDiscovery, Inc.",
+    "pattern": "scaninfo@(?:expanseinc|paloaltonetworks)\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Expanse Inc.",
+    "pattern": "HuaweiWebCatBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Huawei Technologies Co., Ltd.",
+    "pattern": "Hatena-Favicon",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Hatena Co., Ltd.",
+    "pattern": "Hatena-?Bookmark",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Hatena Co., Ltd.",
+    "pattern": "RyowlEngine",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ryowl",
+    "pattern": "OdklBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ZoominfoBot",
+    "pattern": "WeViKaBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SEOkicks",
+    "pattern": "Plukkie",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Plukkie",
+    "pattern": "proximic;",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Gowikibot",
+    "pattern": "SabsimBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SabsimBot",
+    "pattern": "LumtelBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NET SYSTEMS RESEARCH LLC",
+    "pattern": "CensysInspect",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Censys, Inc.",
+    "pattern": "gdnplus\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WellKnownBot",
+    "pattern": "Adsbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Metrics Tools",
+    "pattern": "serpstatbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Netpeak Ltd",
+    "pattern": "colly",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "colly",
+    "pattern": "l9tcpid",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "l9explore",
+    "pattern": "l9scan/|^Lkx-.*/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BaDaaS SRL",
+    "pattern": "MegaIndex\\.ru",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SISTRIX GmbH",
+    "pattern": "Seolyt(?:Bot)?",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SeolytBot",
+    "pattern": "YaK/",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Neeva Inc.",
+    "pattern": "Chatwork LinkPreview",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "kubell Co., Ltd.",
+    "pattern": "LinkPreview",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LinkPreview",
+    "pattern": "JungleKeyThumbnail",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "JungleKeyThumbnail",
+    "pattern": "rocketmonitor(?:bot)?",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Radio Mast, Inc.",
+    "pattern": "SitemapParser-VIPnytt",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SitemapParser-VIPnytt",
+    "pattern": "^Turnitin",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Turnitin",
+    "pattern": "DMBrowser|DMBrowser-[UB]V",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Dotcom Monitor",
+    "pattern": "ThinkChaos/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Cincraw",
+    "pattern": "CISPA Web Analyzer",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "IONOS SE",
+    "pattern": "Crawldad",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Crawldad",
+    "pattern": "https://securitytxt-scan\\.cs\\.hm\\.edu/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Hochschule für angewandte Wissenschaften München",
+    "pattern": "TigerBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TigerBot",
+    "pattern": "TestCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "TestCrawler",
+    "pattern": "CrowdTanglebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CrowdTangle, Inc.",
+    "pattern": "Sellers\\.Guide Crawler by Primis",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "McCann Disciplines, Ltd.",
+    "pattern": "OnalyticaBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "deepnoc, GmbH",
+    "pattern": "Newslitbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Newslit, LLC.",
+    "pattern": "um-(?:ANS|CC|FC|IC|LN)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ubermetrics Technologies GmbH",
+    "pattern": "Abonti",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Infegy, Inc.",
+    "pattern": "HTTP Banner Detection \\(https://security\\.ipip\\.net\\)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Beijing Tiantexin Tech. Co., Ltd.",
+    "pattern": "ev-crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "e.ventures Managementgesellschaft mbH",
+    "pattern": "webprosbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebPros Holdco B.V.",
+    "pattern": "ELB-HealthChecker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Amazon.com, Inc.",
+    "pattern": "Wheregoes\\.com Redirect Checker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WhereGoes",
+    "pattern": "project_patchwatch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "InternetMeasurement",
+    "pattern": "DomainAppender",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GreenWave Online, Inc.",
+    "pattern": "Page Modified Pinger",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Valley Hosting, LLC",
+    "pattern": "adstxtlab\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "aiHitBot",
+    "pattern": "DomainCrawler/",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "DomainCrawler",
+    "pattern": "DNSResearchBot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "DNSResearchBot",
+    "pattern": "GitCrawlerBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GitCrawlerBot",
+    "pattern": "AdAuth",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AdAuth",
+    "pattern": "faveeo\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Faveeo",
+    "pattern": "kozmonavt\\.",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Kozmonavt",
+    "pattern": "CriteoBot/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CriteoBot",
+    "pattern": "PayPal IPN",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Jožef Stefan Institute",
+    "pattern": "CLASSLA",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Jožef Stefan Institute",
+    "pattern": "dnt-policy@eff\\.org",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Electronic Frontier Foundation",
+    "pattern": "InfoTigerBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Infotiger UG",
+    "pattern": "(?:Birdcrawlerbot|CrawlaDeBot)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Swoppen Systems GmbH",
+    "pattern": "ScamadviserExternalHit",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ecommerce Operations B.V.",
+    "pattern": "ZaldamoSearchBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Zaldamo, LLC.",
+    "pattern": "AFB",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Allloadin Favicon Bot",
+    "pattern": "LinkWalker",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "PhishLabs, Inc.",
+    "pattern": "RenovateBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Inetdex Bot",
+    "pattern": "NETZZAPPEN",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Marc Huemer",
+    "pattern": "panscient\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Panscient, Inc.",
+    "pattern": "research@pdrlabs\\.net",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Torben Hansen",
+    "pattern": "Crawlson",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Crawlson",
+    "pattern": "tchelebi",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "New Work SE",
+    "pattern": "RepoLookoutBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Crissy Field GmbH",
+    "pattern": "PATHspider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "MAMI Project",
+    "pattern": "everyfeed-spider",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Everyfeed",
+    "pattern": "Exchange check",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Kevin Beaumont",
+    "pattern": "Sublinq",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sublinq",
+    "pattern": "Gregarius",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Gregarius",
+    "pattern": "COMODO DCV",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Comodo Security Solutions, Inc.",
+    "pattern": "Sectigo DCV|acme\\.sectigo\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sectigo Limited",
+    "pattern": "KlarnaBot-(?:DownloadProductImage|EnrichProducts|PriceWatcher)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Taboola, Inc.",
+    "pattern": "Asana",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Asana, Inc.",
+    "pattern": "Chrome Privacy Preserving Prefetch Proxy",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google Inc.",
+    "pattern": "URLinspectorBot",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "LinkResearchTools GmbH",
+    "pattern": "EntferBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Entfer Ltd.",
+    "pattern": "TagInspector",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "InfoTrust, LLC",
+    "pattern": "pageburst",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Elsevier Ltd",
+    "pattern": ".+diffbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Diffbot Technologies Corp.",
+    "pattern": "DisqusAdstxtCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Disqus, Inc.",
+    "pattern": "startmebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "2ip",
+    "pattern": "ReqBin Curl Client",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ReqBin",
+    "pattern": "XoviBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Xovi GmbH",
+    "pattern": "Overcast/.+Podcast Sync",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Overcast Podcast Sync",
+    "pattern": "^Verity",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GumGum Verity",
+    "pattern": "hackermention",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "hackermention",
+    "pattern": "BitSightBot",
+    "category": "malicious",
+    "operator": "various"
+  },
+  {
+    "name": "BitSight Technologies, Inc.",
+    "pattern": "Ezgif",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ezgif",
+    "pattern": "intelx\\.io_bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Grier Forensics, LLC",
+    "pattern": "AdsTxtCrawler/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "IAB Technology Laboratory, Inc.",
+    "pattern": "Morningscore",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BrightEdge Technologies, Inc",
+    "pattern": "sfFeedReader",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "sfFeedReader",
+    "pattern": "cyberscan\\.io",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DGC Verwaltungs GmbH",
+    "pattern": "researchscan\\.comsys\\.rwth-aachen\\.de",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "RWTH Aachen University",
+    "pattern": "newspaper",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sprious LLC",
+    "pattern": "Ant(?:\\.com beta|Bot)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ant.com Ltd.",
+    "pattern": "WebwikiBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "webwiki GmbH",
+    "pattern": "phpMyAdmin",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "phpMyAdmin",
+    "pattern": "Matomo/[\\d.]+",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "InnoCraft Ltd",
+    "pattern": "Prometheus",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "The Linux Foundation",
+    "pattern": "ArchiveTeam ArchiveBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ArchiveTeam",
+    "pattern": "MADBbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Meltwater Deutschland GmbH",
+    "pattern": "owler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Open Search Foundation e.V.",
+    "pattern": "bbc\\.co\\.uk/display/men/Page\\+Monitor",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BBC",
+    "pattern": "BBC-Forge-URL-Monitor-Twisted",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ClaudeBot",
+    "pattern": "Imagesift",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "Castle Global, Inc.",
+    "pattern": "TactiScout",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Tactikast",
+    "pattern": "Brightbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Bright Interactive Ltd",
+    "pattern": "DaspeedBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GeedoProductSearch",
+    "pattern": "BackupLand",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ООО «КВАРТА»",
+    "pattern": "Konturbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "АО «ПФ «СКБ Контур»",
+    "pattern": "keys-so-bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ООО «МОДЕСКО»",
+    "pattern": "LetsearchBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LetSearch",
+    "pattern": "Example3",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Example3",
+    "pattern": "StatOnlineRuBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ООО «Регистратор доменных имен РЕГ.РУ»",
+    "pattern": "Spawning-AI",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Spawning, Inc",
+    "pattern": "domain research project",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Trent Wiles",
+    "pattern": "getodin\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SuSea, Inc.",
+    "pattern": "SiteScoreBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SEOptimer",
+    "pattern": "mariadb-mysql-kbs-bot",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "WDES SAS",
+    "pattern": "GitHubCopilotChat",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "GitHubCopilotChat",
+    "pattern": "^pdrl\\.fm",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Podroll Analyzer",
+    "pattern": "PodUptime/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "anthropic-ai",
+    "pattern": "anthropic-ai",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "Anthropic, PBC",
+    "pattern": "NetpeakCheckerBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Netpeak LTD",
+    "pattern": "SandobaCrawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SANDOBA//EBUSINESS SOLUTIONS",
+    "pattern": "SirdataBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Sirdata SAS",
+    "pattern": "CheckMarkNetwork",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "cohere-ai",
+    "pattern": "cohere-ai",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "PerplexityBot",
+    "pattern": "PerplexityBot",
+    "category": "extractive",
+    "operator": "Perplexity",
+    "purpose": "Search"
+  },
+  {
+    "name": "Perplexity AI, Inc.",
+    "pattern": "TTD-Content",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "The Trade Desk, Inc.",
+    "pattern": "montastic-monitor",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Metadot, Corp.",
+    "pattern": "Ruby, Twurly v",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Twurly",
+    "pattern": "Mixnode(?:Cache)?",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Mixnode Technologies, Inc.",
+    "pattern": "CSSCheck",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CSSCheck",
+    "pattern": "MicrosoftPreview",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Microsoft Corporation",
+    "pattern": "s~virustotalcloud",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Idée, Inc.",
+    "pattern": "e~arsnova-filter-system",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebCEO, LLC",
+    "pattern": "NetTrack",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NetTrack",
+    "pattern": "htmlyse",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Trendsmap Pty Ltd",
+    "pattern": "Shareaholic(?:bot)?",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Shareaholic, Inc.",
+    "pattern": "keycdn-tools:",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "KeyCDN Tools",
+    "pattern": "keycdn-tools/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "proinity LLC",
+    "pattern": "Arquivo-web-crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "FCT|FCCN",
+    "pattern": "WhatsMyIP\\.org",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Senuto Sp. z o.o.",
+    "pattern": "GozleBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Doly Horjun HJ",
+    "pattern": "Quantcastbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Quantcast Corp.",
+    "pattern": "FontRadar",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "EMDASH SAS",
+    "pattern": "ViberUrlDownloader",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Viber Media S.à r.l.",
+    "pattern": "^Zeno$",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "The Internet Archive",
+    "pattern": "Barracuda Sentinel",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Dynatrace LLC",
+    "pattern": "DynatraceSynthetic",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Monsido LLC",
+    "pattern": "AccompanyBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Accompani, Inc",
+    "pattern": "Ghost Inspector",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Ghost Inspector, Inc.",
+    "pattern": "Google-Apps-Script",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Google Apps Script",
+    "pattern": "SiteOne-Crawler",
+    "category": "beneficial",
+    "operator": "various"
+  },
+  {
+    "name": "SiteOne s.r.o.",
+    "pattern": "Detectify",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Detectify AB",
+    "pattern": "DomCopBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Axeman Technology Solutions LLP",
+    "pattern": "Paqlebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Paqle A/S",
+    "pattern": "Wibybot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Synapse",
+    "pattern": "OSZKbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SEO Cube S.r.l.",
+    "pattern": "RavenCrawler",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "TapClicks, Inc.",
+    "pattern": "KadoBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DubBot",
+    "pattern": "Swiftbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Elasticsearch, B.V.",
+    "pattern": "EyeMonIT",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "EyeMonit",
+    "pattern": "ThousandEyes",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Cisco Systems, Inc.",
+    "pattern": "OmtrBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "OmtrBot",
+    "pattern": "WebMon",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WebMon",
+    "pattern": "AdsTxtCrawlerTP",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AdsTxtCrawlerTP",
+    "pattern": "fragFINN",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Clickagy, LLC",
+    "pattern": "kiwitcms-gitops",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Open Technologies Bulgaria, Ltd.",
+    "pattern": "webtru_crawler",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DataSign Inc.",
+    "pattern": "URLSuMaBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "URLSuMaBot",
+    "pattern": "360JK yunjiankong",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "360 Security Technology Inc.",
+    "pattern": "UCSBNetworkMeasurement",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "University of California, Santa Barbara",
+    "pattern": "Plesk screenshot bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Plesk International GmbH",
+    "pattern": "Who\\.is",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Who.is Bot",
+    "pattern": "Probely",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Probely - Soluções de Cibersegurança, S.A.",
+    "pattern": "Uptimia",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "JJ Online GmbH",
+    "pattern": "2GDPR",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "2GDPR",
+    "pattern": "abuse\\.xmco\\.fr",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "XMCO, SASU",
+    "pattern": "CheckHost",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "CheckHost",
+    "pattern": "LAC_IAHarvester",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Library and Archives Canada",
+    "pattern": "InsytfulBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Zengenti Limited",
+    "pattern": "statista\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Statista, Inc.",
+    "pattern": "SubstackContentFetch",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Substack, Inc.",
+    "pattern": "^ds9",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Copyright Clearance Center, Inc.",
+    "pattern": "LiveJournal\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ООО СИМ",
+    "pattern": "bitdiscovery",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Tenable, Inc.",
+    "pattern": "Castopod",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Castopod",
+    "pattern": "Elastic/Synthetics",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Elasticsearch B.V.",
+    "pattern": "WDG_Validator",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "WDG HTML Validator",
+    "pattern": "scan@aegis.network",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "BDFetch",
+    "pattern": "PunkMap",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Punk Map",
+    "pattern": "GenomeCrawlerd",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Nokia Corporation",
+    "pattern": "Gaisbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "AlltheWeb",
+    "pattern": "ducks\\.party",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "ducks.party",
+    "pattern": "DepSpid",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "DepSpid",
+    "pattern": "Website-info\\.net",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Meins und Vogel GmbH",
+    "pattern": "RedekenBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Redeken",
+    "pattern": "semaltbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Semalt LP",
+    "pattern": "MakeMerryBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Timpibot",
+    "pattern": "Timpibot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Timpi Inc.",
+    "pattern": "Validbot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "NPBot",
+    "pattern": "NPBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "NameProtect, Inc.",
+    "pattern": "domaincodex\\.com",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Erie Data Systems, LLC",
+    "pattern": "Swisscows Favicons",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Swisscows AG",
+    "pattern": "leak\\.info",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "leak.info",
+    "pattern": "workona",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Workona, Inc.",
+    "pattern": "Bloglines",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Marginalia",
+    "pattern": "vu-server-health-scanner",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VU Amsterdam",
+    "pattern": "Functionize",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Functionize, Inc.",
+    "pattern": "Prerender",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "saas.group Inc.",
+    "pattern": "bl\\.uk_ldfc_bot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "The British Library",
+    "pattern": "Miniature\\.io",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "LCX Ventures Ltd",
+    "pattern": "Convertify",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Muck Rack, LLC",
+    "pattern": "Golfe",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Golfe",
+    "pattern": "SpiderLing",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Natural Language Processing Centre",
+    "pattern": "Bravebot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Brave Software, Inc.",
+    "pattern": "1001FirmsBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "1001FirmsBot",
+    "pattern": "SteamChatURLLookup",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Valve Corporation",
+    "pattern": "ohdear\\.app",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Immutable, SNC",
+    "pattern": "Inspici",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "peer39_crawler",
+    "pattern": "peer39_crawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "DomainsBot, Inc.",
+    "pattern": "CloudServerMarketSpider",
+    "category": "extractive",
+    "operator": "various"
+  },
+  {
+    "name": "CloudServerMarketSpider",
+    "pattern": "Pigafetta",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "aStonish Studio Srl",
+    "pattern": "Cotoyogi",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Joint Support-Center for Data Science Research (ROIS-DS)",
+    "pattern": "SuggestBot",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SuggestBot",
+    "pattern": "cms-experiment",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Cyber Circus Limited",
+    "pattern": "SBIder",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Lightspeed Systems, Inc.",
+    "pattern": "Research JLU",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Justus Liebig University Giessen",
+    "pattern": "(?:hgf|OS)AlphaXCrawl",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "University of Passau",
+    "pattern": "WPMU DEV",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Incsub, LLC.",
+    "pattern": "SnoopSecInspect",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "SnoopSecInspect",
+    "pattern": "ModatScanner",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Modat B.V.",
+    "pattern": "researchcyber\\.net",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Crystal Semantics Ltd.",
+    "pattern": "najdu\\.s\\.holubem\\.eu",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "najdu.s.holubem.eu",
+    "pattern": "VORTEX/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "VORTEX",
+    "pattern": "xtate/(\\d+\\.[.\\d]+)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "xtate",
+    "pattern": "FediList Agent/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "FediList",
+    "pattern": "Grafana/(\\d+\\.[.\\d]+)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Grafana Labs",
+    "pattern": "github-camo",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Github",
+    "pattern": "Bluesky",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Bluesky Social PBC",
+    "pattern": "OpenGraph\\.io",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "OpenGraph.io",
+    "pattern": "microsoft-flow/",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Microsoft Corporation",
+    "pattern": "nuhk|grub-client|Download Demon|SearchExpress|Microsoft URL Control|borg|altavista|dataminr\\.com|teoma|oegp|http%20client|htdig|mogimogi|larbin|scrubby|searchsight|semanticdiscovery|snappy|zeal(?!ot)|dataparksearch|findlinks|BrowserMob|URL2PNG|ZooShot|GomezA|Google SketchUp|Read%20Later|7Siters|centuryb\\.o\\.t9|InterNaetBoten|EasyBib AutoCite|Bidtellect|tomnomnom/meg|cortex|Re-re Studio|adreview|AHC/|NameOfAgent|Request-Promise|ALittle Client|Hello,? world|wp_is_mobile|0xAbyssalDoesntExist|Anarchy99|^revolt|nvd0rz|xfa1|Hakai|gbrmss|fuck-your-hp|IDBTE4M CODE87|Antoine|Insomania|Hells-Net|b3astmode|Linux Gnu \\(cow\\)|Test Certificate Info|iplabel|Magellan|TheSafex?Internetx?Search|Searcherx?web|kirkland-signature|LinkChain|survey-security-dot-txt|infrawatch|Time/|r00ts3c-owned-you|nvdorz|Root Slut|NiggaBalls|BotPoke|GlobalWebSearch|xx032_bo9vs83_2a|sslshed|geckotrail|Wordup|Keydrop|\\(compatible\\)|John Recon|SPARK COMMIT|masjesu|Komaru_The_Cat|Jesus Christ of Nazareth is LORD|Kowai|Hakai|LoliSec|LMAO|^xenu|^(?:chrome|firefox|Abcd|Dark|KvshClient|Node.js|Report Runner|url|Zeus|ZmEu)$|OnlyScans|TheInternetSearchx",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "Generic Bot",
+    "pattern": "[a-z0-9_-]*(?:(?<!cu|power[ _]|m[ _])bot(?![ _]TAB|[ _]?5[0-9]|[ _]Senior|[ _]Junior)|analyzer|appengine|archiver?|checker|collector|crawl|crawler|(?<!node-|uclient-|Mikrotik/\\d\\.[x\\d] |electron-)fetch(?:er)?|indexer|inspector|monitor|(?<!Microsoft |banshee-)project(?!or)|(?<!Google Wap |Blue |SpeedMode; )proxy|(?<!P)research|resolver|robots|(?<!Cam)scanner|scraper|script|searcher|(?<!-)security|spider(?! 8)|study|transcoder|uptime|user[ _]?agent|validator)(?:[^a-z]|$)",
+    "category": "unknown",
+    "operator": "various"
+  },
+  {
+    "name": "IsraBot",
+    "pattern": "IsraBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Orthogaffe",
+    "pattern": "Orthogaffe",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "UbiCrawler",
+    "pattern": "UbiCrawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "DOC",
+    "pattern": "DOC",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Zao",
+    "pattern": "Zao",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "sitecheck.internetseer.com",
+    "pattern": "sitecheck.internetseer.com",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Zealbot",
+    "pattern": "Zealbot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "MSIECrawler",
+    "pattern": "MSIECrawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "SiteSnagger",
+    "pattern": "SiteSnagger",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Fetch",
+    "pattern": "Fetch",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Offline Explorer",
+    "pattern": "Offline Explorer",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Teleport",
+    "pattern": "Teleport",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "TeleportPro",
+    "pattern": "TeleportPro",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "linko",
+    "pattern": "linko",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Microsoft.URL.Control",
+    "pattern": "Microsoft.URL.Control",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Xenu",
+    "pattern": "Xenu",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "ZyBORG",
+    "pattern": "ZyBORG",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Download Ninja",
+    "pattern": "Download Ninja",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "fast",
+    "pattern": "fast",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "wget",
+    "pattern": "wget",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "grub-client",
+    "pattern": "grub-client",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "k2spider",
+    "pattern": "k2spider",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "WebReaper",
+    "pattern": "WebReaper",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Applebot-Extended",
+    "pattern": "Applebot-Extended",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Googlebot",
+    "pattern": "Googlebot",
+    "category": "beneficial",
+    "operator": "Google",
+    "purpose": "Search"
+  },
+  {
+    "name": "AliyunSecBot",
+    "pattern": "AliyunSecBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "AudigentAdBot",
+    "pattern": "AudigentAdBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Claude-SearchBot",
+    "pattern": "Claude-SearchBot",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "Claude-User",
+    "pattern": "Claude-User",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "Claude-Web",
+    "pattern": "Claude-Web",
+    "category": "extractive",
+    "operator": "Anthropic",
+    "purpose": "RAG"
+  },
+  {
+    "name": "Diffbot",
+    "pattern": "Diffbot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "EchoboxBot",
+    "pattern": "EchoboxBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "FriendlyCrawler",
+    "pattern": "FriendlyCrawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Google-Extended",
+    "pattern": "Google-Extended",
+    "category": "extractive",
+    "operator": "Google",
+    "purpose": "AI Training"
+  },
+  {
+    "name": "Meta-ExternalAgent",
+    "pattern": "Meta-ExternalAgent",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Meta-ExternalFetcher",
+    "pattern": "Meta-ExternalFetcher",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "MyCentralAIScraperBot",
+    "pattern": "MyCentralAIScraperBot",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "NewsNow",
+    "pattern": "NewsNow",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "news-please",
+    "pattern": "news-please",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "omgilibot",
+    "pattern": "omgilibot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "peer39_crawler/1.0",
+    "pattern": "peer39_crawler/1.0",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Perplexity-User",
+    "pattern": "Perplexity-User",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Poseidon Research Crawler",
+    "pattern": "Poseidon Research Crawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "quillbot.com",
+    "pattern": "quillbot.com",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "SeekrBot",
+    "pattern": "SeekrBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "SeznamHomepageCrawler",
+    "pattern": "SeznamHomepageCrawler",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "TaraGroup Intelligent Bot",
+    "pattern": "TaraGroup Intelligent Bot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "ViennaTinyBot",
+    "pattern": "ViennaTinyBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "YandexAdditional",
+    "pattern": "YandexAdditional",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "YandexAdditionalBot",
+    "pattern": "YandexAdditionalBot",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "EtaoSpider",
+    "pattern": "EtaoSpider",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "GoogleAgent-Mariner",
+    "pattern": "GoogleAgent-Mariner",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "GoogleAgent-Shopping",
+    "pattern": "GoogleAgent-Shopping",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Devin",
+    "pattern": "Devin",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "AI2Bot",
+    "pattern": "AI2Bot",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "Gemini-Deep-Research",
+    "pattern": "Gemini-Deep-Research",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "PanguBot",
+    "pattern": "PanguBot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "MistralAI-User",
+    "pattern": "MistralAI-User",
+    "category": "extractive",
+    "purpose": "various"
+  },
+  {
+    "name": "Sidetrade indexer bot",
+    "pattern": "Sidetrade indexer bot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "Google-NotebookLM",
+    "pattern": "Google-NotebookLM",
+    "category": "beneficial",
+    "purpose": "various"
+  },
+  {
+    "name": "Copilot",
+    "pattern": "Copilot",
+    "category": "unknown",
+    "purpose": "various"
+  },
+  {
+    "name": "YandexBot",
+    "pattern": "YandexBot",
+    "category": "beneficial",
+    "operator": "Yandex",
+    "purpose": "Search"
+  },
+  {
+    "name": "RogerBot",
+    "pattern": "RogerBot",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  },
+  {
+    "name": "DataForSEO",
+    "pattern": "DataForSEO",
+    "category": "extractive",
+    "purpose": "SEO/Marketing"
+  }
+]
