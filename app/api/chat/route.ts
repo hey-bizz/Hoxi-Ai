@@ -1,7 +1,7 @@
 // Hoxi AI Chat API Route
 // Connects the frontend chat interface with the Hoxi AI agent
 
-import { streamText } from 'ai'
+import { stepCountIs, streamText } from 'ai'
 import { hoxiAgent } from '@/lib/hoxi-ai'
 import { NextRequest } from 'next/server'
 
@@ -47,39 +47,27 @@ export async function POST(req: NextRequest) {
     // Prepare messages with context
     const messagesWithContext = [contextMessage, ...messages]
     
+    let currentStep = 0
+
     // Stream the response using the Hoxi agent
     const result = await streamText({
       model: hoxiAgent.getModel(),
       messages: messagesWithContext,
       tools: hoxiAgent.getTools(),
-      maxSteps: 5,
+      stopWhen: stepCountIs(5),
       temperature: 0.1,
-      onStepFinish: async ({ toolCalls, stepNumber }) => {
+      onStepFinish: async stepResult => {
+        const { toolCalls } = stepResult
+        currentStep += 1
         // Log tool usage for optimization
         if (toolCalls?.length) {
           hoxiAgent.logToolUsage(toolCalls, sessionId)
-          console.log(`Hoxi AI [${sessionId}] Step ${stepNumber} used tools: ${toolCalls.map(t => t.toolName).join(', ')}`)
+          console.log(`Hoxi AI [${sessionId}] Step ${currentStep} used tools: ${toolCalls.map(t => t.toolName).join(', ')}`)
         }
       }
     })
     
-    // Check if result has toDataStreamResponse method
-    if (typeof result.toDataStreamResponse === 'function') {
-      return result.toDataStreamResponse()
-    } else {
-      // Fallback for development
-      return new Response(
-        JSON.stringify({ 
-          success: true,
-          message: 'Chat request received',
-          response: 'Hello! I am Hoxi AI. I can help you analyze your bot traffic and provide recommendations.'
-        }),
-        { 
-          status: 200,
-          headers: { 'Content-Type': 'application/json' }
-        }
-      )
-    }
+    return result.toTextStreamResponse()
     
   } catch (error) {
     console.error('Chat API error:', error)
