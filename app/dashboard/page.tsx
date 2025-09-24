@@ -123,6 +123,28 @@ const getMockMetrics = () => {
   }
 }
 
+const normalizeNumber = (value: unknown): number => {
+  if (typeof value === "number") {
+    return Number.isFinite(value) ? value : 0
+  }
+
+  if (typeof value === "string") {
+    const parsed = Number(value)
+    return Number.isFinite(parsed) ? parsed : 0
+  }
+
+  return 0
+}
+
+const formatCategoryName = (key: string): string =>
+  key
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/[_-]+/g, " ")
+    .split(" ")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(" ")
+
 const mapTimeRangeToParam = (label: string): string => {
   switch (label) {
     case "Last hour":
@@ -155,12 +177,14 @@ const buildActivityFromLogs = (logs: Array<Record<string, any>>): any[] => {
   return logs.slice(0, 6).map(entry => {
     const detectedAt = entry.detected_at ? new Date(entry.detected_at) : new Date()
     const time = detectedAt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+    const bandwidthBytes = normalizeNumber(entry.bandwidth_bytes)
+    const categoryKey = typeof entry.category === "string" ? entry.category : "unknown"
     return {
       bot: entry.bot_name || "Unknown Bot",
       action: entry.path ? `Requested ${entry.path}` : "Activity detected",
-      size: formatBytes(entry.bandwidth_bytes || 0),
+      size: formatBytes(bandwidthBytes),
       time,
-      icon: getBotIcon(entry.category || "unknown")
+      icon: getBotIcon(categoryKey)
     }
   })
 }
@@ -302,7 +326,7 @@ export default function DashboardPage() {
         },
         body: JSON.stringify({
           messages: [...chatMessages, userMessage],
-          websiteId: "example-com", // In a real app, this would be dynamic
+          websiteId: websiteMeta?.id || "example-com",
           sessionId: sessionId
         }),
       })
@@ -356,56 +380,129 @@ export default function DashboardPage() {
     }
   }
 
-  // Format bytes to human readable
-  const formatBytes = (bytes: number): string => {
-    if (bytes === 0) return "0 B"
-    const k = 1024
-    const sizes = ["B", "KB", "MB", "GB", "TB"]
-    const i = Math.floor(Math.log(bytes) / Math.log(k))
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i]
-  }
+  useEffect(() => {
+    let cancelled = false
 
-  // Get bot icon based on category
-  const getBotIcon = (category: string): string => {
-    const icons: Record<string, string> = {
-      "ai_training": "🤖",
-      "ai_scraper": "🕷️",
-      "ai_search": "🔍",
-      "search_engine": "🔍",
-      "social_media": "📱",
-      "seo_tool": "📈",
-      "scraper": "📊",
-      "monitoring": "👁️",
-      "security": "🛡️",
-      "unknown": "❓"
+    if (!websiteMeta?.id) {
+      setLoading(false)
+      return () => {
+        cancelled = true
+      }
     }
-    return icons[category] || "🤖"
-  }
 
-  // Generate simulated real-time activity
-  const generateRealtimeActivity = (): any[] => {
-    const bots = ["GPTBot", "Chrome/120", "Googlebot", "CCBot", "Chrome/120", "Chrome/120"]
-    const actions = ["crawled /api/data", "visited /", "indexed /sitemap.xml", "scraped /products", "visited /", "visited /about"]
-    const sizes = ["11.22 KB", "2.82 KB", "2.16 KB", "220.82 KB", "10.03 KB", "8.09 KB"]
-    const icons = ["🤖", "👤", "🔍", "🕷️", "👤", "👤"]
-    
-    const activity: any[] = []
-    for (let i = 0; i < 6; i++) {
-      const time = new Date(Date.now() - Math.floor(Math.random() * 300000)) // Random time within last 5 minutes
-      const hours = time.getHours().toString().padStart(2, '0')
-      const minutes = time.getMinutes().toString().padStart(2, '0')
-      const seconds = time.getSeconds().toString().padStart(2, '0')
-      
-      activity.push({
-        bot: bots[i],
-        action: actions[i],
-        size: sizes[i],
-        time: `${hours}:${minutes}:${seconds} AM`,
-        icon: icons[i]
-      })
+    const fetchDashboardData = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+
+        const timeRangeParam = mapTimeRangeToParam(timeRange)
+        const response = await fetch(
+          `/api/analyze?websiteId=${encodeURIComponent(websiteMeta.id)}&timeRange=${timeRangeParam}`
+        )
+        const payload = await response.json()
+
+        if (!response.ok) {
+          throw new Error(payload?.error || 'Failed to load metrics')
+        }
+
+        if (!payload?.metrics) {
+          throw new Error('Metrics not available yet')
+        }
+
+        const metricsPayload = payload.metrics
+
+        const normalizedMetrics = {
+          totalRequests: normalizeNumber(metricsPayload.totalRequests),
+          humanRequests: normalizeNumber(metricsPayload.humanRequests),
+          botRequests: normalizeNumber(metricsPayload.botRequests),
+          aiPercentage:
+            typeof metricsPayload.aiPercentage === 'string'
+              ? metricsPayload.aiPercentage
+              : normalizeNumber(metricsPayload.totalRequests)
+                ? (
+                    (normalizeNumber(metricsPayload.botRequests) /
+                      Math.max(normalizeNumber(metricsPayload.totalRequests), 1)) *
+                    100
+                  ).toFixed(1)
+                : '0',
+          humanPercentage:
+            typeof metricsPayload.humanPercentage === 'string'
+              ? metricsPayload.humanPercentage
+              : normalizeNumber(metricsPayload.totalRequests)
+                ? (
+                    (normalizeNumber(metricsPayload.humanRequests) /
+                      Math.max(normalizeNumber(metricsPayload.totalRequests), 1)) *
+                    100
+                  ).toFixed(1)
+                : '0',
+          botBandwidth: normalizeNumber(metricsPayload.botBandwidth),
+          humanBandwidth: normalizeNumber(metricsPayload.humanBandwidth),
+          potentialSavings: {
+            total: normalizeNumber(metricsPayload.potentialSavings?.total),
+            monthly: normalizeNumber(metricsPayload.potentialSavings?.monthly),
+            yearly: normalizeNumber(metricsPayload.potentialSavings?.yearly)
+          },
+          botBreakdown: metricsPayload.botBreakdown ?? {}
+        }
+
+        if (cancelled) return
+
+        setMetrics(normalizedMetrics)
+        setLiveRequests(normalizeNumber(metricsPayload.totalRequests))
+
+        const breakdownEntries = Object.entries(metricsPayload.botBreakdown ?? {})
+        const breakdownTotal = normalizedMetrics.totalRequests
+
+        const categories = breakdownEntries
+          .map(([key, rawValue]) => {
+            const data = rawValue as { requests?: unknown; bandwidth?: unknown; bots?: string[] }
+            const requests = normalizeNumber(data.requests)
+            const bandwidth = normalizeNumber(data.bandwidth)
+            const bots = Array.isArray(data.bots) ? data.bots : []
+            const percentage = breakdownTotal
+              ? ((requests / breakdownTotal) * 100).toFixed(1)
+              : '0.0'
+
+            return {
+              name: formatCategoryName(key),
+              bots: bots.join(', ') || 'Unknown bots',
+              requests,
+              percentage,
+              bandwidth: formatBytes(bandwidth),
+              icon: getBotIcon(key)
+            }
+          })
+          .sort((a, b) => b.requests - a.requests)
+
+        setBotCategories(categories)
+
+        const activity = buildActivityFromLogs(payload.logs ?? [])
+        setRealtimeActivity(activity.length ? activity : generateRealtimeActivity())
+      } catch (err) {
+        console.error('Dashboard data load failed:', err)
+
+        if (cancelled) return
+
+        setError('Using demo data - connect your hosting provider to see real metrics')
+        setMetrics(getMockMetrics())
+        setBotCategories([])
+        setRealtimeActivity(generateRealtimeActivity())
+      } finally {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      }
     }
-    return activity
-  }
+
+    fetchDashboardData()
+
+    return () => {
+      cancelled = true
+    }
+  }, [websiteMeta?.id, timeRange])
+
+  const domainLabel = websiteMeta?.domain || 'example.com'
+  const providerLabel = formatProviderName(websiteMeta?.provider)
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -483,7 +580,10 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between mb-8">
               <div>
                 <h1 className="text-4xl font-bold text-white">AI Crawler Monitor</h1>
-                <p className="text-gray-400 text-lg">example.com • Cloudflare</p>
+                <p className="text-gray-400 text-lg">
+                  {domainLabel}
+                  {providerLabel ? ` • ${providerLabel}` : ""}
+                </p>
                 <p className="text-sm text-gray-500">Real-time traffic analysis and bot detection</p>
               </div>
 
