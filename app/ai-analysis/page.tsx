@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 
@@ -11,6 +11,25 @@ export default function AIAnalysisPage() {
   const [stage, setStage] = useState<Stage>("initializing")
   const [progress, setProgress] = useState(0)
   const [currentTask, setCurrentTask] = useState("Initializing Hoxi AI...")
+  const websiteIdRef = useRef<string | null>(null)
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    const raw = window.localStorage.getItem("hoxi-active-website")
+    if (!raw) return
+
+    try {
+      const parsed = JSON.parse(raw)
+      if (parsed && typeof parsed === "object" && typeof parsed.id === "string") {
+        websiteIdRef.current = parsed.id
+        return
+      }
+    } catch {
+      // Ignore JSON parse errors and fall back to raw value
+    }
+
+    websiteIdRef.current = raw
+  }, [])
 
   useEffect(() => {
     const stages: Array<{ stage: Stage; task: string; duration: number; progress: number }> = [
@@ -54,7 +73,8 @@ export default function AIAnalysisPage() {
           } else {
             // Analysis complete, redirect to dashboard
             setTimeout(() => {
-              router.push("/dashboard")
+              const websiteId = websiteIdRef.current
+              router.push(websiteId ? `/dashboard?websiteId=${websiteId}` : "/dashboard")
             }, 1000)
           }
         }, duration)

@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -29,6 +29,140 @@ interface MetricCardProps {
   change?: string
   icon: React.ReactNode
   color: "blue" | "red" | "orange" | "green"
+}
+
+const formatBytes = (bytes: number): string => {
+  if (!bytes) return "0 B"
+  const k = 1024
+  const sizes = ["B", "KB", "MB", "GB", "TB"]
+  const i = Math.floor(Math.log(bytes) / Math.log(k))
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`
+}
+
+const getBotIcon = (category: string): string => {
+  const icons: Record<string, string> = {
+    ai_training: "🤖",
+    ai_scraper: "🕷️",
+    ai_search: "🔍",
+    search_engine: "🔍",
+    social_media: "📱",
+    seo_tool: "📈",
+    scraper: "📊",
+    monitoring: "👁️",
+    security: "🛡️",
+    unknown: "❓"
+  }
+  return icons[category] || "🤖"
+}
+
+const generateRealtimeActivity = (): any[] => {
+  const bots = ["GPTBot", "Chrome/120", "Googlebot", "CCBot", "Chrome/120", "Chrome/120"]
+  const actions = ["crawled /api/data", "visited /", "indexed /sitemap.xml", "scraped /products", "visited /", "visited /about"]
+  const sizes = ["11.22 KB", "2.82 KB", "2.16 KB", "220.82 KB", "10.03 KB", "8.09 KB"]
+  const icons = ["🤖", "👤", "🔍", "🕷️", "👤", "👤"]
+
+  const activity: any[] = []
+  for (let i = 0; i < 6; i++) {
+    const time = new Date(Date.now() - Math.floor(Math.random() * 300000))
+    const hours = time.getHours().toString().padStart(2, "0")
+    const minutes = time.getMinutes().toString().padStart(2, "0")
+    const seconds = time.getSeconds().toString().padStart(2, "0")
+
+    activity.push({
+      bot: bots[i],
+      action: actions[i],
+      size: sizes[i],
+      time: `${hours}:${minutes}:${seconds}`,
+      icon: icons[i]
+    })
+  }
+  return activity
+}
+
+const getMockMetrics = () => {
+  return {
+    totalRequests: 52029,
+    humanRequests: 38100,
+    botRequests: 13929,
+    humanPercentage: 73.2,
+    aiPercentage: 26.8,
+    totalBandwidth: 1240000000,
+    botBandwidth: 750000000,
+    potentialSavings: {
+      total: 95,
+      monthly: 95,
+      yearly: 1140,
+    },
+    botBreakdown: {
+      AI_Training: {
+        requests: 6800,
+        bandwidth: 750000000,
+        bots: ["GPTBot", "Claude-Web", "ChatGPT-User"]
+      },
+      Search_Engines: {
+        requests: 3200,
+        bandwidth: 280000000,
+        bots: ["Googlebot", "Bingbot", "DuckDuckBot"]
+      },
+      AI_Scrapers: {
+        requests: 2400,
+        bandwidth: 150000000,
+        bots: ["PerplexityBot", "You.com", "Diffbot"]
+      },
+      Social_Media: {
+        requests: 900,
+        bandwidth: 45000000,
+        bots: ["facebookexternalhit", "Twitterbot", "LinkedInBot"]
+      },
+      SEO_Tools: {
+        requests: 629,
+        bandwidth: 15000000,
+        bots: ["AhrefsBot", "SemrushBot", "MJ12bot"]
+      }
+    }
+  }
+}
+
+const mapTimeRangeToParam = (label: string): string => {
+  switch (label) {
+    case "Last hour":
+      return "1h"
+    case "Last 24 hours":
+      return "24h"
+    case "Last 7 days":
+      return "7d"
+    case "Last 30 days":
+      return "30d"
+    default:
+      return "24h"
+  }
+}
+
+const formatProviderName = (provider?: string | null): string | null => {
+  if (!provider) return null
+  return provider
+    .split(/[_-\s]+/)
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ")
+}
+
+const buildActivityFromLogs = (logs: Array<Record<string, any>>): any[] => {
+  if (!Array.isArray(logs) || logs.length === 0) {
+    return []
+  }
+
+  return logs.slice(0, 6).map(entry => {
+    const detectedAt = entry.detected_at ? new Date(entry.detected_at) : new Date()
+    const time = detectedAt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+    return {
+      bot: entry.bot_name || "Unknown Bot",
+      action: entry.path ? `Requested ${entry.path}` : "Activity detected",
+      size: formatBytes(entry.bandwidth_bytes || 0),
+      time,
+      icon: getBotIcon(entry.category || "unknown")
+    }
+  })
 }
 
 function MetricCard({ title, value, subtitle, change, icon, color }: MetricCardProps) {
@@ -78,21 +212,59 @@ export default function DashboardPage() {
   const [chatInput, setChatInput] = useState("")
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [websiteMeta, setWebsiteMeta] = useState<{ id: string; domain?: string | null; provider?: string | null } | null>(null)
   const [metrics, setMetrics] = useState<any>(null)
   const [botCategories, setBotCategories] = useState<any[]>([])
   const [realtimeActivity, setRealtimeActivity] = useState<any[]>([])
   const [isSending, setIsSending] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const searchParams = useSearchParams()
+
+  const parseStoredWebsiteMeta = (raw: string | null): { id: string; domain?: string | null; provider?: string | null } | null => {
+    if (!raw) return null
+    try {
+      const parsed = JSON.parse(raw)
+      if (parsed && typeof parsed === "object") {
+        const parsedRecord = parsed as Record<string, unknown>
+        const id = typeof parsedRecord.id === "string" ? parsedRecord.id : undefined
+        if (id) {
+          return {
+            id,
+            domain: typeof parsedRecord.domain === "string" ? parsedRecord.domain : null,
+            provider: typeof parsedRecord.provider === "string" ? parsedRecord.provider : null
+          }
+        }
+      }
+    } catch {
+      // Ignore parse errors and fall back to treating the raw value as the ID
+    }
+
+    return typeof raw === "string" && raw.length > 0 ? { id: raw } : null
+  }
 
   useEffect(() => {
-    // Fetch real-time dashboard data
-    fetchDashboardData()
-    
-    // Set up periodic refresh
-    const interval = setInterval(fetchDashboardData, 30000) // Refresh every 30 seconds
-    
-    return () => clearInterval(interval)
-  }, [])
+    if (typeof window === "undefined") return
+
+    const storedRaw = window.localStorage.getItem("hoxi-active-website")
+    const storedMeta = parseStoredWebsiteMeta(storedRaw)
+    const paramId = searchParams?.get("websiteId")
+
+    let nextMeta = storedMeta
+
+    if (paramId) {
+      nextMeta = nextMeta ? { ...nextMeta, id: paramId } : { id: paramId }
+      try {
+        window.localStorage.setItem("hoxi-active-website", JSON.stringify(nextMeta))
+      } catch (storageError) {
+        console.error("Failed to persist active website metadata", storageError)
+      }
+    }
+
+    if (nextMeta) {
+      setWebsiteMeta(nextMeta)
+      setShowOnboarding(false)
+    }
+  }, [searchParams])
 
   useEffect(() => {
     // Scroll to bottom of chat when new messages are added
@@ -101,102 +273,6 @@ export default function DashboardPage() {
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
-
-  const getMockMetrics = () => {
-    return {
-      totalRequests: 52029,
-      humanRequests: 38100,
-      botRequests: 13929,
-      humanPercentage: 73.2,
-      aiPercentage: 26.8,
-      totalBandwidth: 1240000000, // 1.24 GB in bytes
-      botBreakdown: {
-        "AI Training": {
-          requests: 6800,
-          bandwidth: 750000000,
-          bots: ["GPTBot", "Claude-Web", "ChatGPT-User"]
-        },
-        "Search Engines": {
-          requests: 3200,
-          bandwidth: 280000000,
-          bots: ["Googlebot", "Bingbot", "DuckDuckBot"]
-        },
-        "AI Scrapers": {
-          requests: 2400,
-          bandwidth: 150000000,
-          bots: ["PerplexityBot", "You.com", "Diffbot"]
-        },
-        "Social Media": {
-          requests: 900,
-          bandwidth: 45000000,
-          bots: ["facebookexternalhit", "Twitterbot", "LinkedInBot"]
-        },
-        "SEO Tools": {
-          requests: 629,
-          bandwidth: 15000000,
-          bots: ["AhrefsBot", "SemrushBot", "MJ12bot"]
-        }
-      }
-    }
-  }
-
-  const fetchDashboardData = async () => {
-    try {
-      setLoading(true)
-      setError(null)
-
-      let metricsData = null;
-
-      // Try to fetch real metrics data
-      try {
-        const metricsRes = await fetch(`/api/analyze?websiteId=example-com&timeRange=24h`)
-        metricsData = await metricsRes.json()
-
-        if (metricsRes.ok && metricsData.metrics) {
-          setMetrics(metricsData.metrics)
-        } else {
-          // Fall back to mock data if no real data available
-          setMetrics(getMockMetrics())
-          setError("Using demo data - connect your hosting provider to see real metrics")
-        }
-      } catch (apiError) {
-        // Fall back to mock data if API fails
-        setMetrics(getMockMetrics())
-        setError("Using demo data - connect your hosting provider to see real metrics")
-      }
-      
-      // Simulate live requests counter
-      setLiveRequests(prev => prev + Math.floor(Math.random() * 10))
-      
-      // Process bot categories for display (only if we have real data)
-      if (metricsData && metricsData.metrics && metricsData.metrics.botBreakdown) {
-        const categories: any[] = []
-        for (const [category, data] of Object.entries(metricsData.metrics.botBreakdown)) {
-          categories.push({
-            name: category,
-            requests: (data as any).requests,
-            percentage: metricsData.metrics.totalRequests > 0 ? 
-              (((data as any).requests / metricsData.metrics.totalRequests) * 100).toFixed(1) : "0",
-            bandwidth: formatBytes((data as any).bandwidth),
-            icon: getBotIcon(category),
-            bots: Array.isArray((data as any).bots) ? (data as any).bots.slice(0, 3).join(", ") : ""
-          })
-        }
-        
-        // Sort by requests descending and take top 5
-        setBotCategories(categories.sort((a, b) => b.requests - a.requests).slice(0, 5))
-      }
-      
-      // Simulate real-time activity
-      setRealtimeActivity(generateRealtimeActivity())
-      
-    } catch (err) {
-      console.error("Dashboard fetch error:", err)
-      setError(err instanceof Error ? err.message : "Failed to load dashboard data")
-    } finally {
-      setLoading(false)
-    }
   }
 
   const handleLogout = () => {

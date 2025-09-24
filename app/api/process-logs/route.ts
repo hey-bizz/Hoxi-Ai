@@ -49,6 +49,7 @@ export async function POST(request: NextRequest) {
 
     // Try to find existing website or create new one for uploads
     let websiteRow: any = null
+    let inferredDomain: string | null = null
 
     // Check if websiteId is a UUID (existing website)
     const isUUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(websiteId)
@@ -57,7 +58,7 @@ export async function POST(request: NextRequest) {
       // Existing website - validate ownership
       const { data, error: websiteError } = await supabaseAdmin
         .from('websites')
-        .select('id, user_id, provider')
+        .select('id, user_id, provider, domain, url, name')
         .eq('id', websiteId)
         .maybeSingle()
 
@@ -81,6 +82,7 @@ export async function POST(request: NextRequest) {
     if (!isUUID) {
       const domain = extractDomainFromLogs(lines, headers) || 'uploaded-logs.local'
       const uploadUUID = generateUUIDFromString(websiteId)
+      inferredDomain = domain
 
       // Create website record
       const { data: newWebsite, error: createError } = await supabaseAdmin
@@ -102,7 +104,7 @@ export async function POST(request: NextRequest) {
       }
 
       websiteId = uploadUUID
-      websiteRow = newWebsite || { id: uploadUUID, user_id: userId, provider: 'upload' }
+      websiteRow = newWebsite || { id: uploadUUID, user_id: userId, provider: 'upload', domain }
     }
 
     const parsedLogs = parseLogs(lines, headers, websiteId)
@@ -118,7 +120,10 @@ export async function POST(request: NextRequest) {
           potentialSavings: 0,
           inserted: 0
         },
-        message: 'No valid log lines found'
+        message: 'No valid log lines found',
+        websiteId,
+        websiteDomain: websiteRow?.domain || inferredDomain,
+        websiteProvider: websiteRow?.provider || provider
       })
     }
 
@@ -201,7 +206,10 @@ export async function POST(request: NextRequest) {
       stats,
       detectionsInserted,
       processing: processingStats,
-      message: `Processed ${normalizedEntries.length} log entries${dryRun ? ' (dry-run, no DB writes)' : `, inserted ${inserted} rows`}`
+      message: `Processed ${normalizedEntries.length} log entries${dryRun ? ' (dry-run, no DB writes)' : `, inserted ${inserted} rows`}`,
+      websiteId,
+      websiteDomain: websiteRow?.domain || inferredDomain,
+      websiteProvider: websiteRow?.provider || provider
     })
   } catch (error) {
     console.error('Error processing logs:', error)

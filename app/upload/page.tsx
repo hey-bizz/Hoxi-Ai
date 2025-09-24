@@ -26,6 +26,15 @@ export default function UploadPage() {
 
   const supabase = useMemo(() => getSupabaseBrowserClient(), [])
 
+  const persistWebsiteMeta = (meta: { id: string; domain?: string | null; provider?: string | null }) => {
+    if (typeof window === "undefined") return
+    try {
+      window.localStorage.setItem("hoxi-active-website", JSON.stringify(meta))
+    } catch (storageError) {
+      console.error("Failed to persist website metadata", storageError)
+    }
+  }
+
   useEffect(() => {
     const init = async () => {
       const { data } = await supabase.auth.getSession()
@@ -121,6 +130,15 @@ export default function UploadPage() {
 
       if (!response.ok) {
         throw new Error(result.error || "Upload failed")
+      }
+
+      const newWebsiteId = typeof result.websiteId === "string" ? result.websiteId : null
+      if (newWebsiteId) {
+        persistWebsiteMeta({
+          id: newWebsiteId,
+          domain: typeof result.websiteDomain === "string" ? result.websiteDomain : null,
+          provider: typeof result.websiteProvider === "string" ? result.websiteProvider : null
+        })
       }
 
       setProgress({ stage: "complete", percent: 100, message: "Upload complete!" })
