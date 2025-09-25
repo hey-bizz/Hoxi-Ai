@@ -53,7 +53,7 @@ export default function HoxiLanding() {
   ]
 
   return (
-    <div className="min-h-screen bg-black dark">
+    <div className="min-h-screen bg-black">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-gray-800">
         <div className="container mx-auto px-6 py-4">
