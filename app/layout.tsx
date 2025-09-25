@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description:
     "Discover which AI crawlers are silently draining your bandwidth. Get real-time insights and implement smart controls in seconds.",
   generator: "v0.app",
+  icons: {
+    icon: "/hoxi-logo.png",
+    shortcut: "/hoxi-logo.png",
+    apple: "/hoxi-logo.png",
+  },
 }
 
 export default function RootLayout({
