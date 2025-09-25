@@ -133,6 +133,57 @@ export async function GET(request: NextRequest) {
       yearly: monthlySavings * 12
     }
 
+    // If no real data exists, return demo data for new users
+    if (totalRequests === 0) {
+      const demoMetrics = {
+        totalRequests: 14523,
+        botRequests: 6826,
+        humanRequests: 7697,
+        aiPercentage: '47.0',
+        humanPercentage: '53.0',
+        botBandwidth: 255599616000, // ~238 GB
+        humanBandwidth: 189599616000, // ~177 GB
+        potentialSavings: {
+          total: 847,
+          monthly: 847,
+          yearly: 10164
+        },
+        botBreakdown: {
+          'ai_training': {
+            requests: 2843,
+            bandwidth: 89599616000, // ~84 GB
+            bots: ['GPTBot', 'ChatGPT-User', 'Bard']
+          },
+          'ai_scraper': {
+            requests: 1654,
+            bandwidth: 67599616000, // ~63 GB
+            bots: ['ClaudeBot', 'Perplexity', 'AI-Assistant']
+          },
+          'search_engine': {
+            requests: 1123,
+            bandwidth: 45599616000, // ~43 GB
+            bots: ['Googlebot', 'Bingbot', 'DuckDuckBot']
+          },
+          'social_media': {
+            requests: 756,
+            bandwidth: 24599616000, // ~23 GB
+            bots: ['facebookexternalhit', 'TwitterBot', 'LinkedInBot']
+          },
+          'seo_tool': {
+            requests: 450,
+            bandwidth: 28200384000, // ~26 GB
+            bots: ['AhrefsBot', 'SemrushBot', 'MozBot']
+          }
+        }
+      }
+
+      return NextResponse.json({
+        metrics: demoMetrics,
+        isDemo: true,
+        logs: [] // No logs for demo
+      })
+    }
+
     return NextResponse.json({
       metrics: {
         totalRequests,

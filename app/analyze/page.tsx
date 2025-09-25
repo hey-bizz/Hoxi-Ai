@@ -224,11 +224,19 @@ export default function AnalyzePage() {
 
           {stage === "results" && (
             <div className="space-y-12">
+              {/* Demo Data Notice */}
+              <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 mb-6">
+                <p className="text-blue-400">ℹ️ Demo Analysis</p>
+                <p className="text-gray-400 text-sm mt-2">
+                  This is a sample analysis showing typical bot traffic patterns. Connect your hosting provider to see your real data.
+                </p>
+              </div>
+
               {/* Error Message */}
               {error && (
                 <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
                   <p className="text-red-400">⚠️ {error}</p>
-                  <p className="text-gray-400 text-sm mt-2">Displaying sample data for demonstration purposes.</p>
+                  <p className="text-gray-400 text-sm mt-2">Showing demo data while we work on connecting to your provider.</p>
                 </div>
               )}
               

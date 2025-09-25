@@ -1,46 +1,56 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
-import { Activity } from "lucide-react"
+import { Activity, Shield, Zap } from "lucide-react"
 
 export default function HoxiLanding() {
   const [url, setUrl] = useState("")
+  const [totalRequests, setTotalRequests] = useState(3992)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const router = useRouter()
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTotalRequests((prev) => prev + Math.floor(Math.random() * 5))
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   const handleAnalyze = async () => {
     if (url) {
       setIsAnalyzing(true)
-
-      try {
-        // Detect provider directly without mock analysis
-        const response = await fetch(`/api/detect-provider?websiteUrl=${encodeURIComponent(url)}`)
-        const data = await response.json()
-
-        if (data.provider && data.provider !== 'unknown') {
-          // Redirect directly to provider connection page
-          router.push(`/connect/${data.provider}`)
-        } else {
-          // Redirect to unknown provider page
-          router.push('/connect/unknown')
-        }
-      } catch (error) {
-        console.error('Provider detection failed:', error)
-        // Fallback to unknown provider page
-        router.push('/connect/unknown')
-      } finally {
+      setTimeout(() => {
         setIsAnalyzing(false)
-      }
+        router.push(`/analyze?site=${encodeURIComponent(url)}`)
+      }, 1000)
     }
   }
 
+  const features = [
+    {
+      icon: Activity,
+      title: "Real-Time Analytics",
+      description: "Monitor traffic patterns and bot behavior as it happens with millisecond precision.",
+    },
+    {
+      icon: Shield,
+      title: "Advanced Bot Detection",
+      description:
+        "Identify AI crawlers, scrapers, and social bots with 99.7% accuracy using Hoxi traffic intelligence",
+    },
+    {
+      icon: Zap,
+      title: "Instant Implementation",
+      description: "Deploy protection in under 60 seconds with our one-click integration system.",
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-black dark">
@@ -100,7 +110,7 @@ export default function HoxiLanding() {
             {/* Main Headline */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-balance text-white">
-                AI, Scrapers, Social Bots… <span className="text-green-400">Let&apos;s Get Real About Your Traffic!</span>
+                AI, Scrapers, Social Bots… <span className="text-green-400">Let's Get Real About Your Traffic!</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto text-pretty">
@@ -125,22 +135,22 @@ export default function HoxiLanding() {
                   disabled={isAnalyzing}
                   className="h-14 px-8 bg-green-400 hover:bg-green-500 text-black text-lg font-semibold"
                 >
-                  {isAnalyzing ? "Detecting Provider..." : "Connect Now"}
+                  {isAnalyzing ? "Analyzing..." : "Analyze Now"}
                 </Button>
               </div>
 
               <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
-                  <span>Instant connection</span>
+                  <span>Free analysis</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
-                  <span>Auto-detects provider</span>
+                  <span>No signup required</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
-                  <span>Setup in 45 seconds</span>
+                  <span>Instant results</span>
                 </div>
               </div>
             </div>
