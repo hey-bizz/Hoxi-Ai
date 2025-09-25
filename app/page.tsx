@@ -159,7 +159,87 @@ export default function HoxiLanding() {
       </section>
 
       {/* Features Section */}
-      
+      <section className="py-24 bg-gray-900/50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
+                Why Developers Choose <span className="text-green-400">Hoxi</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Built for performance, designed for simplicity. Monitor your traffic with enterprise-grade precision.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <Card key={index} className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-green-400/20 rounded-2xl flex items-center justify-center">
+                      <feature.icon className="w-8 h-8 text-green-400" />
+                    </div>
+                    <CardTitle className="text-xl text-white">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-black border-y border-gray-800">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-green-400">{totalRequests.toLocaleString()}</div>
+                <div className="text-gray-300">Requests Monitored</div>
+                <div className="text-sm text-gray-500">Last 24 hours</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-green-400">99.7%</div>
+                <div className="text-gray-300">Detection Accuracy</div>
+                <div className="text-sm text-gray-500">AI-powered analysis</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-green-400">2,500+</div>
+                <div className="text-gray-300">Developers Trust Us</div>
+                <div className="text-sm text-gray-500">Growing daily</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-gray-900/80 border-t border-gray-800">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <Link href="/" className="inline-flex items-center gap-3">
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/hoxi-logo.png"
+                  alt="Hoxi Logo"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="font-bold text-xl text-white">Hoxi</span>
+            </Link>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Stop paying for AI bot traffic. Get real-time insights and implement smart controls in seconds.
+            </p>
+            <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
+              <span>&copy; 2024 Hoxi. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
