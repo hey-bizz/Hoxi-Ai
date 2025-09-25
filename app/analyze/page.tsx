@@ -94,10 +94,11 @@ export default function AnalyzePage() {
   }
 
   const handleGetStarted = () => {
-    if (provider) {
-      router.push(`/connect/${provider}`)
+    // Check if provider is unsupported
+    if (provider === 'cloudflare' || provider === 'aws' || provider === 'unknown' || !provider) {
+      router.push("/upload")
     } else {
-      router.push("/connect/unknown")
+      router.push(`/connect/${provider}`)
     }
   }
 
@@ -237,6 +238,30 @@ export default function AnalyzePage() {
                 <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6">
                   <p className="text-red-400">⚠️ {error}</p>
                   <p className="text-gray-400 text-sm mt-2">Showing demo data while we work on connecting to your provider.</p>
+                </div>
+              )}
+
+              {/* Unsupported Provider Message */}
+              {(provider === 'cloudflare' || provider === 'aws' || provider === 'unknown' || !provider) && (
+                <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-yellow-400">⚠️</span>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-yellow-400 font-semibold mb-2">
+                        {provider === 'cloudflare' ? 'Cloudflare' :
+                         provider === 'aws' ? 'AWS' :
+                         provider === 'unknown' ? 'Your hosting provider' : 'This platform'} is not yet supported
+                      </p>
+                      <p className="text-gray-300 text-sm mb-3">
+                        Unfortunately, {provider === 'cloudflare' ? 'Cloudflare' : provider === 'aws' ? 'AWS' : 'these platforms'} are not yet supported with direct API integration. We are working very hard to get these platforms supported with Hoxi.
+                      </p>
+                      <p className="text-gray-300 text-sm">
+                        <strong>Meanwhile, you can upload your server logs to get the analytics.</strong> The rest of the flow remains exactly the same - you'll get the same powerful insights and bot detection capabilities.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
               
@@ -380,7 +405,10 @@ export default function AnalyzePage() {
                   size="lg"
                   className="px-12 py-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xl font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all"
                 >
-                  Connect {provider === "cloudflare" ? "Cloudflare" : "Provider"} & Start Monitoring
+                  {(provider === 'cloudflare' || provider === 'aws' || provider === 'unknown' || !provider) ?
+                    "Upload Server Logs & Start Monitoring" :
+                    `Connect ${provider === "cloudflare" ? "Cloudflare" : provider === "vercel" ? "Vercel" : provider === "netlify" ? "Netlify" : "Provider"} & Start Monitoring`
+                  }
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
 

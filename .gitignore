@@ -31,5 +31,8 @@ next-env.d.ts
 
 # Local artifacts
 spec_plans/image copy 4.png
-*.png
+spec_plans/*.png
 *spec_plans
+
+# Allow public assets
+!public/*.png

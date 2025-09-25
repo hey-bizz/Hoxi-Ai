@@ -9,68 +9,9 @@ import Image from "next/image"
 
 export default function UnknownProviderConnect() {
   const router = useRouter()
-  const [selectedProvider, setSelectedProvider] = useState<string | null>(null)
 
-  const handleUploadOption = () => {
+  const handleUploadRedirect = () => {
     router.push('/upload')
-  }
-
-  const providers = [
-    {
-      id: "cloudflare",
-      name: "Cloudflare",
-      icon: "☁️",
-      time: "45 seconds",
-      description: "CDN and security services",
-    },
-    {
-      id: "vercel",
-      name: "Vercel",
-      icon: "▲",
-      time: "10 seconds",
-      description: "Frontend deployment platform",
-    },
-    {
-      id: "aws",
-      name: "AWS",
-      icon: "🟠",
-      time: "2-5 minutes",
-      description: "Amazon Web Services",
-    },
-    {
-      id: "netlify",
-      name: "Netlify",
-      icon: "🌐",
-      time: "10 seconds",
-      description: "JAMstack deployment",
-    },
-    {
-      id: "github-pages",
-      name: "GitHub Pages",
-      icon: "🐙",
-      time: "15 seconds",
-      description: "Static site hosting",
-    },
-    {
-      id: "other",
-      name: "Other",
-      icon: "❓",
-      time: "1 minute",
-      description: "Custom setup",
-    },
-  ]
-
-  const generateSiteId = (): string => {
-    return Math.random().toString(36).substring(2, 15)
-  }
-
-  const handleProviderSelect = (providerId: string) => {
-    if (providerId === "other") {
-      // Show JavaScript snippet option
-      setSelectedProvider("other")
-    } else {
-      router.push(`/connect/${providerId}`)
-    }
   }
 
   return (
@@ -100,132 +41,70 @@ export default function UnknownProviderConnect() {
 
       <div className="relative p-8">
         <div className="max-w-2xl mx-auto">
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
-              <span>Step 2 of 3</span>
-              <span>66% complete</span>
-            </div>
-            <div className="w-full bg-gray-800 rounded-full h-2">
-              <div className="bg-green-500 h-2 rounded-full transition-all duration-300" style={{ width: "66%" }} />
-            </div>
-          </div>
-
+          {/* Unsupported Provider Message */}
           <div className="space-y-6">
-            <div>
-              <h1 className="text-3xl font-bold text-white">Provider Not Detected</h1>
-              <p className="text-gray-400 mt-2">We couldn't automatically detect your hosting provider</p>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center">
+                <span className="text-3xl">⚠️</span>
+              </div>
+              <div>
+                <h1 className="text-3xl font-bold text-white">Provider Not Yet Supported</h1>
+                <p className="text-gray-400">But you can still get analytics by uploading logs</p>
+              </div>
             </div>
 
             <Card className="bg-gray-900/40 border-gray-700 backdrop-blur-xl">
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-4 text-white">Choose your provider manually:</h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {providers.map((provider) => (
-                    <button
-                      key={provider.id}
-                      onClick={() => handleProviderSelect(provider.id)}
-                      className="p-4 border border-gray-700 rounded-lg hover:bg-gray-800 hover:border-green-500/50 transition-all text-left group"
-                    >
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-2xl">{provider.icon}</span>
-                        <div>
-                          <div className="font-semibold text-white group-hover:text-green-400 transition-colors">
-                            {provider.name}
-                          </div>
-                          <div className="text-xs text-gray-400">{provider.description}</div>
-                        </div>
-                      </div>
-                      <div className="text-xs text-green-400">Setup time: {provider.time}</div>
-                    </button>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {selectedProvider === "other" && (
-              <Card className="bg-blue-500/10 border-blue-500/20 backdrop-blur-xl">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-3 mb-4">
-                    <Code className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div className="text-center space-y-4">
+                    <div className="w-20 h-20 mx-auto bg-yellow-500/20 rounded-2xl flex items-center justify-center">
+                      <span className="text-4xl">❓</span>
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-2 text-blue-400">Alternative: JavaScript Snippet</h4>
-                      <p className="text-sm text-gray-400 mb-3">
-                        Add this script to your website for automatic monitoring:
+                      <h2 className="text-2xl font-bold text-white mb-2">Your Hosting Provider Not Detected</h2>
+                      <p className="text-gray-300 mb-4">
+                        We couldn't automatically detect your hosting provider or it's not yet supported.
+                        We are working very hard to add support for more platforms.
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-black rounded-lg p-4 mb-4">
-                    <code className="text-xs text-green-400 break-all">
-                      {`<script src="https://cdn.hoxi.com/monitor.js" data-site-id="${generateSiteId()}"></script>`}
-                    </code>
+                  <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-6">
+                    <div className="flex items-start gap-3">
+                      <Upload className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-lg font-semibold text-green-400 mb-2">Upload Server Logs Instead</h3>
+                        <p className="text-gray-300 text-sm mb-4">
+                          Meanwhile, you can upload your server logs to get the same powerful analytics.
+                          The rest of the flow remains exactly the same - you'll get the same bot detection
+                          and insights capabilities.
+                        </p>
+                        <ul className="text-sm text-gray-300 space-y-1 mb-4">
+                          <li>• Same AI-powered bot detection</li>
+                          <li>• Complete traffic analysis</li>
+                          <li>• Cost savings recommendations</li>
+                          <li>• Real-time monitoring dashboard</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-4">
                     <Button
-                      onClick={() => {
-                        const script = `<script src="https://cdn.hoxi.com/monitor.js" data-site-id="${generateSiteId()}"></script>`
-                        navigator.clipboard.writeText(script)
-                      }}
-                      variant="outline"
-                      className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10"
+                      onClick={handleUploadRedirect}
+                      className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white"
+                      size="lg"
                     >
-                      Copy Script
+                      <Upload className="w-5 h-5 mr-2" />
+                      Upload Server Logs
                     </Button>
                     <Button
-                      onClick={() => router.push("/dashboard")}
-                      className="bg-blue-600 hover:bg-blue-700 text-white"
-                    >
-                      Continue to Dashboard
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Upload Alternative */}
-            <Card className="bg-gray-900/40 border-gray-700 backdrop-blur-xl">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <Upload className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white">Upload Server Logs</h3>
-                    <p className="text-sm text-gray-400">Fastest way to get started</p>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-300 mb-4">
-                  Don't see your provider? No problem! Upload your server logs directly and our AI will analyze them regardless of your hosting setup.
-                </p>
-                <Button
-                  onClick={handleUploadOption}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  <FileText className="w-4 h-4 mr-2" />
-                  Upload Server Logs
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900/40 border-gray-700 backdrop-blur-xl">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-3">
-                  <HelpCircle className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">Need Help?</h4>
-                    <p className="text-sm text-gray-400 mb-3">
-                      Can't find your provider or need assistance with setup?
-                    </p>
-                    <Button
-                      onClick={() => window.open("mailto:support@hoxi.com", "_blank")}
+                      onClick={() => router.push('/analyze')}
                       variant="outline"
                       className="border-gray-600 text-gray-300 hover:bg-gray-800"
+                      size="lg"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Contact Support
+                      Back to Analysis
                     </Button>
                   </div>
                 </div>
